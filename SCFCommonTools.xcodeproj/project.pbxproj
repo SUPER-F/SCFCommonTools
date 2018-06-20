@@ -18,6 +18,7 @@
 		959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A1C20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m */; };
 		959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */; };
 		959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2220DA44420097F0C1 /* UIButton+SCFImagePosition.m */; };
+		959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2720DA502F0097F0C1 /* UIButton+SCFIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFCountDown.m"; sourceTree = "<group>"; };
 		959A5A2120DA44420097F0C1 /* UIButton+SCFImagePosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCFImagePosition.h"; sourceTree = "<group>"; };
 		959A5A2220DA44420097F0C1 /* UIButton+SCFImagePosition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFImagePosition.m"; sourceTree = "<group>"; };
+		959A5A2620DA502F0097F0C1 /* UIButton+SCFIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCFIndicator.h"; sourceTree = "<group>"; };
+		959A5A2720DA502F0097F0C1 /* UIButton+SCFIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFIndicator.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */,
 				959A5A2120DA44420097F0C1 /* UIButton+SCFImagePosition.h */,
 				959A5A2220DA44420097F0C1 /* UIButton+SCFImagePosition.m */,
+				959A5A2620DA502F0097F0C1 /* UIButton+SCFIndicator.h */,
+				959A5A2720DA502F0097F0C1 /* UIButton+SCFIndicator.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
+				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
