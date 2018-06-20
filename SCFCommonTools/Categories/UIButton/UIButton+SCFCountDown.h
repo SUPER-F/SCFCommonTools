@@ -2,7 +2,7 @@
 //  UIButton+SCFCountDown.h
 //  SCFCommonTools
 //
-//  Created by 博颐 on 2018/6/20.
+//  Created by scf on 2018/6/20.
 //  Copyright © 2018年 scf. All rights reserved.
 //
 //  github: https://github.com/SUPER-F/SCFCommonTools
