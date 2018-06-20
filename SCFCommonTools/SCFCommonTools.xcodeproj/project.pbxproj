@@ -13,6 +13,7 @@
 		959A59FA20D8E7840097F0C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F920D8E7840097F0C1 /* Assets.xcassets */; };
 		959A59FD20D8E7840097F0C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59FB20D8E7840097F0C1 /* LaunchScreen.storyboard */; };
 		959A5A0020D8E7840097F0C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59FF20D8E7840097F0C1 /* main.m */; };
+		959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A0A20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		959A59FC20D8E7840097F0C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959A59FE20D8E7840097F0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959A59FF20D8E7840097F0C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		959A5A0920D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+SCFBadge.h"; sourceTree = "<group>"; };
+		959A5A0A20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+SCFBadge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		959A59EF20D8E7830097F0C1 /* SCFCommonTools */ = {
 			isa = PBXGroup;
 			children = (
+				959A5A0620D8E9980097F0C1 /* Categories */,
+				959A5A0720D8E9980097F0C1 /* Utils */,
 				959A59F020D8E7830097F0C1 /* AppDelegate.h */,
 				959A59F120D8E7830097F0C1 /* AppDelegate.m */,
 				959A59F320D8E7830097F0C1 /* ViewController.h */,
@@ -69,6 +74,30 @@
 				959A59FF20D8E7840097F0C1 /* main.m */,
 			);
 			path = SCFCommonTools;
+			sourceTree = "<group>";
+		};
+		959A5A0620D8E9980097F0C1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				959A5A0820D8F58B0097F0C1 /* UIBarButtonItem */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		959A5A0720D8E9980097F0C1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		959A5A0820D8F58B0097F0C1 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				959A5A0920D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.h */,
+				959A5A0A20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m */,
+			);
+			path = UIBarButtonItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +126,7 @@
 		959A59E520D8E7830097F0C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SCF;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = scf;
 				TargetAttributes = {
@@ -142,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
+				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
 				959A5A0020D8E7840097F0C1 /* main.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 			);
