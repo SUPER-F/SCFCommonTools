@@ -16,6 +16,7 @@
 		959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A0A20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m */; };
 		959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A1920DA34FA0097F0C1 /* UIButton+SCFBadge.m */; };
 		959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A1C20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m */; };
+		959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		959A5A1920DA34FA0097F0C1 /* UIButton+SCFBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFBadge.m"; sourceTree = "<group>"; };
 		959A5A1B20DA38350097F0C1 /* UIButton+SCFBackgroundImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCFBackgroundImage.h"; sourceTree = "<group>"; };
 		959A5A1C20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFBackgroundImage.m"; sourceTree = "<group>"; };
+		959A5A1E20DA3F010097F0C1 /* UIButton+SCFCountDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCFCountDown.h"; sourceTree = "<group>"; };
+		959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFCountDown.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				959A5A1920DA34FA0097F0C1 /* UIButton+SCFBadge.m */,
 				959A5A1B20DA38350097F0C1 /* UIButton+SCFBackgroundImage.h */,
 				959A5A1C20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m */,
+				959A5A1E20DA3F010097F0C1 /* UIButton+SCFCountDown.h */,
+				959A5A1F20DA3F010097F0C1 /* UIButton+SCFCountDown.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
 				959A5A0020D8E7840097F0C1 /* main.m in Sources */,
 				959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */,
+				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
