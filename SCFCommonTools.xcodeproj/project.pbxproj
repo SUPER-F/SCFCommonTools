@@ -20,6 +20,7 @@
 		959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2220DA44420097F0C1 /* UIButton+SCFImagePosition.m */; };
 		959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2720DA502F0097F0C1 /* UIButton+SCFIndicator.m */; };
 		959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2B20DA5ADC0097F0C1 /* UIColor+SCFGradient.m */; };
+		959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		959A5A2720DA502F0097F0C1 /* UIButton+SCFIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCFIndicator.m"; sourceTree = "<group>"; };
 		959A5A2A20DA5ADC0097F0C1 /* UIColor+SCFGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFGradient.h"; sourceTree = "<group>"; };
 		959A5A2B20DA5ADC0097F0C1 /* UIColor+SCFGradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFGradient.m"; sourceTree = "<group>"; };
+		959A5A2D20DA61230097F0C1 /* UIColor+SCFHexadecimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFHexadecimal.h"; sourceTree = "<group>"; };
+		959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFHexadecimal.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 			children = (
 				959A5A2A20DA5ADC0097F0C1 /* UIColor+SCFGradient.h */,
 				959A5A2B20DA5ADC0097F0C1 /* UIColor+SCFGradient.m */,
+				959A5A2D20DA61230097F0C1 /* UIColor+SCFHexadecimal.h */,
+				959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */,
 				959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
+				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
