@@ -22,6 +22,7 @@
 		959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2B20DA5ADC0097F0C1 /* UIColor+SCFGradient.m */; };
 		959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */; };
 		959A5A3220DB39450097F0C1 /* UIColor+SCFModify.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */; };
+		959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFHexadecimal.m"; sourceTree = "<group>"; };
 		959A5A3020DB39450097F0C1 /* UIColor+SCFModify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFModify.h"; sourceTree = "<group>"; };
 		959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFModify.m"; sourceTree = "<group>"; };
+		959A5A3320DB405B0097F0C1 /* UIColor+SCFRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFRandom.h"; sourceTree = "<group>"; };
+		959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFRandom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */,
 				959A5A3020DB39450097F0C1 /* UIColor+SCFModify.h */,
 				959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */,
+				959A5A3320DB405B0097F0C1 /* UIColor+SCFRandom.h */,
+				959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				959A5A3220DB39450097F0C1 /* UIColor+SCFModify.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
+				959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
