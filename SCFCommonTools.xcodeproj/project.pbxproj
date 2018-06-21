@@ -23,6 +23,7 @@
 		959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A2E20DA61230097F0C1 /* UIColor+SCFHexadecimal.m */; };
 		959A5A3220DB39450097F0C1 /* UIColor+SCFModify.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */; };
 		959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */; };
+		959A5A3920DB4AFE0097F0C1 /* UIImage+SCFAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFModify.m"; sourceTree = "<group>"; };
 		959A5A3320DB405B0097F0C1 /* UIColor+SCFRandom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFRandom.h"; sourceTree = "<group>"; };
 		959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFRandom.m"; sourceTree = "<group>"; };
+		959A5A3720DB4AFE0097F0C1 /* UIImage+SCFAlpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFAlpha.h"; sourceTree = "<group>"; };
+		959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFAlpha.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				959A5A3620DB4ABD0097F0C1 /* UIImage */,
 				959A5A2920DA5ABA0097F0C1 /* UIColor */,
 				959A5A1720DA34DA0097F0C1 /* UIButton */,
 				959A5A0820D8F58B0097F0C1 /* UIBarButtonItem */,
@@ -159,6 +163,15 @@
 				959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		959A5A3620DB4ABD0097F0C1 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				959A5A3720DB4AFE0097F0C1 /* UIImage+SCFAlpha.h */,
+				959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +248,7 @@
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
 				959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */,
 				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
+				959A5A3920DB4AFE0097F0C1 /* UIImage+SCFAlpha.m in Sources */,
 				959A5A0020D8E7840097F0C1 /* main.m in Sources */,
 				959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */,
 				959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */,
