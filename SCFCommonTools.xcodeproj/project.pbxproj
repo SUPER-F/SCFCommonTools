@@ -25,6 +25,7 @@
 		959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */; };
 		959A5A3920DB4AFE0097F0C1 /* UIImage+SCFAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */; };
 		959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3B20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m */; };
+		959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A3E20DBBD000097F0C1 /* UIImage+SCFCapture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFAlpha.m"; sourceTree = "<group>"; };
 		959A5A3A20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFAnimatedGIF.h"; sourceTree = "<group>"; };
 		959A5A3B20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFAnimatedGIF.m"; sourceTree = "<group>"; };
+		959A5A3D20DBBD000097F0C1 /* UIImage+SCFCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFCapture.h"; sourceTree = "<group>"; };
+		959A5A3E20DBBD000097F0C1 /* UIImage+SCFCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFCapture.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +178,8 @@
 				959A5A3820DB4AFE0097F0C1 /* UIImage+SCFAlpha.m */,
 				959A5A3A20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.h */,
 				959A5A3B20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m */,
+				959A5A3D20DBBD000097F0C1 /* UIImage+SCFCapture.h */,
+				959A5A3E20DBBD000097F0C1 /* UIImage+SCFCapture.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				959A5A3220DB39450097F0C1 /* UIColor+SCFModify.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
+				959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */,
 				959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
