@@ -29,6 +29,7 @@
 		959A5A4220DC8FBB0097F0C1 /* UIImage+SCFColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4120DC8FBB0097F0C1 /* UIImage+SCFColor.m */; };
 		959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4420DCA1FD0097F0C1 /* UIImage+SCFScale.m */; };
 		959A5A4820DCDF130097F0C1 /* UIImage+SCFFileName.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */; };
+		959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,8 @@
 		959A5A4420DCA1FD0097F0C1 /* UIImage+SCFScale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFScale.m"; sourceTree = "<group>"; };
 		959A5A4620DCDF130097F0C1 /* UIImage+SCFFileName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFFileName.h"; sourceTree = "<group>"; };
 		959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFFileName.m"; sourceTree = "<group>"; };
+		959A5A4920DCF8C60097F0C1 /* UIImage+SCFMerge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFMerge.h"; sourceTree = "<group>"; };
+		959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFMerge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				959A5A4420DCA1FD0097F0C1 /* UIImage+SCFScale.m */,
 				959A5A4620DCDF130097F0C1 /* UIImage+SCFFileName.h */,
 				959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */,
+				959A5A4920DCF8C60097F0C1 /* UIImage+SCFMerge.h */,
+				959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */,
 				959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
+				959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 			);
