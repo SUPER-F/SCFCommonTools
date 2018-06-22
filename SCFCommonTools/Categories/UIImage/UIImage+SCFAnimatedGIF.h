@@ -26,4 +26,11 @@
 
 + (UIImage *)scf_animatedImageWithAnimatedGIFURL:(NSURL *)theURL;
 
+#pragma mark - 另外一种实现方式
++ (UIImage *)scf_animatedImageWithGIFData:(NSData *)data;
+
++ (UIImage *)scf_animatedImageWithGIFNamed:(NSString *)name;
+
+- (UIImage *)scf_animatedImageByScalingAndCroppingToSize:(CGSize)size;
+
 @end
