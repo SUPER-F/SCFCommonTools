@@ -30,6 +30,7 @@
 		959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4420DCA1FD0097F0C1 /* UIImage+SCFScale.m */; };
 		959A5A4820DCDF130097F0C1 /* UIImage+SCFFileName.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */; };
 		959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */; };
+		959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,8 @@
 		959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFFileName.m"; sourceTree = "<group>"; };
 		959A5A4920DCF8C60097F0C1 /* UIImage+SCFMerge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFMerge.h"; sourceTree = "<group>"; };
 		959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFMerge.m"; sourceTree = "<group>"; };
+		959A5A4C20E081D30097F0C1 /* UIImage+SCFOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFOrientation.h"; sourceTree = "<group>"; };
+		959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				959A5A4720DCDF130097F0C1 /* UIImage+SCFFileName.m */,
 				959A5A4920DCF8C60097F0C1 /* UIImage+SCFMerge.h */,
 				959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */,
+				959A5A4C20E081D30097F0C1 /* UIImage+SCFOrientation.h */,
+				959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */,
 				959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */,
+				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
 				959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */,
 				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
