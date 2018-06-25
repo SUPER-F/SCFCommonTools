@@ -32,6 +32,7 @@
 		959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4A20DCF8C60097F0C1 /* UIImage+SCFMerge.m */; };
 		959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */; };
 		959A5A5120E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A5020E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m */; };
+		959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A5320E0D5030097F0C1 /* UIImage+SCFResize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFOrientation.m"; sourceTree = "<group>"; };
 		959A5A4F20E0CA380097F0C1 /* UIImage+SCFRoundedCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFRoundedCorner.h"; sourceTree = "<group>"; };
 		959A5A5020E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFRoundedCorner.m"; sourceTree = "<group>"; };
+		959A5A5220E0D5030097F0C1 /* UIImage+SCFResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFResize.h"; sourceTree = "<group>"; };
+		959A5A5320E0D5030097F0C1 /* UIImage+SCFResize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFResize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +213,8 @@
 				959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */,
 				959A5A4F20E0CA380097F0C1 /* UIImage+SCFRoundedCorner.h */,
 				959A5A5020E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m */,
+				959A5A5220E0D5030097F0C1 /* UIImage+SCFResize.h */,
+				959A5A5320E0D5030097F0C1 /* UIImage+SCFResize.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */,
+				959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */,
 				959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */,
 				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
