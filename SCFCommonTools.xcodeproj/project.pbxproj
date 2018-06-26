@@ -33,6 +33,7 @@
 		959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A4D20E081D30097F0C1 /* UIImage+SCFOrientation.m */; };
 		959A5A5120E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A5020E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m */; };
 		959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A5320E0D5030097F0C1 /* UIImage+SCFResize.m */; };
+		959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A5A5720E0F75A0097F0C1 /* UIImageView+SCFAddition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		959A5A5020E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFRoundedCorner.m"; sourceTree = "<group>"; };
 		959A5A5220E0D5030097F0C1 /* UIImage+SCFResize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SCFResize.h"; sourceTree = "<group>"; };
 		959A5A5320E0D5030097F0C1 /* UIImage+SCFResize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SCFResize.m"; sourceTree = "<group>"; };
+		959A5A5620E0F75A0097F0C1 /* UIImageView+SCFAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCFAddition.h"; sourceTree = "<group>"; };
+		959A5A5720E0F75A0097F0C1 /* UIImageView+SCFAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFAddition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				959A5A5520E0F7010097F0C1 /* UIImageView */,
 				959A5A3620DB4ABD0097F0C1 /* UIImage */,
 				959A5A2920DA5ABA0097F0C1 /* UIColor */,
 				959A5A1720DA34DA0097F0C1 /* UIButton */,
@@ -219,6 +223,15 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		959A5A5520E0F7010097F0C1 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				959A5A5620E0F75A0097F0C1 /* UIImageView+SCFAddition.h */,
+				959A5A5720E0F75A0097F0C1 /* UIImageView+SCFAddition.m */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +306,7 @@
 				959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */,
 				959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */,
 				959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */,
+				959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */,
 				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
 				959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */,
