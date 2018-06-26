@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9506890C20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506890B20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m */; };
 		9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506890E20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m */; };
+		9506891220E23C8D009C2EE7 /* UIImageView+SCFReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		9506890B20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFBetterFace.m"; sourceTree = "<group>"; };
 		9506890D20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCFFaceAwareFill.h"; sourceTree = "<group>"; };
 		9506890E20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFFaceAwareFill.m"; sourceTree = "<group>"; };
+		9506891020E23C8D009C2EE7 /* UIImageView+SCFReflect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCFReflect.h"; sourceTree = "<group>"; };
+		9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFReflect.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				9506890B20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m */,
 				9506890D20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.h */,
 				9506890E20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m */,
+				9506891020E23C8D009C2EE7 /* UIImageView+SCFReflect.h */,
+				9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */,
 			);
 			path = UIImageView;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */,
 				9506890C20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m in Sources */,
+				9506891220E23C8D009C2EE7 /* UIImageView+SCFReflect.m in Sources */,
 				959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */,
 				959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */,
 				959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */,
