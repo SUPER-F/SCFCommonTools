@@ -13,6 +13,7 @@
 		9506891620E24622009C2EE7 /* UILabel+SCFAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891520E24622009C2EE7 /* UILabel+SCFAutoSize.m */; };
 		9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */; };
 		9506891D20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891C20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m */; };
+		9506892020E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891F20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -55,6 +56,8 @@
 		9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SCFAutomaticWriting.m"; sourceTree = "<group>"; };
 		9506891B20E3610C009C2EE7 /* UINavigationController+SCFStackManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SCFStackManager.h"; sourceTree = "<group>"; };
 		9506891C20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SCFStackManager.m"; sourceTree = "<group>"; };
+		9506891E20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SCFAnimationTransition.h"; sourceTree = "<group>"; };
+		9506891F20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SCFAnimationTransition.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 			children = (
 				9506891B20E3610C009C2EE7 /* UINavigationController+SCFStackManager.h */,
 				9506891C20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m */,
+				9506891E20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.h */,
+				9506891F20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 				959A5A4820DCDF130097F0C1 /* UIImage+SCFFileName.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
+				9506892020E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m in Sources */,
 				959A5A4220DC8FBB0097F0C1 /* UIImage+SCFColor.m in Sources */,
 				9506891D20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m in Sources */,
 				959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */,
