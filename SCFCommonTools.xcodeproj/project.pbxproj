@@ -14,6 +14,7 @@
 		9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */; };
 		9506891D20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891C20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m */; };
 		9506892020E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891F20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m */; };
+		9506892420E36E55009C2EE7 /* UIScreen+SCFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892320E36E55009C2EE7 /* UIScreen+SCFFrame.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 		9506891C20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SCFStackManager.m"; sourceTree = "<group>"; };
 		9506891E20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+SCFAnimationTransition.h"; sourceTree = "<group>"; };
 		9506891F20E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+SCFAnimationTransition.m"; sourceTree = "<group>"; };
+		9506892220E36E55009C2EE7 /* UIScreen+SCFFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SCFFrame.h"; sourceTree = "<group>"; };
+		9506892320E36E55009C2EE7 /* UIScreen+SCFFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+SCFFrame.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -145,6 +148,15 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
+		9506892120E36E3F009C2EE7 /* UIScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9506892220E36E55009C2EE7 /* UIScreen+SCFFrame.h */,
+				9506892320E36E55009C2EE7 /* UIScreen+SCFFrame.m */,
+			);
+			path = UIScreen;
+			sourceTree = "<group>";
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9506892120E36E3F009C2EE7 /* UIScreen */,
 				9506891A20E360EA009C2EE7 /* UINavigationController */,
 				9506891320E2460B009C2EE7 /* UILabel */,
 				959A5A5520E0F7010097F0C1 /* UIImageView */,
@@ -384,6 +397,7 @@
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
+				9506892420E36E55009C2EE7 /* UIScreen+SCFFrame.m in Sources */,
 				959A5A5120E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
