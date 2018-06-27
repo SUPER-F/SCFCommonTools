@@ -11,6 +11,7 @@
 		9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506890E20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m */; };
 		9506891220E23C8D009C2EE7 /* UIImageView+SCFReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */; };
 		9506891620E24622009C2EE7 /* UILabel+SCFAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891520E24622009C2EE7 /* UILabel+SCFAutoSize.m */; };
+		9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -49,6 +50,8 @@
 		9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFReflect.m"; sourceTree = "<group>"; };
 		9506891420E24622009C2EE7 /* UILabel+SCFAutoSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+SCFAutoSize.h"; sourceTree = "<group>"; };
 		9506891520E24622009C2EE7 /* UILabel+SCFAutoSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SCFAutoSize.m"; sourceTree = "<group>"; };
+		9506891720E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+SCFAutomaticWriting.h"; sourceTree = "<group>"; };
+		9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SCFAutomaticWriting.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 			children = (
 				9506891420E24622009C2EE7 /* UILabel+SCFAutoSize.h */,
 				9506891520E24622009C2EE7 /* UILabel+SCFAutoSize.m */,
+				9506891720E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.h */,
+				9506891820E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
+				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
 				959A5A5120E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
