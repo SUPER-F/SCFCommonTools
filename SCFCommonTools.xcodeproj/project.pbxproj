@@ -17,6 +17,7 @@
 		9506892420E36E55009C2EE7 /* UIScreen+SCFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892320E36E55009C2EE7 /* UIScreen+SCFFrame.m */; };
 		9506892820E376DB009C2EE7 /* UIScrollView+SCFAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892720E376DB009C2EE7 /* UIScrollView+SCFAddition.m */; };
 		9506892B20E48BAD009C2EE7 /* UIScrollView+SCFPages.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892A20E48BAD009C2EE7 /* UIScrollView+SCFPages.m */; };
+		9506892F20E4B329009C2EE7 /* UITextField+SCFHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892E20E4B329009C2EE7 /* UITextField+SCFHistory.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -67,6 +68,8 @@
 		9506892720E376DB009C2EE7 /* UIScrollView+SCFAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SCFAddition.m"; sourceTree = "<group>"; };
 		9506892920E48BAD009C2EE7 /* UIScrollView+SCFPages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SCFPages.h"; sourceTree = "<group>"; };
 		9506892A20E48BAD009C2EE7 /* UIScrollView+SCFPages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SCFPages.m"; sourceTree = "<group>"; };
+		9506892D20E4B329009C2EE7 /* UITextField+SCFHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+SCFHistory.h"; sourceTree = "<group>"; };
+		9506892E20E4B329009C2EE7 /* UITextField+SCFHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SCFHistory.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -174,6 +177,15 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
+		9506892C20E4B305009C2EE7 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				9506892D20E4B329009C2EE7 /* UITextField+SCFHistory.h */,
+				9506892E20E4B329009C2EE7 /* UITextField+SCFHistory.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9506892C20E4B305009C2EE7 /* UITextField */,
 				9506892520E376B9009C2EE7 /* UIScrollView */,
 				9506892120E36E3F009C2EE7 /* UIScreen */,
 				9506891A20E360EA009C2EE7 /* UINavigationController */,
@@ -404,6 +417,7 @@
 				959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */,
 				959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */,
 				959A5A3220DB39450097F0C1 /* UIColor+SCFModify.m in Sources */,
+				9506892F20E4B329009C2EE7 /* UITextField+SCFHistory.m in Sources */,
 				959A5A4820DCDF130097F0C1 /* UIImage+SCFFileName.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
