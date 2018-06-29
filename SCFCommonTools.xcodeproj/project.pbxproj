@@ -20,6 +20,7 @@
 		9506892F20E4B329009C2EE7 /* UITextField+SCFHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506892E20E4B329009C2EE7 /* UITextField+SCFHistory.m */; };
 		9506893220E4BFF7009C2EE7 /* UITextField+SCFSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506893120E4BFF7009C2EE7 /* UITextField+SCFSelect.m */; };
 		9506893520E4C528009C2EE7 /* UITextField+SCFShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506893420E4C528009C2EE7 /* UITextField+SCFShake.m */; };
+		9506893820E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506893720E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -76,6 +77,8 @@
 		9506893120E4BFF7009C2EE7 /* UITextField+SCFSelect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SCFSelect.m"; sourceTree = "<group>"; };
 		9506893320E4C528009C2EE7 /* UITextField+SCFShake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+SCFShake.h"; sourceTree = "<group>"; };
 		9506893420E4C528009C2EE7 /* UITextField+SCFShake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SCFShake.m"; sourceTree = "<group>"; };
+		9506893620E5D8D9009C2EE7 /* UITextField+SCFInputLimit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+SCFInputLimit.h"; sourceTree = "<group>"; };
+		9506893720E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+SCFInputLimit.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				9506893120E4BFF7009C2EE7 /* UITextField+SCFSelect.m */,
 				9506893320E4C528009C2EE7 /* UITextField+SCFShake.h */,
 				9506893420E4C528009C2EE7 /* UITextField+SCFShake.m */,
+				9506893620E5D8D9009C2EE7 /* UITextField+SCFInputLimit.h */,
+				9506893720E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m */,
 			);
 			path = UITextField;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
+				9506893820E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m in Sources */,
 				9506892420E36E55009C2EE7 /* UIScreen+SCFFrame.m in Sources */,
 				959A5A5120E0CA380097F0C1 /* UIImage+SCFRoundedCorner.m in Sources */,
 			);
