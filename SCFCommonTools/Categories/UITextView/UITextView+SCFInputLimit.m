@@ -20,7 +20,7 @@ static const void *SCFTextViewInputLimitMaxLength = &SCFTextViewInputLimitMaxLen
                              SCFTextViewInputLimitMaxLength,
                              @(scf_maxLength),
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scf_textViewTextDidChange:) name:@"UITextViewTextDidChangeNotification" object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scf_textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:self];
 }
 
 - (NSInteger)scf_maxLength {
