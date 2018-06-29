@@ -26,6 +26,7 @@
 		9506894220E60343009C2EE7 /* UITextView+SCFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894120E60343009C2EE7 /* UITextView+SCFPlaceHolder.m */; };
 		9506894520E60922009C2EE7 /* UITextView+SCFSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894420E60922009C2EE7 /* UITextView+SCFSelect.m */; };
 		9506894920E61820009C2EE7 /* UIView+SCFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894820E61820009C2EE7 /* UIView+SCFFrame.m */; };
+		9506894C20E624C1009C2EE7 /* UIView+SCFShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894B20E624C1009C2EE7 /* UIView+SCFShake.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -94,6 +95,8 @@
 		9506894420E60922009C2EE7 /* UITextView+SCFSelect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SCFSelect.m"; sourceTree = "<group>"; };
 		9506894720E61820009C2EE7 /* UIView+SCFFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SCFFrame.h"; sourceTree = "<group>"; };
 		9506894820E61820009C2EE7 /* UIView+SCFFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCFFrame.m"; sourceTree = "<group>"; };
+		9506894A20E624C1009C2EE7 /* UIView+SCFShake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SCFShake.h"; sourceTree = "<group>"; };
+		9506894B20E624C1009C2EE7 /* UIView+SCFShake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCFShake.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			children = (
 				9506894720E61820009C2EE7 /* UIView+SCFFrame.h */,
 				9506894820E61820009C2EE7 /* UIView+SCFFrame.m */,
+				9506894A20E624C1009C2EE7 /* UIView+SCFShake.h */,
+				9506894B20E624C1009C2EE7 /* UIView+SCFShake.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */,
 				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
+				9506894C20E624C1009C2EE7 /* UIView+SCFShake.m in Sources */,
 				959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */,
 				9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */,
 				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
