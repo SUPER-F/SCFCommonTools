@@ -25,6 +25,7 @@
 		9506893F20E5E1D3009C2EE7 /* UITextView+SCFPinchZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506893E20E5E1D3009C2EE7 /* UITextView+SCFPinchZoom.m */; };
 		9506894220E60343009C2EE7 /* UITextView+SCFPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894120E60343009C2EE7 /* UITextView+SCFPlaceHolder.m */; };
 		9506894520E60922009C2EE7 /* UITextView+SCFSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894420E60922009C2EE7 /* UITextView+SCFSelect.m */; };
+		9506894920E61820009C2EE7 /* UIView+SCFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506894820E61820009C2EE7 /* UIView+SCFFrame.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -91,6 +92,8 @@
 		9506894120E60343009C2EE7 /* UITextView+SCFPlaceHolder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SCFPlaceHolder.m"; sourceTree = "<group>"; };
 		9506894320E60922009C2EE7 /* UITextView+SCFSelect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+SCFSelect.h"; sourceTree = "<group>"; };
 		9506894420E60922009C2EE7 /* UITextView+SCFSelect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+SCFSelect.m"; sourceTree = "<group>"; };
+		9506894720E61820009C2EE7 /* UIView+SCFFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SCFFrame.h"; sourceTree = "<group>"; };
+		9506894820E61820009C2EE7 /* UIView+SCFFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SCFFrame.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -228,6 +231,15 @@
 			path = UITextView;
 			sourceTree = "<group>";
 		};
+		9506894620E60B83009C2EE7 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				9506894720E61820009C2EE7 /* UIView+SCFFrame.h */,
+				9506894820E61820009C2EE7 /* UIView+SCFFrame.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +277,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9506894620E60B83009C2EE7 /* UIView */,
 				9506893920E5DDBC009C2EE7 /* UITextView */,
 				9506892C20E4B305009C2EE7 /* UITextField */,
 				9506892520E376B9009C2EE7 /* UIScrollView */,
@@ -469,6 +482,7 @@
 				9506893520E4C528009C2EE7 /* UITextField+SCFShake.m in Sources */,
 				959A5A2F20DA61230097F0C1 /* UIColor+SCFHexadecimal.m in Sources */,
 				9506892020E3657B009C2EE7 /* UINavigationController+SCFAnimationTransition.m in Sources */,
+				9506894920E61820009C2EE7 /* UIView+SCFFrame.m in Sources */,
 				959A5A4220DC8FBB0097F0C1 /* UIImage+SCFColor.m in Sources */,
 				9506891D20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m in Sources */,
 				959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */,
