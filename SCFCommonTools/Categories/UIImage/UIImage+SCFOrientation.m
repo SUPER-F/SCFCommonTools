@@ -155,11 +155,11 @@
 }
 
 + (CGFloat)scf_radiansFromDegrees:(CGFloat)degrees {
-    return degrees * M_PI / 100.0f;
+    return degrees * M_PI / 180.0f;
 }
 
 + (CGFloat)scf_degreesFromRadians:(CGFloat)radians {
-    return radians * 180.0 / M_PI;
+    return radians * 180.0f / M_PI;
 }
 
 @end
