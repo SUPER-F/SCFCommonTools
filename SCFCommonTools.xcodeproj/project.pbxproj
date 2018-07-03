@@ -34,6 +34,7 @@
 		9506895D20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895C20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m */; };
 		9506896020EB5D36009C2EE7 /* UIColor+SCFWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895F20EB5D36009C2EE7 /* UIColor+SCFWeb.m */; };
 		9506896320EB67CC009C2EE7 /* UIWebView+SCFJavaScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506896220EB67CC009C2EE7 /* UIWebView+SCFJavaScript.m */; };
+		9506896620EB6C82009C2EE7 /* UIWebView+SCFStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506896520EB6C82009C2EE7 /* UIWebView+SCFStyle.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -118,6 +119,8 @@
 		9506895F20EB5D36009C2EE7 /* UIColor+SCFWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFWeb.m"; sourceTree = "<group>"; };
 		9506896120EB67CC009C2EE7 /* UIWebView+SCFJavaScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SCFJavaScript.h"; sourceTree = "<group>"; };
 		9506896220EB67CC009C2EE7 /* UIWebView+SCFJavaScript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SCFJavaScript.m"; sourceTree = "<group>"; };
+		9506896420EB6C82009C2EE7 /* UIWebView+SCFStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SCFStyle.h"; sourceTree = "<group>"; };
+		9506896520EB6C82009C2EE7 /* UIWebView+SCFStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SCFStyle.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 				9506895C20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m */,
 				9506896120EB67CC009C2EE7 /* UIWebView+SCFJavaScript.h */,
 				9506896220EB67CC009C2EE7 /* UIWebView+SCFJavaScript.m */,
+				9506896420EB6C82009C2EE7 /* UIWebView+SCFStyle.h */,
+				9506896520EB6C82009C2EE7 /* UIWebView+SCFStyle.m */,
 			);
 			path = UIWebView;
 			sourceTree = "<group>";
@@ -524,6 +529,7 @@
 				9506891620E24622009C2EE7 /* UILabel+SCFAutoSize.m in Sources */,
 				9506893220E4BFF7009C2EE7 /* UITextField+SCFSelect.m in Sources */,
 				9506895A20EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.m in Sources */,
+				9506896620EB6C82009C2EE7 /* UIWebView+SCFStyle.m in Sources */,
 				959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */,
 				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
