@@ -38,6 +38,7 @@
 		9506896920EB6E72009C2EE7 /* UIWebView+SCFWebStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506896820EB6E72009C2EE7 /* UIWebView+SCFWebStorage.m */; };
 		9506896D20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506896C20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m */; };
 		9506897120EB7689009C2EE7 /* NSDate+SCFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */; };
+		9506897420EB783B009C2EE7 /* NSDate+SCFFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -130,6 +131,8 @@
 		9506896C20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SCFHierarchy.m"; sourceTree = "<group>"; };
 		9506896F20EB7689009C2EE7 /* NSDate+SCFExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+SCFExtension.h"; sourceTree = "<group>"; };
 		9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFExtension.m"; sourceTree = "<group>"; };
+		9506897220EB783B009C2EE7 /* NSDate+SCFFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+SCFFormatter.h"; sourceTree = "<group>"; };
+		9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFFormatter.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -322,6 +325,8 @@
 			children = (
 				9506896F20EB7689009C2EE7 /* NSDate+SCFExtension.h */,
 				9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */,
+				9506897220EB783B009C2EE7 /* NSDate+SCFFormatter.h */,
+				9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -596,6 +601,7 @@
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
+				9506897420EB783B009C2EE7 /* NSDate+SCFFormatter.m in Sources */,
 				9506894220E60343009C2EE7 /* UITextView+SCFPlaceHolder.m in Sources */,
 				9506896D20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m in Sources */,
 				9506893820E5D8D9009C2EE7 /* UITextField+SCFInputLimit.m in Sources */,
