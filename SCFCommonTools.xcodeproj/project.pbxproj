@@ -39,6 +39,7 @@
 		9506896D20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506896C20EB6FE7009C2EE7 /* UIWindow+SCFHierarchy.m */; };
 		9506897120EB7689009C2EE7 /* NSDate+SCFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */; };
 		9506897420EB783B009C2EE7 /* NSDate+SCFFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */; };
+		9506897720EB7B62009C2EE7 /* NSDate+SCFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897620EB7B62009C2EE7 /* NSDate+SCFHelper.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -133,6 +134,8 @@
 		9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFExtension.m"; sourceTree = "<group>"; };
 		9506897220EB783B009C2EE7 /* NSDate+SCFFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+SCFFormatter.h"; sourceTree = "<group>"; };
 		9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFFormatter.m"; sourceTree = "<group>"; };
+		9506897520EB7B62009C2EE7 /* NSDate+SCFHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+SCFHelper.h"; sourceTree = "<group>"; };
+		9506897620EB7B62009C2EE7 /* NSDate+SCFHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFHelper.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 				9506897020EB7689009C2EE7 /* NSDate+SCFExtension.m */,
 				9506897220EB783B009C2EE7 /* NSDate+SCFFormatter.h */,
 				9506897320EB783B009C2EE7 /* NSDate+SCFFormatter.m */,
+				9506897520EB7B62009C2EE7 /* NSDate+SCFHelper.h */,
+				9506897620EB7B62009C2EE7 /* NSDate+SCFHelper.m */,
 			);
 			path = NSDate;
 			sourceTree = "<group>";
@@ -576,6 +581,7 @@
 				9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */,
 				959A5A0B20D8F5E00097F0C1 /* UIBarButtonItem+SCFBadge.m in Sources */,
 				959A5A3920DB4AFE0097F0C1 /* UIImage+SCFAlpha.m in Sources */,
+				9506897720EB7B62009C2EE7 /* NSDate+SCFHelper.m in Sources */,
 				959A5A0020D8E7840097F0C1 /* main.m in Sources */,
 				959A5A2C20DA5ADC0097F0C1 /* UIColor+SCFGradient.m in Sources */,
 				959A5A1D20DA38350097F0C1 /* UIButton+SCFBackgroundImage.m in Sources */,
