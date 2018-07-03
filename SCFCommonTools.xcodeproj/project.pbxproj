@@ -31,6 +31,8 @@
 		9506895220E9FD1B009C2EE7 /* UIView+SCFFindOwnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895120E9FD1B009C2EE7 /* UIView+SCFFindOwnController.m */; };
 		9506895620EA033F009C2EE7 /* UIViewController+SCFStoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895520EA033F009C2EE7 /* UIViewController+SCFStoreKit.m */; };
 		9506895A20EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895920EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.m */; };
+		9506895D20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895C20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m */; };
+		9506896020EB5D36009C2EE7 /* UIColor+SCFWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506895F20EB5D36009C2EE7 /* UIColor+SCFWeb.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -109,6 +111,10 @@
 		9506895520EA033F009C2EE7 /* UIViewController+SCFStoreKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SCFStoreKit.m"; sourceTree = "<group>"; };
 		9506895820EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SCFSwipeGesture.h"; sourceTree = "<group>"; };
 		9506895920EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SCFSwipeGesture.m"; sourceTree = "<group>"; };
+		9506895B20EA1F30009C2EE7 /* UIWebView+SCFCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SCFCanvas.h"; sourceTree = "<group>"; };
+		9506895C20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SCFCanvas.m"; sourceTree = "<group>"; };
+		9506895E20EB5D36009C2EE7 /* UIColor+SCFWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCFWeb.h"; sourceTree = "<group>"; };
+		9506895F20EB5D36009C2EE7 /* UIColor+SCFWeb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCFWeb.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -275,6 +281,8 @@
 			children = (
 				9506895820EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.h */,
 				9506895920EA1B97009C2EE7 /* UIWebView+SCFSwipeGesture.m */,
+				9506895B20EA1F30009C2EE7 /* UIWebView+SCFCanvas.h */,
+				9506895C20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m */,
 			);
 			path = UIWebView;
 			sourceTree = "<group>";
@@ -378,6 +386,8 @@
 				959A5A3120DB39450097F0C1 /* UIColor+SCFModify.m */,
 				959A5A3320DB405B0097F0C1 /* UIColor+SCFRandom.h */,
 				959A5A3420DB405B0097F0C1 /* UIColor+SCFRandom.m */,
+				9506895E20EB5D36009C2EE7 /* UIColor+SCFWeb.h */,
+				9506895F20EB5D36009C2EE7 /* UIColor+SCFWeb.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -498,6 +508,7 @@
 				959A5A3C20DB7D300097F0C1 /* UIImage+SCFAnimatedGIF.m in Sources */,
 				9506890C20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m in Sources */,
 				9506891220E23C8D009C2EE7 /* UIImageView+SCFReflect.m in Sources */,
+				9506896020EB5D36009C2EE7 /* UIColor+SCFWeb.m in Sources */,
 				959A5A5420E0D5030097F0C1 /* UIImage+SCFResize.m in Sources */,
 				9506892820E376DB009C2EE7 /* UIScrollView+SCFAddition.m in Sources */,
 				9506892B20E48BAD009C2EE7 /* UIScrollView+SCFPages.m in Sources */,
@@ -522,6 +533,7 @@
 				9506894F20E6277B009C2EE7 /* UIView+SCFVisuals.m in Sources */,
 				9506893C20E5DDD6009C2EE7 /* UITextView+SCFInputLimit.m in Sources */,
 				9506892F20E4B329009C2EE7 /* UITextField+SCFHistory.m in Sources */,
+				9506895D20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m in Sources */,
 				959A5A4820DCDF130097F0C1 /* UIImage+SCFFileName.m in Sources */,
 				959A5A2020DA3F010097F0C1 /* UIButton+SCFCountDown.m in Sources */,
 				9506893F20E5E1D3009C2EE7 /* UITextView+SCFPinchZoom.m in Sources */,
