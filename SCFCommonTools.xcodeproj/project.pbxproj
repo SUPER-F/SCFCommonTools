@@ -43,6 +43,7 @@
 		9506897A20EB7D84009C2EE7 /* NSDate+SCFInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897920EB7D84009C2EE7 /* NSDate+SCFInternetDateTime.m */; };
 		9506897D20EB7F4C009C2EE7 /* NSDate+SCFReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897C20EB7F4C009C2EE7 /* NSDate+SCFReporting.m */; };
 		9506898020EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */; };
+		9506898420EC7D2D009C2EE7 /* NSString+SCFHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506898320EC7D2D009C2EE7 /* NSString+SCFHash.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -145,6 +146,8 @@
 		9506897C20EB7F4C009C2EE7 /* NSDate+SCFReporting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFReporting.m"; sourceTree = "<group>"; };
 		9506897E20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SCFAttributedString.h"; sourceTree = "<group>"; };
 		9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SCFAttributedString.m"; sourceTree = "<group>"; };
+		9506898220EC7D2D009C2EE7 /* NSString+SCFHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SCFHash.h"; sourceTree = "<group>"; };
+		9506898320EC7D2D009C2EE7 /* NSString+SCFHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCFHash.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 			children = (
 				9506897E20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.h */,
 				9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */,
+				9506898220EC7D2D009C2EE7 /* NSString+SCFHash.h */,
+				9506898320EC7D2D009C2EE7 /* NSString+SCFHash.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -599,6 +604,7 @@
 				959A5A5820E0F75A0097F0C1 /* UIImageView+SCFAddition.m in Sources */,
 				959A5A4E20E081D30097F0C1 /* UIImage+SCFOrientation.m in Sources */,
 				959A59F520D8E7830097F0C1 /* ViewController.m in Sources */,
+				9506898420EC7D2D009C2EE7 /* NSString+SCFHash.m in Sources */,
 				9506894C20E624C1009C2EE7 /* UIView+SCFShake.m in Sources */,
 				959A5A1A20DA34FA0097F0C1 /* UIButton+SCFBadge.m in Sources */,
 				9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */,
