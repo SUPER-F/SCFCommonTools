@@ -42,6 +42,7 @@
 		9506897720EB7B62009C2EE7 /* NSDate+SCFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897620EB7B62009C2EE7 /* NSDate+SCFHelper.m */; };
 		9506897A20EB7D84009C2EE7 /* NSDate+SCFInternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897920EB7D84009C2EE7 /* NSDate+SCFInternetDateTime.m */; };
 		9506897D20EB7F4C009C2EE7 /* NSDate+SCFReporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897C20EB7F4C009C2EE7 /* NSDate+SCFReporting.m */; };
+		9506898020EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -142,6 +143,8 @@
 		9506897920EB7D84009C2EE7 /* NSDate+SCFInternetDateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFInternetDateTime.m"; sourceTree = "<group>"; };
 		9506897B20EB7F4C009C2EE7 /* NSDate+SCFReporting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+SCFReporting.h"; sourceTree = "<group>"; };
 		9506897C20EB7F4C009C2EE7 /* NSDate+SCFReporting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SCFReporting.m"; sourceTree = "<group>"; };
+		9506897E20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+SCFAttributedString.h"; sourceTree = "<group>"; };
+		9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+SCFAttributedString.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -346,6 +349,15 @@
 			path = NSDate;
 			sourceTree = "<group>";
 		};
+		9506898120EB8541009C2EE7 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				9506897E20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.h */,
+				9506897F20EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +395,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9506898120EB8541009C2EE7 /* NSString */,
 				9506896E20EB7667009C2EE7 /* NSDate */,
 				9506896A20EB6FC3009C2EE7 /* UIWindow */,
 				9506895720EA1B7D009C2EE7 /* UIWebView */,
@@ -616,6 +629,7 @@
 				9506894520E60922009C2EE7 /* UITextView+SCFSelect.m in Sources */,
 				959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */,
 				959A5A4B20DCF8C60097F0C1 /* UIImage+SCFMerge.m in Sources */,
+				9506898020EB8534009C2EE7 /* NSMutableAttributedString+SCFAttributedString.m in Sources */,
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
