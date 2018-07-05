@@ -91,4 +91,15 @@
     return strlength;
 }
 
++ (NSString *)stringReverseWithString:(NSString *)strtemp {
+    NSMutableString *reverseString = [NSMutableString string];
+    NSInteger charLength = strtemp.length;
+    while (charLength > 0) {
+        charLength--;
+        NSRange subStrRange = NSMakeRange(charLength, 1);
+        [reverseString appendString:[strtemp substringWithRange:subStrRange]];
+    }
+    return reverseString.copy;
+}
+
 @end

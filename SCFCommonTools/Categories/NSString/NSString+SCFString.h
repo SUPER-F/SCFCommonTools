@@ -30,4 +30,7 @@
  */
 + (NSUInteger)stringLenght:(NSString*)strtemp;
 
+//字符串倒序
++ (NSString *)stringReverseWithString:(NSString *)strtemp;
+
 @end
