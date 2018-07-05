@@ -54,6 +54,7 @@
 		9506899C20EDFE19009C2EE7 /* NSString+SCFTrimming.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506899B20EDFE19009C2EE7 /* NSString+SCFTrimming.m */; };
 		950689A020EE0874009C2EE7 /* NSDictionary+SCFValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506899F20EE0874009C2EE7 /* NSDictionary+SCFValue.m */; };
 		950689A320EE2465009C2EE7 /* NSDictionary+SCFMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A220EE2465009C2EE7 /* NSDictionary+SCFMerge.m */; };
+		950689A620EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -178,6 +179,8 @@
 		9506899F20EE0874009C2EE7 /* NSDictionary+SCFValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCFValue.m"; sourceTree = "<group>"; };
 		950689A120EE2465009C2EE7 /* NSDictionary+SCFMerge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCFMerge.h"; sourceTree = "<group>"; };
 		950689A220EE2465009C2EE7 /* NSDictionary+SCFMerge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCFMerge.m"; sourceTree = "<group>"; };
+		950689A420EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCFURLParameters.h"; sourceTree = "<group>"; };
+		950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCFURLParameters.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -416,6 +419,8 @@
 				9506899F20EE0874009C2EE7 /* NSDictionary+SCFValue.m */,
 				950689A120EE2465009C2EE7 /* NSDictionary+SCFMerge.h */,
 				950689A220EE2465009C2EE7 /* NSDictionary+SCFMerge.m */,
+				950689A420EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.h */,
+				950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				959A5A2320DA44420097F0C1 /* UIButton+SCFImagePosition.m in Sources */,
 				959A5A2820DA502F0097F0C1 /* UIButton+SCFIndicator.m in Sources */,
 				9506891920E31D30009C2EE7 /* UILabel+SCFAutomaticWriting.m in Sources */,
+				950689A620EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m in Sources */,
 				9506899920EDF3DB009C2EE7 /* NSString+SCFPages.m in Sources */,
 				9506897420EB783B009C2EE7 /* NSDate+SCFFormatter.m in Sources */,
 				9506894220E60343009C2EE7 /* UITextView+SCFPlaceHolder.m in Sources */,
