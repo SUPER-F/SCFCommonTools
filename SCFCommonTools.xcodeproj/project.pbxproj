@@ -48,6 +48,7 @@
 		9506898A20ECB104009C2EE7 /* NSString+SCFBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506898920ECB104009C2EE7 /* NSString+SCFBase64.m */; };
 		9506898D20ECC621009C2EE7 /* NSString+SCFRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506898C20ECC621009C2EE7 /* NSString+SCFRegex.m */; };
 		9506899020ECCC25009C2EE7 /* NSString+SCFString.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506898F20ECCC25009C2EE7 /* NSString+SCFString.m */; };
+		9506899320ECD141009C2EE7 /* NSString+SCFPinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506899220ECD141009C2EE7 /* NSString+SCFPinYin.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -160,6 +161,8 @@
 		9506898C20ECC621009C2EE7 /* NSString+SCFRegex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCFRegex.m"; sourceTree = "<group>"; };
 		9506898E20ECCC25009C2EE7 /* NSString+SCFString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SCFString.h"; sourceTree = "<group>"; };
 		9506898F20ECCC25009C2EE7 /* NSString+SCFString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCFString.m"; sourceTree = "<group>"; };
+		9506899120ECD141009C2EE7 /* NSString+SCFPinYin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+SCFPinYin.h"; sourceTree = "<group>"; };
+		9506899220ECD141009C2EE7 /* NSString+SCFPinYin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCFPinYin.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				9506898C20ECC621009C2EE7 /* NSString+SCFRegex.m */,
 				9506898E20ECCC25009C2EE7 /* NSString+SCFString.h */,
 				9506898F20ECCC25009C2EE7 /* NSString+SCFString.m */,
+				9506899120ECD141009C2EE7 /* NSString+SCFPinYin.h */,
+				9506899220ECD141009C2EE7 /* NSString+SCFPinYin.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				9506892B20E48BAD009C2EE7 /* UIScrollView+SCFPages.m in Sources */,
 				9506896320EB67CC009C2EE7 /* UIWebView+SCFJavaScript.m in Sources */,
 				9506898D20ECC621009C2EE7 /* NSString+SCFRegex.m in Sources */,
+				9506899320ECD141009C2EE7 /* NSString+SCFPinYin.m in Sources */,
 				9506895620EA033F009C2EE7 /* UIViewController+SCFStoreKit.m in Sources */,
 				9506898720ECA9F1009C2EE7 /* NSString+SCFMD5.m in Sources */,
 				9506896920EB6E72009C2EE7 /* UIWebView+SCFWebStorage.m in Sources */,
