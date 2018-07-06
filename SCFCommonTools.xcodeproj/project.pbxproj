@@ -55,6 +55,7 @@
 		950689A020EE0874009C2EE7 /* NSDictionary+SCFValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506899F20EE0874009C2EE7 /* NSDictionary+SCFValue.m */; };
 		950689A320EE2465009C2EE7 /* NSDictionary+SCFMerge.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A220EE2465009C2EE7 /* NSDictionary+SCFMerge.m */; };
 		950689A620EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */; };
+		950689AA20EF5319009C2EE7 /* NSData+SCFEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A920EF5319009C2EE7 /* NSData+SCFEncrypt.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -181,6 +182,8 @@
 		950689A220EE2465009C2EE7 /* NSDictionary+SCFMerge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCFMerge.m"; sourceTree = "<group>"; };
 		950689A420EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+SCFURLParameters.h"; sourceTree = "<group>"; };
 		950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SCFURLParameters.m"; sourceTree = "<group>"; };
+		950689A820EF5319009C2EE7 /* NSData+SCFEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+SCFEncrypt.h"; sourceTree = "<group>"; };
+		950689A920EF5319009C2EE7 /* NSData+SCFEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+SCFEncrypt.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -425,6 +428,15 @@
 			path = NSDictionary;
 			sourceTree = "<group>";
 		};
+		950689A720EF4A5D009C2EE7 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				950689A820EF5319009C2EE7 /* NSData+SCFEncrypt.h */,
+				950689A920EF5319009C2EE7 /* NSData+SCFEncrypt.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +474,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				950689A720EF4A5D009C2EE7 /* NSData */,
 				9506899D20EE0820009C2EE7 /* NSDictionary */,
 				9506898120EB8541009C2EE7 /* NSString */,
 				9506896E20EB7667009C2EE7 /* NSDate */,
@@ -662,6 +675,7 @@
 				9506896920EB6E72009C2EE7 /* UIWebView+SCFWebStorage.m in Sources */,
 				959A5A4520DCA1FD0097F0C1 /* UIImage+SCFScale.m in Sources */,
 				9506895220E9FD1B009C2EE7 /* UIView+SCFFindOwnController.m in Sources */,
+				950689AA20EF5319009C2EE7 /* NSData+SCFEncrypt.m in Sources */,
 				9506891620E24622009C2EE7 /* UILabel+SCFAutoSize.m in Sources */,
 				9506897120EB7689009C2EE7 /* NSDate+SCFExtension.m in Sources */,
 				9506893220E4BFF7009C2EE7 /* UITextField+SCFSelect.m in Sources */,
