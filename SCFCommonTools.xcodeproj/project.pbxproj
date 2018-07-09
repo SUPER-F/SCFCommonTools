@@ -57,6 +57,7 @@
 		950689A620EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A520EE2A73009C2EE7 /* NSDictionary+SCFURLParameters.m */; };
 		950689AA20EF5319009C2EE7 /* NSData+SCFEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689A920EF5319009C2EE7 /* NSData+SCFEncrypt.m */; };
 		950689AD20EF7571009C2EE7 /* NSData+SCFHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689AC20EF7571009C2EE7 /* NSData+SCFHash.m */; };
+		950689B120F30BE9009C2EE7 /* NSObject+SCFRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 950689B020F30BE9009C2EE7 /* NSObject+SCFRuntime.m */; };
 		959A59F220D8E7830097F0C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F120D8E7830097F0C1 /* AppDelegate.m */; };
 		959A59F520D8E7830097F0C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959A59F420D8E7830097F0C1 /* ViewController.m */; };
 		959A59F820D8E7830097F0C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959A59F620D8E7830097F0C1 /* Main.storyboard */; };
@@ -187,6 +188,8 @@
 		950689A920EF5319009C2EE7 /* NSData+SCFEncrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+SCFEncrypt.m"; sourceTree = "<group>"; };
 		950689AB20EF7571009C2EE7 /* NSData+SCFHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+SCFHash.h"; sourceTree = "<group>"; };
 		950689AC20EF7571009C2EE7 /* NSData+SCFHash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+SCFHash.m"; sourceTree = "<group>"; };
+		950689AF20F30BE9009C2EE7 /* NSObject+SCFRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SCFRuntime.h"; sourceTree = "<group>"; };
+		950689B020F30BE9009C2EE7 /* NSObject+SCFRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SCFRuntime.m"; sourceTree = "<group>"; };
 		959A59ED20D8E7830097F0C1 /* SCFCommonTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCFCommonTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959A59F020D8E7830097F0C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		959A59F120D8E7830097F0C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -442,6 +445,16 @@
 			path = NSData;
 			sourceTree = "<group>";
 		};
+		950689AE20F309F1009C2EE7 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				950689AF20F30BE9009C2EE7 /* NSObject+SCFRuntime.h */,
+				950689B020F30BE9009C2EE7 /* NSObject+SCFRuntime.m */,
+			);
+			name = NSObject;
+			path = SCFCommonTools/Categories/NSObject;
+			sourceTree = SOURCE_ROOT;
+		};
 		959A59E420D8E7830097F0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +492,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				950689AE20F309F1009C2EE7 /* NSObject */,
 				950689A720EF4A5D009C2EE7 /* NSData */,
 				9506899D20EE0820009C2EE7 /* NSDictionary */,
 				9506898120EB8541009C2EE7 /* NSString */,
@@ -721,6 +735,7 @@
 				959A5A4220DC8FBB0097F0C1 /* UIImage+SCFColor.m in Sources */,
 				9506891D20E3610C009C2EE7 /* UINavigationController+SCFStackManager.m in Sources */,
 				959A5A3F20DBBD000097F0C1 /* UIImage+SCFCapture.m in Sources */,
+				950689B120F30BE9009C2EE7 /* NSObject+SCFRuntime.m in Sources */,
 				9506899620EDB04B009C2EE7 /* NSString+SCFSize.m in Sources */,
 				959A5A3520DB405B0097F0C1 /* UIColor+SCFRandom.m in Sources */,
 				9506894520E60922009C2EE7 /* UITextView+SCFSelect.m in Sources */,
