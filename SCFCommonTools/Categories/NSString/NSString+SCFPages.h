@@ -22,6 +22,6 @@
  @param rect 你想要在多大的窗口显示
  @return 返回一个数组，数组的元素是NSRange，根据NSRange来进行截取字符串
  */
-- (NSArray *)scf_getPagesFromString:(NSString *)string withFont:(UIFont *)font inRect:(CGRect)rect;
+- (NSArray *)getPagesFromString:(NSString *)string withFont:(UIFont *)font inRect:(CGRect)rect;
 
 @end

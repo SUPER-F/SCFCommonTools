@@ -11,116 +11,116 @@
 #import "UIButton+SCFBadge.h"
 #import <objc/runtime.h>
 
-NSString const *scf_UIButton_badgeKey = @"scf_UIButton_badgeKey";
+NSString const *UIButton_badgeKey = @"UIButton_badgeKey";
 
-NSString const *scf_UIButton_badgeBGColorKey = @"scf_UIButton_badgeBGColorKey";
-NSString const *scf_UIButton_badgeTextColorKey = @"scf_UIButton_badgeTextColorKey";
-NSString const *scf_UIButton_badgeFontKey = @"scf_UIButton_badgeFontKey";
-NSString const *scf_UIButton_badgePaddingKey = @"scf_UIButton_badgePaddingKey";
-NSString const *scf_UIButton_badgeMinSizeKey = @"scf_UIButton_badgeMinSizeKey";
-NSString const *scf_UIButton_badgeOriginXKey = @"scf_UIButton_badgeOriginXKey";
-NSString const *scf_UIButton_badgeOriginYKey = @"scf_UIButton_badgeOriginYKey";
-NSString const *scf_UIButton_shouldHideBadgeAtZeroKey = @"scf_UIButton_shouldHideBadgeAtZeroKey";
-NSString const *scf_UIButton_shouldAnimateBadgeKey = @"scf_UIButton_shouldAnimateBadgeKey";
-NSString const *scf_UIButton_badgeValueKey = @"scf_UIButton_badgeValueKey";
+NSString const *UIButton_badgeBGColorKey = @"UIButton_badgeBGColorKey";
+NSString const *UIButton_badgeTextColorKey = @"UIButton_badgeTextColorKey";
+NSString const *UIButton_badgeFontKey = @"UIButton_badgeFontKey";
+NSString const *UIButton_badgePaddingKey = @"UIButton_badgePaddingKey";
+NSString const *UIButton_badgeMinSizeKey = @"UIButton_badgeMinSizeKey";
+NSString const *UIButton_badgeOriginXKey = @"UIButton_badgeOriginXKey";
+NSString const *UIButton_badgeOriginYKey = @"UIButton_badgeOriginYKey";
+NSString const *UIButton_shouldHideBadgeAtZeroKey = @"UIButton_shouldHideBadgeAtZeroKey";
+NSString const *UIButton_shouldAnimateBadgeKey = @"UIButton_shouldAnimateBadgeKey";
+NSString const *UIButton_badgeValueKey = @"UIButton_badgeValueKey";
 
 @implementation UIButton (SCFBadge)
 
-@dynamic scf_badgeValue, scf_badgeBGColor, scf_badgeTextColor, scf_badgeFont;
-@dynamic scf_badgePadding, scf_badgeMinSize, scf_badgeOriginX, scf_badgeOriginY;
-@dynamic scf_shouldAnimateBadge, scf_shouldHideBadgeAtZero;
-@dynamic scf_badge;
+@dynamic badgeValue, badgeBGColor, badgeTextColor, badgeFont;
+@dynamic badgePadding, badgeMinSize, badgeOriginX, badgeOriginY;
+@dynamic shouldAnimateBadge, shouldHideBadgeAtZero;
+@dynamic badge;
 
-- (void)scf_badgeInit {
+- (void)badgeInit {
     // Default design initialization
-    self.scf_badgeBGColor = [UIColor redColor];
-    self.scf_badgeTextColor = [UIColor whiteColor];
-    self.scf_badgeFont = [UIFont systemFontOfSize:12.0];
-    self.scf_badgePadding = 6.0;
-    self.scf_badgeMinSize = 8.0;
-    self.scf_badgeOriginX = self.frame.size.width - self.scf_badge.frame.size.width / 2.0;
-    self.scf_badgeOriginY = -4.0;
-    self.scf_shouldHideBadgeAtZero = YES;
-    self.scf_shouldAnimateBadge = YES;
+    self.badgeBGColor = [UIColor redColor];
+    self.badgeTextColor = [UIColor whiteColor];
+    self.badgeFont = [UIFont systemFontOfSize:12.0];
+    self.badgePadding = 6.0;
+    self.badgeMinSize = 8.0;
+    self.badgeOriginX = self.frame.size.width - self.badge.frame.size.width / 2.0;
+    self.badgeOriginY = -4.0;
+    self.shouldHideBadgeAtZero = YES;
+    self.shouldAnimateBadge = YES;
     
     self.clipsToBounds = NO;
 }
 
 #pragma mark - Utility methods
 #pragma mark  当属性值改变后，刷新 badge
-- (void)scf_refreshBadge {
+- (void)refreshBadge {
     // 赋值新属性值
-    self.scf_badge.textColor = self.scf_badgeTextColor;
-    self.scf_badge.backgroundColor = self.scf_badgeBGColor;
-    self.scf_badge.font = self.scf_badgeFont;
+    self.badge.textColor = self.badgeTextColor;
+    self.badge.backgroundColor = self.badgeBGColor;
+    self.badge.font = self.badgeFont;
     
-    if (!self.scf_badgeValue
-        || [self.scf_badgeValue isEqualToString:@""]
-        || ([self.scf_badgeValue isEqualToString:@"0"] && self.scf_shouldHideBadgeAtZero)) {
-        self.scf_badge.hidden = YES;
+    if (!self.badgeValue
+        || [self.badgeValue isEqualToString:@""]
+        || ([self.badgeValue isEqualToString:@"0"] && self.shouldHideBadgeAtZero)) {
+        self.badge.hidden = YES;
     }
     else {
-        self.scf_badge.hidden = NO;
-        [self scf_updateBadgeValueAnimated:YES];
+        self.badge.hidden = NO;
+        [self updateBadgeValueAnimated:YES];
     }
 }
 
 #pragma mark 处理 badge 值改变
-- (void)scf_updateBadgeValueAnimated:(BOOL)animated {
+- (void)updateBadgeValueAnimated:(BOOL)animated {
     // 如果 badge 值改变，并且允许动画
     if (animated
-        && self.scf_shouldAnimateBadge
-        && ![self.scf_badge.text isEqualToString:self.scf_badgeValue]) {
+        && self.shouldAnimateBadge
+        && ![self.badge.text isEqualToString:self.badgeValue]) {
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         [animation setFromValue:[NSNumber numberWithFloat:1.5]];
         [animation setToValue:[NSNumber numberWithFloat:1.0]];
         [animation setDuration:0.2];
         [animation setTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.4f :1.3f :1.0f :1.0f]];
-        [self.scf_badge.layer addAnimation:animation forKey:@"bounceAnimation"];
+        [self.badge.layer addAnimation:animation forKey:@"bounceAnimation"];
     }
     
     // 重新赋值
-    self.scf_badge.text = self.scf_badgeValue;
+    self.badge.text = self.badgeValue;
     
     // 是否需要 badge size 动画
     if (animated
-        && self.scf_shouldAnimateBadge) {
+        && self.shouldAnimateBadge) {
         [UIView animateWithDuration:0.2 animations:^{
-            [self scf_updateBadgeFrame];
+            [self updateBadgeFrame];
         }];
     }
     else {
-        [self scf_updateBadgeFrame];
+        [self updateBadgeFrame];
     }
 }
 
-- (void)scf_updateBadgeFrame {
-    CGSize lbExpectedSize = [self scf_badgeExpectedSize];
+- (void)updateBadgeFrame {
+    CGSize lbExpectedSize = [self badgeExpectedSize];
     
     // 如果实际最小高度小于设定的最小高度，则使用预定最小高度
-    CGFloat minHeight = (lbExpectedSize.height < self.scf_badgeMinSize) ? self.scf_badgeMinSize : lbExpectedSize.height;
+    CGFloat minHeight = (lbExpectedSize.height < self.badgeMinSize) ? self.badgeMinSize : lbExpectedSize.height;
     // 根据最小高度确定最小宽度
     CGFloat minWidth = (lbExpectedSize.width < minHeight) ? minHeight : lbExpectedSize.width;
-    CGFloat padding = self.scf_badgePadding;
+    CGFloat padding = self.badgePadding;
     
     // 设置 badge 的frame
-    self.scf_badge.layer.masksToBounds = YES;
-    self.scf_badge.frame = CGRectMake(self.scf_badgeOriginX, self.scf_badgeOriginY, minWidth + padding, minHeight + padding);
-    self.scf_badge.layer.cornerRadius = (minHeight + padding) / 2.0;
+    self.badge.layer.masksToBounds = YES;
+    self.badge.frame = CGRectMake(self.badgeOriginX, self.badgeOriginY, minWidth + padding, minHeight + padding);
+    self.badge.layer.cornerRadius = (minHeight + padding) / 2.0;
 }
 
-- (CGSize)scf_badgeExpectedSize {
+- (CGSize)badgeExpectedSize {
     // 当 badge 值增大后，需要增大 badge 的 size
     // 计算 badge 的 size 以适应新值
     // 创建新的中间 label 去适应大小，而不是改变原 label 的size
-    UILabel *lbFrame = [self scf_duplicateLabel:self.scf_badge];
+    UILabel *lbFrame = [self duplicateLabel:self.badge];
     [lbFrame sizeToFit];
     
     CGSize lbExpectedSize = lbFrame.frame.size;
     return lbExpectedSize;
 }
 
-- (UILabel *)scf_duplicateLabel:(UILabel *)lbToCopy {
+- (UILabel *)duplicateLabel:(UILabel *)lbToCopy {
     UILabel *lbDuplicate = [[UILabel alloc] initWithFrame:lbToCopy.frame];
     lbDuplicate.text = lbToCopy.text;
     lbDuplicate.font = lbToCopy.font;
@@ -129,163 +129,163 @@ NSString const *scf_UIButton_badgeValueKey = @"scf_UIButton_badgeValueKey";
 }
 
 #pragma mark 移除 badge
-- (void)scf_removeBadge {
+- (void)removeBadge {
     // 动画移除
     [UIView animateWithDuration:0.2 animations:^{
-        self.scf_badge.transform = CGAffineTransformMakeScale(0, 0);
+        self.badge.transform = CGAffineTransformMakeScale(0, 0);
     } completion:^(BOOL finished) {
-        [self.scf_badge removeFromSuperview];
-        self.scf_badge = nil;
+        [self.badge removeFromSuperview];
+        self.badge = nil;
     }];
 }
 
 #pragma mark - getters / setters
-#pragma mark scf_badge
-- (UILabel *)scf_badge {
-    UILabel *lb = objc_getAssociatedObject(self, &scf_UIButton_badgeKey);
+#pragma mark badge
+- (UILabel *)badge {
+    UILabel *lb = objc_getAssociatedObject(self, &UIButton_badgeKey);
     if (!lb) {
-        lb = [[UILabel alloc] initWithFrame:CGRectMake(self.scf_badgeOriginX, self.scf_badgeOriginY, 20, 20)];
-        [self setScf_badge:lb];
-        [self scf_badgeInit];
+        lb = [[UILabel alloc] initWithFrame:CGRectMake(self.badgeOriginX, self.badgeOriginY, 20, 20)];
+        [self setbadge:lb];
+        [self badgeInit];
         [self addSubview:lb];
         lb.textAlignment = NSTextAlignmentCenter;
     }
     return lb;
 }
 
-- (void)setScf_badge:(UILabel *)scf_badge {
-    objc_setAssociatedObject(self, &scf_UIButton_badgeKey, scf_badge, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setbadge:(UILabel *)badge {
+    objc_setAssociatedObject(self, &UIButton_badgeKey, badge, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark scf_badgeValue
-- (NSString *)scf_badgeValue {
-    return objc_getAssociatedObject(self, &scf_UIButton_badgeValueKey);
+#pragma mark badgeValue
+- (NSString *)badgeValue {
+    return objc_getAssociatedObject(self, &UIButton_badgeValueKey);
 }
 
-- (void)setScf_badgeValue:(NSString *)scf_badgeValue {
-    objc_setAssociatedObject(self, &scf_UIButton_badgeValueKey, scf_badgeValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setbadgeValue:(NSString *)badgeValue {
+    objc_setAssociatedObject(self, &UIButton_badgeValueKey, badgeValue, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     // 处理改变value
-    [self scf_updateBadgeValueAnimated:YES];
-    [self scf_refreshBadge];
+    [self updateBadgeValueAnimated:YES];
+    [self refreshBadge];
 }
 
-#pragma mark scf_badgeBGColor
-- (UIColor *)scf_badgeBGColor {
-    return objc_getAssociatedObject(self, &scf_UIButton_badgeBGColorKey);
+#pragma mark badgeBGColor
+- (UIColor *)badgeBGColor {
+    return objc_getAssociatedObject(self, &UIButton_badgeBGColorKey);
 }
 
-- (void)setScf_badgeBGColor:(UIColor *)scf_badgeBGColor {
-    objc_setAssociatedObject(self, &scf_UIButton_badgeBGColorKey, scf_badgeBGColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_refreshBadge];
+- (void)setbadgeBGColor:(UIColor *)badgeBGColor {
+    objc_setAssociatedObject(self, &UIButton_badgeBGColorKey, badgeBGColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self refreshBadge];
     }
 }
 
-#pragma mark scf_badgeTextColor
-- (UIColor *)scf_badgeTextColor {
-    return objc_getAssociatedObject(self, &scf_UIButton_badgeTextColorKey);
+#pragma mark badgeTextColor
+- (UIColor *)badgeTextColor {
+    return objc_getAssociatedObject(self, &UIButton_badgeTextColorKey);
 }
 
-- (void)setScf_badgeTextColor:(UIColor *)scf_badgeTextColor {
-    objc_setAssociatedObject(self, &scf_UIButton_badgeTextColorKey, scf_badgeTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_refreshBadge];
+- (void)setbadgeTextColor:(UIColor *)badgeTextColor {
+    objc_setAssociatedObject(self, &UIButton_badgeTextColorKey, badgeTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self refreshBadge];
     }
 }
 
-#pragma mark scf_badgeFont
--  (UIFont *)scf_badgeFont {
-    return objc_getAssociatedObject(self, &scf_UIButton_badgeFontKey);
+#pragma mark badgeFont
+-  (UIFont *)badgeFont {
+    return objc_getAssociatedObject(self, &UIButton_badgeFontKey);
 }
 
-- (void)setScf_badgeFont:(UIFont *)scf_badgeFont {
-    objc_setAssociatedObject(self, &scf_UIButton_badgeFontKey, scf_badgeFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_refreshBadge];
+- (void)setbadgeFont:(UIFont *)badgeFont {
+    objc_setAssociatedObject(self, &UIButton_badgeFontKey, badgeFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self refreshBadge];
     }
 }
 
-#pragma mark scf_badgePadding
-- (CGFloat)scf_badgePadding {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_badgePaddingKey);
+#pragma mark badgePadding
+- (CGFloat)badgePadding {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_badgePaddingKey);
     return number.floatValue;
 }
 
-- (void)setScf_badgePadding:(CGFloat)scf_badgePadding {
-    NSNumber *number = [NSNumber numberWithDouble:scf_badgePadding];
-    objc_setAssociatedObject(self, &scf_UIButton_badgePaddingKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_updateBadgeFrame];
+- (void)setbadgePadding:(CGFloat)badgePadding {
+    NSNumber *number = [NSNumber numberWithDouble:badgePadding];
+    objc_setAssociatedObject(self, &UIButton_badgePaddingKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self updateBadgeFrame];
     }
 }
 
-#pragma mark scf_badgeMinSize
-- (CGFloat)scf_badgeMinSize {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_badgeMinSizeKey);
+#pragma mark badgeMinSize
+- (CGFloat)badgeMinSize {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_badgeMinSizeKey);
     return number.floatValue;
 }
 
-- (void)setScf_badgeMinSize:(CGFloat)scf_badgeMinSize {
-    NSNumber *number = [NSNumber numberWithDouble:scf_badgeMinSize];
-    objc_setAssociatedObject(self, &scf_UIButton_badgeMinSizeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_updateBadgeFrame];
+- (void)setbadgeMinSize:(CGFloat)badgeMinSize {
+    NSNumber *number = [NSNumber numberWithDouble:badgeMinSize];
+    objc_setAssociatedObject(self, &UIButton_badgeMinSizeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self updateBadgeFrame];
     }
 }
 
-#pragma mark scf_badgeOriginX
-- (CGFloat)scf_badgeOriginX {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_badgeOriginXKey);
+#pragma mark badgeOriginX
+- (CGFloat)badgeOriginX {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_badgeOriginXKey);
     return number.floatValue;
 }
 
-- (void)setScf_badgeOriginX:(CGFloat)scf_badgeOriginX {
-    NSNumber *number = [NSNumber numberWithDouble:scf_badgeOriginX];
-    objc_setAssociatedObject(self, &scf_UIButton_badgeOriginXKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_updateBadgeFrame];
+- (void)setbadgeOriginX:(CGFloat)badgeOriginX {
+    NSNumber *number = [NSNumber numberWithDouble:badgeOriginX];
+    objc_setAssociatedObject(self, &UIButton_badgeOriginXKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self updateBadgeFrame];
     }
 }
 
-#pragma mark scf_badgeOriginY
-- (CGFloat)scf_badgeOriginY {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_badgeOriginYKey);
+#pragma mark badgeOriginY
+- (CGFloat)badgeOriginY {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_badgeOriginYKey);
     return number.floatValue;
 }
 
-- (void)setScf_badgeOriginY:(CGFloat)scf_badgeOriginY {
-    NSNumber *number = [NSNumber numberWithDouble:scf_badgeOriginY];
-    objc_setAssociatedObject(self, &scf_UIButton_badgeOriginYKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_updateBadgeFrame];
+- (void)setbadgeOriginY:(CGFloat)badgeOriginY {
+    NSNumber *number = [NSNumber numberWithDouble:badgeOriginY];
+    objc_setAssociatedObject(self, &UIButton_badgeOriginYKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self updateBadgeFrame];
     }
 }
 
-#pragma mark scf_shouleHideBadgeAtZero
-- (BOOL)scf_shouldHideBadgeAtZero {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_shouldHideBadgeAtZeroKey);
+#pragma mark shouleHideBadgeAtZero
+- (BOOL)shouldHideBadgeAtZero {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey);
     return number.boolValue;
 }
 
-- (void)setScf_shouldHideBadgeAtZero:(BOOL)scf_shouldHideBadgeAtZero {
-    NSNumber *number = [NSNumber numberWithBool:scf_shouldHideBadgeAtZero];
-    objc_setAssociatedObject(self, &scf_UIButton_shouldHideBadgeAtZeroKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_refreshBadge];
+- (void)setshouldHideBadgeAtZero:(BOOL)shouldHideBadgeAtZero {
+    NSNumber *number = [NSNumber numberWithBool:shouldHideBadgeAtZero];
+    objc_setAssociatedObject(self, &UIButton_shouldHideBadgeAtZeroKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self refreshBadge];
     }
 }
 
-#pragma mark scf_shouldAnimateBadge
-- (BOOL)scf_shouldAnimateBadge {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_UIButton_shouldAnimateBadgeKey);
+#pragma mark shouldAnimateBadge
+- (BOOL)shouldAnimateBadge {
+    NSNumber *number = objc_getAssociatedObject(self, &UIButton_shouldAnimateBadgeKey);
     return number.boolValue;
 }
 
-- (void)setScf_shouldAnimateBadge:(BOOL)scf_shouldAnimateBadge {
-    NSNumber *number = [NSNumber numberWithBool:scf_shouldAnimateBadge];
-    objc_setAssociatedObject(self, &scf_UIButton_shouldAnimateBadgeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    if (self.scf_badge) {
-        [self scf_refreshBadge];
+- (void)setshouldAnimateBadge:(BOOL)shouldAnimateBadge {
+    NSNumber *number = [NSNumber numberWithBool:shouldAnimateBadge];
+    objc_setAssociatedObject(self, &UIButton_shouldAnimateBadgeKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (self.badge) {
+        [self refreshBadge];
     }
 }
 

@@ -20,6 +20,6 @@
  @param title 按钮标题
  @param waitTitle 倒计时过程中显示的标题
  */
-- (void)scf_countDownTime:(NSInteger)timeout title:(NSString *)title waitTitle:(NSString *)waitTitle;
+- (void)countDownTime:(NSInteger)timeout title:(NSString *)title waitTitle:(NSString *)waitTitle;
 
 @end

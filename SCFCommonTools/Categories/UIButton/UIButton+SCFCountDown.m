@@ -12,7 +12,7 @@
 
 @implementation UIButton (SCFCountDown)
 
-- (void)scf_countDownTime:(NSInteger)timeout title:(NSString *)title waitTitle:(NSString *)waitTitle {
+- (void)countDownTime:(NSInteger)timeout title:(NSString *)title waitTitle:(NSString *)waitTitle {
     __block NSInteger time = timeout; //倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);

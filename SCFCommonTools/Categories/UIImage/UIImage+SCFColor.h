@@ -19,7 +19,7 @@
  @param color 颜色
  @return 纯色图片
  */
-+ (UIImage *)scf_imageFromColor:(UIColor *)color;
++ (UIImage *)imageFromColor:(UIColor *)color;
 
 
 /**
@@ -28,7 +28,7 @@
  @param fromImage 原图片
  @return 转化后的灰度图
  */
-+ (UIImage *)scf_imageCovertToGrayFromImage:(UIImage *)fromImage;
++ (UIImage *)imageCovertToGrayFromImage:(UIImage *)fromImage;
 
 
 /**
@@ -37,7 +37,7 @@
  @param point 某一点
  @return 获取的颜色
  */
-- (UIColor *)scf_imageColorAtPoint:(CGPoint)point;
+- (UIColor *)imageColorAtPoint:(CGPoint)point;
 
 
 /**
@@ -46,6 +46,6 @@
  @param pixel 某一像素
  @return 获取的颜色
  */
-- (UIColor *)scf_imageColorAtPixel:(CGPoint)pixel;
+- (UIColor *)imageColorAtPixel:(CGPoint)pixel;
 
 @end

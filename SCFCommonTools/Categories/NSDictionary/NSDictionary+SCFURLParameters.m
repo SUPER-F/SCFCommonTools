@@ -12,7 +12,7 @@
 
 @implementation NSDictionary (SCFURLParameters)
 
-+ (NSDictionary *)scf_dictionaryWithURLString:(NSString *)urlString {
++ (NSDictionary *)dictionaryWithURLString:(NSString *)urlString {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSArray *parameters = [urlString componentsSeparatedByString:@"&"];
     for(NSString *parameter in parameters) {
@@ -29,7 +29,7 @@
     return [NSDictionary dictionaryWithDictionary:dict];
 }
 
-- (NSString *)scf_urlParametersString {
+- (NSString *)urlParametersString {
     NSMutableString *string = [NSMutableString string];
     for (NSString *key in [self allKeys]) {
         if ([string length]) {

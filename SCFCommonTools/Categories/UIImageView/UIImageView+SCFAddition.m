@@ -12,27 +12,27 @@
 
 @implementation UIImageView (SCFAddition)
 
-+ (UIImageView *)scf_imageViewWithImageNamed:(NSString *)imageName {
++ (UIImageView *)imageViewWithImageNamed:(NSString *)imageName {
     return [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];
 }
 
-+ (UIImageView *)scf_imageViewWithFrame:(CGRect)frame {
++ (UIImageView *)imageViewWithFrame:(CGRect)frame {
     return [[UIImageView alloc] initWithFrame:frame];
 }
 
-+ (UIImageView *)scf_imageViewStretchableImageNamed:(NSString *)imageName frame:(CGRect)frame {
++ (UIImageView *)imageViewStretchableImageNamed:(NSString *)imageName frame:(CGRect)frame {
     UIImage *image = [UIImage imageNamed:imageName];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
     imageView.image = [image stretchableImageWithLeftCapWidth:image.size.width / 2 topCapHeight:image.size.height / 2];
     return imageView;
 }
 
-+ (UIImageView *)scf_imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration {
++ (UIImageView *)imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration {
     if (!imageArray || imageArray.count <= 0) {
         return nil;
     }
     
-    UIImageView *imageView = [UIImageView scf_imageViewWithImageNamed:[imageArray firstObject]];
+    UIImageView *imageView = [UIImageView imageViewWithImageNamed:[imageArray firstObject]];
     NSMutableArray *images = [NSMutableArray array];
     for (NSInteger i = 0; i < imageArray.count; i++) {
         UIImage *image = [UIImage imageNamed:[imageArray objectAtIndex:i]];
@@ -46,13 +46,13 @@
     return imageView;
 }
 
-- (void)scf_setStretchableImageWithName:(NSString *)imageName {
+- (void)setStretchableImageWithName:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName];
     self.image = [image stretchableImageWithLeftCapWidth:image.size.width / 2 topCapHeight:image.size.height / 2];
 }
 
 #pragma mark - 画水印
-- (void)scf_setImage:(UIImage *)image withWaterMarkImage:(UIImage *)markImage inRect:(CGRect)rect {
+- (void)setImage:(UIImage *)image withWaterMarkImage:(UIImage *)markImage inRect:(CGRect)rect {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 4.0) {
         UIGraphicsBeginImageContextWithOptions(self.image.size, NO, 0.0); // 0.0 for scale means "scale for device's main screen".
     }
@@ -67,7 +67,7 @@
     self.image = newImage;
 }
 
-- (void)scf_setImage:(UIImage *)image withWaterMarkString:(NSString *)markString inRect:(CGRect)rect color:(UIColor *)color font:(UIFont *)font {
+- (void)setImage:(UIImage *)image withWaterMarkString:(NSString *)markString inRect:(CGRect)rect color:(UIColor *)color font:(UIFont *)font {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 4.0) {
         UIGraphicsBeginImageContextWithOptions(self.image.size, NO, 0.0); // 0.0 for scale means "scale for device's main screen".
     }
@@ -92,7 +92,7 @@
     self.image = newImage;
 }
 
-- (void)scf_setImage:(UIImage *)image withWaterMarkString:(NSString *)markString atPoint:(CGPoint)point color:(UIColor *)color font:(UIFont *)font {
+- (void)setImage:(UIImage *)image withWaterMarkString:(NSString *)markString atPoint:(CGPoint)point color:(UIColor *)color font:(UIFont *)font {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 4.0) {
         UIGraphicsBeginImageContextWithOptions(self.image.size, NO, 0.0); // 0.0 for scale means "scale for device's main screen".
     }

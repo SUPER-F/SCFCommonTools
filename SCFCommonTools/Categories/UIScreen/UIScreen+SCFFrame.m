@@ -13,34 +13,34 @@
 @implementation UIScreen (SCFFrame)
 
 #pragma mark - public methods
-+ (CGSize)scf_size {
++ (CGSize)size {
     return [[UIScreen mainScreen] bounds].size;
 }
 
-+ (CGFloat)scf_width {
++ (CGFloat)width {
     return [[UIScreen mainScreen] bounds].size.width;
 }
 
-+ (CGFloat)scf_height {
++ (CGFloat)height {
     return [[UIScreen mainScreen] bounds].size.height;
 }
 
-+ (CGSize)scf_sizeOrientation {
++ (CGSize)sizeOrientation {
     CGFloat systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
     BOOL isLand = UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation);
     
-    return (systemVersion > 8.0 && isLand) ? scf_exchangeWidthToHeight([UIScreen scf_size]) : [UIScreen scf_size];
+    return (systemVersion > 8.0 && isLand) ? exchangeWidthToHeight([UIScreen size]) : [UIScreen size];
 }
 
-+ (CGFloat)scf_widthOrientation {
-    return [UIScreen scf_sizeOrientation].width;
++ (CGFloat)widthOrientation {
+    return [UIScreen sizeOrientation].width;
 }
 
-+ (CGFloat)scf_heightOrientation {
-    return [UIScreen scf_sizeOrientation].height;
++ (CGFloat)heightOrientation {
+    return [UIScreen sizeOrientation].height;
 }
 
-+ (CGSize)scf_sizeDPI {
++ (CGSize)sizeDPI {
     CGSize size = [[UIScreen mainScreen] bounds].size;
     CGFloat scale = [[UIScreen mainScreen] scale];
     return CGSizeMake(size.width * scale, size.height * scale);
@@ -48,7 +48,7 @@
 
 #pragma mark - private methods
 // 交换高度与宽度
-static inline CGSize scf_exchangeWidthToHeight(CGSize size) {
+static inline CGSize exchangeWidthToHeight(CGSize size) {
     return CGSizeMake(size.height, size.width);
 }
 

@@ -20,6 +20,6 @@
  @param secondImage 第二个图片
  @return 合并后的图片
  */
-+ (UIImage *)scf_imageMergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage;
++ (UIImage *)imageMergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage;
 
 @end

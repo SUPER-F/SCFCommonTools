@@ -15,20 +15,20 @@ static const void *SCFTextViewInputLimitMaxLength = &SCFTextViewInputLimitMaxLen
 
 @implementation UITextView (SCFInputLimit)
 
-- (void)setScf_maxLength:(NSInteger)scf_maxLength {
+- (void)setMaxLength:(NSInteger)maxLength {
     objc_setAssociatedObject(self,
                              SCFTextViewInputLimitMaxLength,
-                             @(scf_maxLength),
+                             @(maxLength),
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scf_textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:self];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewTextDidChange:) name:UITextViewTextDidChangeNotification object:self];
 }
 
-- (NSInteger)scf_maxLength {
+- (NSInteger)maxLength {
     NSNumber *number = objc_getAssociatedObject(self, SCFTextViewInputLimitMaxLength);
     return number.integerValue;
 }
 
-- (void)scf_textViewTextDidChange:(NSNotification *)notification {
+- (void)textViewTextDidChange:(NSNotification *)notification {
     NSString *toBeString = self.text;
     // 获取高亮部分
     UITextRange *selectedRange = [self markedTextRange];
@@ -37,15 +37,15 @@ static const void *SCFTextViewInputLimitMaxLength = &SCFTextViewInputLimitMaxLen
     // 如果没有高亮选择的字，则对已输入的文字进行字数统计和限制
     // 在iOS7下，position对象总是不为nil
     if ((!position || !selectedRange)
-        && (self.scf_maxLength > 0 && toBeString.length > self.scf_maxLength)) {
-        NSRange rangeAtIndex = [toBeString rangeOfComposedCharacterSequenceAtIndex:self.scf_maxLength];
+        && (self.maxLength > 0 && toBeString.length > self.maxLength)) {
+        NSRange rangeAtIndex = [toBeString rangeOfComposedCharacterSequenceAtIndex:self.maxLength];
         if (rangeAtIndex.length == 1) {
-            self.text = [toBeString substringToIndex:self.scf_maxLength];
+            self.text = [toBeString substringToIndex:self.maxLength];
         }
         else {
-            NSRange rangeForRange = [toBeString rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, self.scf_maxLength)];
+            NSRange rangeForRange = [toBeString rangeOfComposedCharacterSequencesForRange:NSMakeRange(0, self.maxLength)];
             NSInteger tmpLength;
-            if (rangeForRange.length > self.scf_maxLength) {
+            if (rangeForRange.length > self.maxLength) {
                 tmpLength = rangeForRange.length - rangeAtIndex.length;
             }
             else {

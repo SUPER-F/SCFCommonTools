@@ -14,9 +14,9 @@
 
 // 使用活动指示器代替按钮的文本
 // 显示活动指示器，隐藏按钮文本
-- (void)scf_showIndicator;
+- (void)showIndicator;
 
 // 隐藏活动指示器，显示按钮文本
-- (void)scf_hideIndicator;
+- (void)hideIndicator;
 
 @end

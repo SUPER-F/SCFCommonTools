@@ -22,15 +22,15 @@
  
  例如，假设GIF包含三个框架。第0帧有持续时间3。第一帧的时间是9。框架2有持续时间15。我将每个持续时间除以所有持续时间的最大公分母，也就是3，然后把每一帧的次数相加。因此，“animation”将包含第0 /3 = 1次，然后第1 /3 = 3次，然后第2 /3 = 5次。我设置的动画。持续时间(3+9+15)/100 = 0.27秒。
  */
-+ (UIImage *)scf_animatedImageWithAnimatedGIFData:(NSData *)theData;
++ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)theData;
 
-+ (UIImage *)scf_animatedImageWithAnimatedGIFURL:(NSURL *)theURL;
++ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)theURL;
 
 #pragma mark - 另外一种实现方式
-+ (UIImage *)scf_animatedImageWithGIFData:(NSData *)data;
++ (UIImage *)animatedImageWithGIFData:(NSData *)data;
 
-+ (UIImage *)scf_animatedImageWithGIFNamed:(NSString *)name;
++ (UIImage *)animatedImageWithGIFNamed:(NSString *)name;
 
-- (UIImage *)scf_animatedImageByScalingAndCroppingToSize:(CGSize)size;
+- (UIImage *)animatedImageByScalingAndCroppingToSize:(CGSize)size;
 
 @end

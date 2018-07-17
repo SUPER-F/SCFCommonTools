@@ -28,6 +28,6 @@ typedef NS_ENUM(NSInteger, SCFImagePositions) {
  @param position 图片文字排列位置
  @param spacing 图片和文字的间隔
  */
-- (void)scf_setImagePosition:(SCFImagePositions)position spacing:(CGFloat)spacing;
+- (void)setImagePosition:(SCFImagePositions)position spacing:(CGFloat)spacing;
 
 @end

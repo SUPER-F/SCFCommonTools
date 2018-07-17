@@ -12,7 +12,7 @@
 
 @implementation UIImage (SCFOrientation)
 
-+ (UIImage *)scf_imageFixOrientation:(UIImage *)srcImage {
++ (UIImage *)imageFixOrientation:(UIImage *)srcImage {
     if (srcImage.imageOrientation == UIImageOrientationUp) {
         return srcImage;
     }
@@ -95,7 +95,7 @@
     return image;
 }
 
-- (UIImage *)scf_flipIsHorizontal:(BOOL)isHorizontal {
+- (UIImage *)flipIsHorizontal:(BOOL)isHorizontal {
     CGRect rect = CGRectMake(0.0f, 0.0f, self.size.width, self.size.height);
     
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
@@ -115,18 +115,18 @@
     return image;
 }
 
-- (UIImage *)scf_imageFlipVertical {
-    return [self scf_flipIsHorizontal:NO];
+- (UIImage *)imageFlipVertical {
+    return [self flipIsHorizontal:NO];
 }
 
-- (UIImage *)scf_imageFlipHorizontal {
-    return [self scf_flipIsHorizontal:YES];
+- (UIImage *)imageFlipHorizontal {
+    return [self flipIsHorizontal:YES];
 }
 
-- (UIImage *)scf_imageRotatedByDegrees:(CGFloat)degrees {
+- (UIImage *)imageRotatedByDegrees:(CGFloat)degrees {
     // 计算旋转视图中包含绘图空间的框的大小
     UIView *rotatedViewBox = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.size.width, self.size.height)];
-    CGAffineTransform transform = CGAffineTransformMakeRotation([UIImage scf_radiansFromDegrees:degrees]);
+    CGAffineTransform transform = CGAffineTransformMakeRotation([UIImage radiansFromDegrees:degrees]);
     rotatedViewBox.transform = transform;
     CGSize rotatedSize = rotatedViewBox.frame.size;
     
@@ -138,7 +138,7 @@
     CGContextTranslateCTM(context, rotatedSize.width / 2.0, rotatedSize.height / 2.0);
     
     // 旋转图像背景
-    CGContextRotateCTM(context, [UIImage scf_radiansFromDegrees:degrees]);
+    CGContextRotateCTM(context, [UIImage radiansFromDegrees:degrees]);
     
     // 将旋转/缩放的图像绘制到上下文中
     CGContextScaleCTM(context, 1.0, -1.0);
@@ -150,15 +150,15 @@
     return image;
 }
 
-- (UIImage *)scf_imageRotatedByRadians:(CGFloat)radians {
-    return [self scf_imageRotatedByDegrees:[UIImage scf_degreesFromRadians:radians]];
+- (UIImage *)imageRotatedByRadians:(CGFloat)radians {
+    return [self imageRotatedByDegrees:[UIImage degreesFromRadians:radians]];
 }
 
-+ (CGFloat)scf_radiansFromDegrees:(CGFloat)degrees {
++ (CGFloat)radiansFromDegrees:(CGFloat)degrees {
     return degrees * M_PI / 180.0f;
 }
 
-+ (CGFloat)scf_degreesFromRadians:(CGFloat)radians {
++ (CGFloat)degreesFromRadians:(CGFloat)radians {
     return radians * 180.0f / M_PI;
 }
 

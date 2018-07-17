@@ -13,10 +13,10 @@
 @interface UITextView (SCFPinchZoom)
 
 // 最小字体
-@property (nonatomic, assign) CGFloat scf_minFontSize;
+@property (nonatomic, assign) CGFloat minFontSize;
 // 最大字体
-@property (nonatomic, assign) CGFloat scf_maxFontSize;
+@property (nonatomic, assign) CGFloat maxFontSize;
 // 是否允许缩放
-@property (nonatomic, assign) BOOL scf_zoomEnabled;
+@property (nonatomic, assign) BOOL zoomEnabled;
 
 @end

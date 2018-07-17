@@ -19,7 +19,7 @@
  @param viewController push到的viewcontroller
  @param animationTransition 转场动画
  */
-- (void)scf_pushViewController:(UIViewController *)viewController withAnimationTransition:(UIViewAnimationTransition)animationTransition;
+- (void)pushViewController:(UIViewController *)viewController withAnimationTransition:(UIViewAnimationTransition)animationTransition;
 
 
 /**
@@ -28,6 +28,6 @@
  @param animationTransition 转场动画
  @return pop到的viewcontroller
  */
-- (UIViewController *)scf_popViewControllerWithAnimationTransition:(UIViewAnimationTransition)animationTransition;
+- (UIViewController *)popViewControllerWithAnimationTransition:(UIViewAnimationTransition)animationTransition;
 
 @end

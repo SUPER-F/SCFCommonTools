@@ -12,16 +12,16 @@
 
 @interface NSString (SCFHash)
 
-- (NSString *)scf_sha1String;
+- (NSString *)sha1String;
 
-- (NSString *)scf_sha256String;
+- (NSString *)sha256String;
 
-- (NSString *)scf_sha512String;
+- (NSString *)sha512String;
 
-- (NSString *)scf_hmacSHA1StringWithKey:(NSString *)key;
+- (NSString *)hmacSHA1StringWithKey:(NSString *)key;
 
-- (NSString *)scf_hmacSHA256StringWithKey:(NSString *)key;
+- (NSString *)hmacSHA256StringWithKey:(NSString *)key;
 
-- (NSString *)scf_hmacSHA512StringWithKey:(NSString *)key;
+- (NSString *)hmacSHA512StringWithKey:(NSString *)key;
 
 @end

@@ -16,6 +16,6 @@
 @interface UIImageView (SCFReflect)
 
 // 倒影
-- (void)scf_reflect;
+- (void)reflect;
 
 @end

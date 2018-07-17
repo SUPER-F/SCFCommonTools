@@ -11,11 +11,11 @@
 #import "UIView+SCFVisuals.h"
 
 // 角度转弧度
-#define scf_radiansFromDegrees(degrees) (M_PI * degrees / 180.0f)
+#define radiansFromDegrees(degrees) (M_PI * degrees / 180.0f)
 
 @implementation UIView (SCFVisuals)
 
-- (void)scf_viewRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius {
+- (void)viewRoundedCorners:(UIRectCorner)corners radius:(CGFloat)radius {
     CGRect rect = self.bounds;
     
     // 创建贝塞尔路径
@@ -31,7 +31,7 @@
     self.layer.mask = maskLayer;
 }
 
-- (void)scf_viewShadowWithColor:(UIColor *)color
+- (void)viewShadowWithColor:(UIColor *)color
                          offset:(CGSize)offset
                         opacity:(CGFloat)opacity
                          radius:(CGFloat)radius {
@@ -42,7 +42,7 @@
     self.layer.shadowRadius = radius;
 }
 
-- (void)scf_removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration {
+- (void)removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationDuration:duration];
@@ -52,7 +52,7 @@
     [UIView commitAnimations];
 }
 
-- (void)scf_addSubview:(UIView *)subview
+- (void)addSubview:(UIView *)subview
         withTransition:(UIViewAnimationTransition)transition
               duration:(NSTimeInterval)duration {
     [UIView beginAnimations:nil context:NULL];
@@ -62,7 +62,7 @@
     [UIView commitAnimations];
 }
 
-- (void)scf_removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition
+- (void)removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition
                                      duration:(NSTimeInterval)duration {
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:duration];
@@ -71,14 +71,14 @@
     [UIView commitAnimations];
 }
 
-- (void)scf_viewRotateByAngle:(CGFloat)angle
+- (void)viewRotateByAngle:(CGFloat)angle
                      duration:(NSTimeInterval)duration
                   autoReverse:(BOOL)autoReverse
                   repeatCount:(CGFloat)repeatCount
                 timingFuction:(CAMediaTimingFunction *)timingFunction {
     
     CABasicAnimation *rotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    rotation.toValue = [NSNumber numberWithFloat:scf_radiansFromDegrees(angle)];
+    rotation.toValue = [NSNumber numberWithFloat:radiansFromDegrees(angle)];
     rotation.duration = duration;
     rotation.repeatCount = repeatCount;
     rotation.autoreverses = autoReverse;
@@ -89,7 +89,7 @@
     [self.layer addAnimation:rotation forKey:@"rotationAnimation"];
 }
 
-- (void)scf_viewMoveToPoint:(CGPoint)newPoint
+- (void)viewMoveToPoint:(CGPoint)newPoint
                    duration:(NSTimeInterval)duration
                 autoReverse:(BOOL)autoReverse
                 repeatCount:(CGFloat)repeatCount

@@ -12,7 +12,7 @@
 
 @implementation UIImageView (SCFReflect)
 
-- (void)scf_reflect {
+- (void)reflect {
     CGRect frame = self.frame;
     frame.origin.y += (frame.size.height + 1);
     

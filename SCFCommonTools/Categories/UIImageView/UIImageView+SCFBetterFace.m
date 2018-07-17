@@ -14,61 +14,61 @@
 #define BETTER_LAYER_NAME @"BETTER_LAYER_NAME"
 #define GOLDEN_RATIO (0.618)
 
-#ifdef SCF_DEBUG
+#ifdef DEBUG
 #define SCFLog(format...) NSLog(format)
 #else
 #define SCFLog(format...)
 #endif
 
-static CIDetector *scf_detector;
+static CIDetector *detector;
 
-static NSString *const scf_needBetterFaceKey = @"scf_needBetterFaceKey";
-static NSString *const scf_fastSpeedKey = @"scf_fastSpeedKey";
-static NSString *const scf_detectorKey = @"scf_detectorKey";
+static NSString *const needBetterFaceKey = @"needBetterFaceKey";
+static NSString *const fastSpeedKey = @"fastSpeedKey";
+static NSString *const detectorKey = @"detectorKey";
 
 @implementation UIImageView (SCFBetterFace)
 
 #pragma mark - public methods
-void scf_hack_uiimageview_bf(void) {
+void hack_uiimageview_bf(void) {
     Method oriSetImgMethod = class_getInstanceMethod([UIImageView class], @selector(setImage:));
-    Method newSetImgMethod = class_getInstanceMethod([UIImageView class], @selector(scf_setBetterFaceImage:));
+    Method newSetImgMethod = class_getInstanceMethod([UIImageView class], @selector(setBetterFaceImage:));
     method_exchangeImplementations(newSetImgMethod, oriSetImgMethod);
 }
 
-- (void)scf_setBetterFaceImage:(UIImage *)image {
+- (void)setBetterFaceImage:(UIImage *)image {
     
 }
 
 #pragma mark - private methods
-- (void)scf_faceDetect:(UIImage *)aImage {
+- (void)faceDetect:(UIImage *)aImage {
     dispatch_queue_t queue = dispatch_queue_create("com.scf.betterface.queue", NULL);
     dispatch_async(queue, ^{
         CIImage *ciImage = aImage.CIImage;
         if (ciImage == nil) {
             ciImage = [CIImage imageWithCGImage:aImage.CGImage];
         }
-        if (scf_detector == nil) {
-            NSDictionary *pots = [NSDictionary dictionaryWithObject:[self scf_fast] ? CIDetectorAccuracyLow : CIDetectorAccuracyHigh forKey:CIDetectorAccuracy];
-            scf_detector = [CIDetector detectorOfType:CIDetectorTypeFace
+        if (detector == nil) {
+            NSDictionary *pots = [NSDictionary dictionaryWithObject:[self fast] ? CIDetectorAccuracyLow : CIDetectorAccuracyHigh forKey:CIDetectorAccuracy];
+            detector = [CIDetector detectorOfType:CIDetectorTypeFace
                                               context:nil
                                               options:pots];
         }
         
-        NSArray *features = [scf_detector featuresInImage:ciImage];
+        NSArray *features = [detector featuresInImage:ciImage];
         if (features.count == 0) {
             SCFLog(@"no faces");
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[self scf_imageLayer] removeFromSuperlayer];
+                [[self imageLayer] removeFromSuperlayer];
             });
         }
         else {
             SCFLog(@"succeed %ld faces", features.count);
-            [self scf_markAfterFaceDetect:features size:CGSizeMake(CGImageGetWidth(aImage.CGImage), CGImageGetHeight(aImage.CGImage))];
+            [self markAfterFaceDetect:features size:CGSizeMake(CGImageGetWidth(aImage.CGImage), CGImageGetHeight(aImage.CGImage))];
         }
     });
 }
 
-- (CALayer *)scf_imageLayer {
+- (CALayer *)imageLayer {
     for (CALayer *layer in [self.layer sublayers]) {
         if ([layer.name isEqualToString:BETTER_LAYER_NAME]) {
             return layer;
@@ -86,7 +86,7 @@ void scf_hack_uiimageview_bf(void) {
     return layer;
 }
 
-- (void)scf_markAfterFaceDetect:(NSArray *)features size:(CGSize)size {
+- (void)markAfterFaceDetect:(NSArray *)features size:(CGSize)size {
     CGRect fixedRect = CGRectMake(MAXFLOAT, MAXFLOAT, 0.0f, 0.0f);
     CGFloat rightBorder = 0.0f, bottomBorder = 0.0f;
     for (CIFaceFeature *feature in features) {
@@ -140,49 +140,49 @@ void scf_hack_uiimageview_bf(void) {
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        CALayer *layer = [self scf_imageLayer];
+        CALayer *layer = [self imageLayer];
         layer.frame = CGRectMake(offset.x, offset.y, finalSize.width, finalSize.height);
         layer.contents = (id)self.image.CGImage;
     });
 }
 
 #pragma mark - setters / getters
-#pragma mark scf_needsBetterFace
-- (void)setScf_needsBetterFace:(BOOL)scf_needsBetterFace {
+#pragma mark needsBetterFace
+- (void)setNeedsBetterFace:(BOOL)needsBetterFace {
     objc_setAssociatedObject(self,
-                             &scf_needBetterFaceKey,
-                             [NSNumber numberWithBool:scf_needsBetterFace],
+                             &needBetterFaceKey,
+                             [NSNumber numberWithBool:needsBetterFace],
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)scf_needsBetterFace {
-    NSNumber *nbfNumber = objc_getAssociatedObject(self, &scf_needBetterFaceKey);
+- (BOOL)needsBetterFace {
+    NSNumber *nbfNumber = objc_getAssociatedObject(self, &needBetterFaceKey);
     return [nbfNumber boolValue];
 }
 
-#pragma mark scf_fast
-- (void)setScf_fast:(BOOL)scf_fast {
+#pragma mark fast
+- (void)setFast:(BOOL)fast {
     objc_setAssociatedObject(self,
-                             &scf_fastSpeedKey,
-                             [NSNumber numberWithBool:scf_fast],
+                             &fastSpeedKey,
+                             [NSNumber numberWithBool:fast],
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)scf_fast {
-    NSNumber *fastNumber = objc_getAssociatedObject(self, &scf_fastSpeedKey);
+- (BOOL)fast {
+    NSNumber *fastNumber = objc_getAssociatedObject(self, &fastSpeedKey);
     return [fastNumber boolValue];
 }
 
-#pragma mark scf_detector
-- (void)setScf_detector:(CIDetector *)scf_detector {
+#pragma mark detector
+- (void)setdetector:(CIDetector *)detector {
     objc_setAssociatedObject(self,
-                             &scf_detectorKey,
-                             scf_detector,
+                             &detectorKey,
+                             detector,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CIDetector *)scf_Detector {
-    return objc_getAssociatedObject(self, &scf_detectorKey);
+- (CIDetector *)Detector {
+    return objc_getAssociatedObject(self, &detectorKey);
 }
 
 

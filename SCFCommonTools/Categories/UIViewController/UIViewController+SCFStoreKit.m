@@ -11,20 +11,20 @@
 #import "UIViewController+SCFStoreKit.h"
 #import <objc/runtime.h>
 
-static NSString *const scf_affiliateTokenKey = @"scf_affiliateTokenKey";
-static NSString *const scf_campaignTokenKey = @"scf_campaignTokenKey";
-static NSString *const scf_loadingStoreKitItemBlockKey = @"scf_loadingStoreKitItemBlockKey";
-static NSString *const scf_loadedStoreKitItemBlockKey = @"scf_loadedStoreKitItemBlockKey";
-static NSString *const scf_iTunesAppleString = @"itunes.apple.com";
+static NSString *const affiliateTokenKey = @"affiliateTokenKey";
+static NSString *const campaignTokenKey = @"campaignTokenKey";
+static NSString *const loadingStoreKitItemBlockKey = @"loadingStoreKitItemBlockKey";
+static NSString *const loadedStoreKitItemBlockKey = @"loadedStoreKitItemBlockKey";
+static NSString *const iTunesAppleString = @"itunes.apple.com";
 
 @implementation UIViewController (SCFStoreKit)
 
 #pragma mark - public methods
-+ (BOOL)scf_isContainsAppUrlHostWithUrlString:(NSString *)urlString {
-    return ([urlString rangeOfString:scf_iTunesAppleString].location != NSNotFound);
++ (BOOL)isContainsAppUrlHostWithUrlString:(NSString *)urlString {
+    return ([urlString rangeOfString:iTunesAppleString].location != NSNotFound);
 }
 
-+ (NSString *)scf_getAppIDWithUrlString:(NSString *)urlString {
++ (NSString *)getAppIDWithUrlString:(NSString *)urlString {
     NSError *error;
     NSRegularExpression *regExp = [NSRegularExpression regularExpressionWithPattern:@"id\\d+" options:0 error:&error];
     NSTextCheckingResult *result = [regExp firstMatchInString:urlString options:0 range:NSMakeRange(0, urlString.length)];
@@ -37,38 +37,38 @@ static NSString *const scf_iTunesAppleString = @"itunes.apple.com";
     return idString;
 }
 
-+ (NSURL *)scf_getAppUrlWithIdentifier:(NSString *)identifier {
++ (NSURL *)getAppUrlWithIdentifier:(NSString *)identifier {
     NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/app/id%@", identifier];
     return [NSURL URLWithString:urlString];
 }
 
-+ (void)scf_openAppUrlWithIdentifier:(NSString *)identifier {
++ (void)openAppUrlWithIdentifier:(NSString *)identifier {
     NSString *appUrlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app/id%@", identifier];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:appUrlString]];
 }
 
-+ (void)scf_openAppReviewUrlWithIdentifier:(NSString *)identifier {
++ (void)openAppReviewUrlWithIdentifier:(NSString *)identifier {
     NSString *reviewUrlString = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", identifier];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:reviewUrlString]];
 }
 
-- (void)scf_presentStoreViewControllerWithIdentifier:(NSString *)identifier {
+- (void)presentStoreViewControllerWithIdentifier:(NSString *)identifier {
     SKStoreProductViewController *storeViewController = [[SKStoreProductViewController alloc] init];
     storeViewController.delegate = self;
     
-    NSString *campaignToken = self.scf_campaignToken ? self.scf_campaignToken : @"";
+    NSString *campaignToken = self.campaignToken ? self.campaignToken : @"";
     
     NSDictionary *parameters = @{SKStoreProductParameterITunesItemIdentifier : identifier,
-                                 scf_affiliateTokenKey : kAffiliateToken,
-                                 scf_campaignTokenKey : campaignToken,
+                                 affiliateTokenKey : kAffiliateToken,
+                                 campaignTokenKey : campaignToken,
                                  };
     
-    if (self.scf_loadingStoreKitItemBlock) {
-        self.scf_loadingStoreKitItemBlock();
+    if (self.loadingStoreKitItemBlock) {
+        self.loadingStoreKitItemBlock();
     }
     [storeViewController loadProductWithParameters:parameters completionBlock:^(BOOL result, NSError * _Nullable error) {
-        if (self.scf_loadedStoreKitItemBlock) {
-            self.scf_loadedStoreKitItemBlock();
+        if (self.loadedStoreKitItemBlock) {
+            self.loadedStoreKitItemBlock();
         }
         
         if (result && !error) {
@@ -83,37 +83,37 @@ static NSString *const scf_iTunesAppleString = @"itunes.apple.com";
 }
 
 #pragma mark - setters / getters
-- (void)setScf_campaignToken:(NSString *)scf_campaignToken {
+- (void)setCampaignToken:(NSString *)campaignToken {
     objc_setAssociatedObject(self,
-                             &scf_campaignTokenKey,
-                             scf_campaignToken,
+                             &campaignTokenKey,
+                             campaignToken,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString *)scf_campaignToken {
-    return objc_getAssociatedObject(self, &scf_campaignTokenKey);
+- (NSString *)campaignToken {
+    return objc_getAssociatedObject(self, &campaignTokenKey);
 }
 
-- (void)setScf_loadingStoreKitItemBlock:(void (^)(void))scf_loadingStoreKitItemBlock {
+- (void)setLoadingStoreKitItemBlock:(void (^)(void))loadingStoreKitItemBlock {
     objc_setAssociatedObject(self,
-                             &scf_loadingStoreKitItemBlockKey,
-                             scf_loadingStoreKitItemBlock,
+                             &loadingStoreKitItemBlockKey,
+                             loadingStoreKitItemBlock,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void (^)(void))scf_loadingStoreKitItemBlock {
-    return objc_getAssociatedObject(self, &scf_loadingStoreKitItemBlockKey);
+- (void (^)(void))loadingStoreKitItemBlock {
+    return objc_getAssociatedObject(self, &loadingStoreKitItemBlockKey);
 }
 
-- (void)setScf_loadedStoreKitItemBlock:(void (^)(void))scf_loadedStoreKitItemBlock {
+- (void)setLoadedStoreKitItemBlock:(void (^)(void))loadedStoreKitItemBlock {
     objc_setAssociatedObject(self,
-                             &scf_loadedStoreKitItemBlockKey,
-                             scf_loadedStoreKitItemBlock,
+                             &loadedStoreKitItemBlockKey,
+                             loadedStoreKitItemBlock,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void (^)(void))scf_loadedStoreKitItemBlock {
-    return objc_getAssociatedObject(self, &scf_loadedStoreKitItemBlockKey);
+- (void (^)(void))loadedStoreKitItemBlock {
+    return objc_getAssociatedObject(self, &loadedStoreKitItemBlockKey);
 }
 
 @end

@@ -21,6 +21,6 @@
  @param height 渐变高度
  @return 渐变颜色结果
  */
-+ (UIColor *)scf_gradientFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor withHeight:(CGFloat)height;
++ (UIColor *)gradientFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor withHeight:(CGFloat)height;
 
 @end

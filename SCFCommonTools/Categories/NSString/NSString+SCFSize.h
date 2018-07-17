@@ -21,7 +21,7 @@
  @param width 限制宽度
  @return 字符串高度
  */
-- (CGFloat)scf_heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width;
+- (CGFloat)heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width;
 
 
 /**
@@ -31,7 +31,7 @@
  @param height 限制高度
  @return 字符串宽度
  */
-- (CGFloat)scf_widthWithFont:(UIFont *)font constrainedToWidth:(CGFloat)height;
+- (CGFloat)widthWithFont:(UIFont *)font constrainedToWidth:(CGFloat)height;
 
 
 /**
@@ -41,7 +41,7 @@
  @param width 限制宽度
  @return 字符串size
  */
-- (CGSize)scf_sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width;
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width;
 
 
 /**
@@ -51,6 +51,6 @@
  @param height 限制高度
  @return 字符串size
  */
-- (CGSize)scf_sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height;
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height;
 
 @end

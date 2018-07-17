@@ -14,11 +14,11 @@
 
 @interface UIImageView (SCFBetterFace)
 
-@property (nonatomic) BOOL scf_needsBetterFace;
-@property (nonatomic) BOOL scf_fast;
+@property (nonatomic) BOOL needsBetterFace;
+@property (nonatomic) BOOL fast;
 
-void scf_hack_uiimageview_bf(void);
+void hack_uiimageview_bf(void);
 
-- (void)scf_setBetterFaceImage:(UIImage *)image;
+- (void)setBetterFaceImage:(UIImage *)image;
 
 @end

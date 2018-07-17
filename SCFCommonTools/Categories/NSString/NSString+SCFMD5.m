@@ -13,7 +13,7 @@
 
 @implementation NSString (SCFMD5)
 
-+ (NSString *)scf_md5StringWithOriginalString:(NSString *)originalStr {
++ (NSString *)md5StringWithOriginalString:(NSString *)originalStr {
     const char *string = originalStr.UTF8String;
     CC_LONG length = (CC_LONG)strlen(string);
     
@@ -23,19 +23,19 @@
     unsigned char bytes[CC_MD5_DIGEST_LENGTH];
     CC_MD5_Final(bytes, &md5);
     
-    return [NSString p_scf_stringFromBytes:bytes length:length];
+    return [NSString p_stringFromBytes:bytes length:length];
 }
 
-- (NSString *)scf_md5String {
+- (NSString *)md5String {
     const char *string = self.UTF8String;
     CC_LONG length = (CC_LONG)strlen(string);
     unsigned char bytes[CC_MD5_DIGEST_LENGTH];
     CC_MD5(string, length, bytes);
-    return [NSString p_scf_stringFromBytes:bytes length:length];
+    return [NSString p_stringFromBytes:bytes length:length];
 }
 
 #pragma mark - private methods
-+ (NSString *)p_scf_stringFromBytes:(unsigned char *)bytes length:(NSUInteger)length {
++ (NSString *)p_stringFromBytes:(unsigned char *)bytes length:(NSUInteger)length {
     NSMutableString *mutableString = [NSMutableString string];
     for (NSInteger i = 0; i < length; i++) {
         [mutableString appendFormat:@"%02x", bytes[i]];

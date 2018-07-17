@@ -12,6 +12,6 @@
 
 @interface UITextField (SCFInputLimit)
 
-@property (nonatomic, assign) NSInteger scf_maxLength;  // if <= 0, no limit
+@property (nonatomic, assign) NSInteger maxLength;  // if <= 0, no limit
 
 @end

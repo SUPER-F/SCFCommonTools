@@ -19,6 +19,6 @@
  @param bgColor 背景颜色
  @param state 按钮状态
  */
-- (void)scf_setBackgroundImageWithColor:(UIColor *)bgColor forState:(UIControlState)state;
+- (void)setBackgroundImageWithColor:(UIColor *)bgColor forState:(UIControlState)state;
 
 @end

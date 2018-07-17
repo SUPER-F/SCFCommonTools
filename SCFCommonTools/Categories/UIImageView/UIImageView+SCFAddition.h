@@ -19,7 +19,7 @@
  @param imageName bundle中的图片名
  @return 创建的imageview
  */
-+ (UIImageView *)scf_imageViewWithImageNamed:(NSString *)imageName;
++ (UIImageView *)imageViewWithImageNamed:(NSString *)imageName;
 
 
 /**
@@ -28,7 +28,7 @@
  @param frame imageview的frame
  @return 创建的imageview
  */
-+ (UIImageView *)scf_imageViewWithFrame:(CGRect)frame;
++ (UIImageView *)imageViewWithFrame:(CGRect)frame;
 
 
 /**
@@ -38,7 +38,7 @@
  @param frame imageview的frame
  @return imageview
  */
-+ (UIImageView *)scf_imageViewStretchableImageNamed:(NSString *)imageName frame:(CGRect)frame;
++ (UIImageView *)imageViewStretchableImageNamed:(NSString *)imageName frame:(CGRect)frame;
 
 
 /**
@@ -48,7 +48,7 @@
  @param duration 动画时间
  @return imageview
  */
-+ (UIImageView *)scf_imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration;
++ (UIImageView *)imageViewWithImageArray:(NSArray *)imageArray duration:(NSTimeInterval)duration;
 
 
 /**
@@ -56,7 +56,7 @@
 
  @param imageName 图片名
  */
-- (void)scf_setStretchableImageWithName:(NSString *)imageName;
+- (void)setStretchableImageWithName:(NSString *)imageName;
 
 #pragma mark - 画水印
 
@@ -67,7 +67,7 @@
  @param markImage 图片水印
  @param rect 水印位置
  */
-- (void)scf_setImage:(UIImage *)image withWaterMarkImage:(UIImage *)markImage inRect:(CGRect)rect;
+- (void)setImage:(UIImage *)image withWaterMarkImage:(UIImage *)markImage inRect:(CGRect)rect;
 
 
 /**
@@ -79,7 +79,7 @@
  @param color 文字颜色
  @param font 文字大小
  */
-- (void)scf_setImage:(UIImage *)image withWaterMarkString:(NSString *)markString inRect:(CGRect)rect color:(UIColor *)color font:(UIFont *)font;
+- (void)setImage:(UIImage *)image withWaterMarkString:(NSString *)markString inRect:(CGRect)rect color:(UIColor *)color font:(UIFont *)font;
 
 
 /**
@@ -91,6 +91,6 @@
  @param color 文字颜色
  @param font 文字大小
  */
-- (void)scf_setImage:(UIImage *)image withWaterMarkString:(NSString *)markString atPoint:(CGPoint)point color:(UIColor *)color font:(UIFont *)font;
+- (void)setImage:(UIImage *)image withWaterMarkString:(NSString *)markString atPoint:(CGPoint)point color:(UIColor *)color font:(UIFont *)font;
 
 @end

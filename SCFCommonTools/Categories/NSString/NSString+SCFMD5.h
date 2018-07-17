@@ -12,8 +12,8 @@
 
 @interface NSString (SCFMD5)
 
-+ (NSString *)scf_md5StringWithOriginalString:(NSString *)originalStr;
++ (NSString *)md5StringWithOriginalString:(NSString *)originalStr;
 
-- (NSString *)scf_md5String;
+- (NSString *)md5String;
 
 @end

@@ -44,29 +44,29 @@
 
 @interface UIImage (SCFScale)
 
-- (UIImage *)scf_imageCroppedToRect:(CGRect)rect;
+- (UIImage *)imageCroppedToRect:(CGRect)rect;
 
-- (UIImage *)scf_imageScaledToSize:(CGSize)size;
+- (UIImage *)imageScaledToSize:(CGSize)size;
 
-- (UIImage *)scf_imageScaledToFitSize:(CGSize)size;
+- (UIImage *)imageScaledToFitSize:(CGSize)size;
 
-- (UIImage *)scf_imageScaledToFillSize:(CGSize)size;
+- (UIImage *)imageScaledToFillSize:(CGSize)size;
 
-- (UIImage *)scf_imageCroppedAndScaledToSize:(CGSize)size
+- (UIImage *)imageCroppedAndScaledToSize:(CGSize)size
                                  contentMode:(UIViewContentMode)contentMode
                                     padToFit:(BOOL)padToFit;
 
-- (UIImage *)scf_imageReflectedWithScale:(CGFloat)scale;
-- (UIImage *)scf_imageReflectedWithScale:(CGFloat)scale gap:(CGFloat)gap alpha:(CGFloat)alpha;
+- (UIImage *)imageReflectedWithScale:(CGFloat)scale;
+- (UIImage *)imageReflectedWithScale:(CGFloat)scale gap:(CGFloat)gap alpha:(CGFloat)alpha;
 
-- (UIImage *)scf_imageWithShadowColor:(UIColor *)color offset:(CGSize)offset blur:(CGFloat)blur;
+- (UIImage *)imageWithShadowColor:(UIColor *)color offset:(CGSize)offset blur:(CGFloat)blur;
 
-- (UIImage *)scf_imageWithCornerRadius:(CGFloat)radius;
+- (UIImage *)imageWithCornerRadius:(CGFloat)radius;
 
-- (UIImage *)scf_imageWithAlpha:(CGFloat)alpha;
+- (UIImage *)imageWithAlpha:(CGFloat)alpha;
 
-- (UIImage *)scf_imageWithMaskFromImage:(UIImage *)fromImage;
+- (UIImage *)imageWithMaskFromImage:(UIImage *)fromImage;
 
-- (UIImage *)scf_imageWithMaskFromImageAlpha;
+- (UIImage *)imageWithMaskFromImageAlpha;
 
 @end

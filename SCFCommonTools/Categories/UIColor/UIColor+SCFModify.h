@@ -13,10 +13,10 @@
 @interface UIColor (SCFModify)
 
 // 反向颜色
-- (UIColor *)scf_colorInverted;
+- (UIColor *)colorInverted;
 
 // 半透明颜色
-- (UIColor *)scf_colorTranslucency;
+- (UIColor *)colorTranslucency;
 
 
 /**
@@ -25,7 +25,7 @@
  @param lighten 变亮参数
  @return 变亮后的颜色
  */
-- (UIColor *)scf_colorLighten:(CGFloat)lighten;
+- (UIColor *)colorLighten:(CGFloat)lighten;
 
 
 /**
@@ -34,6 +34,6 @@
  @param darken 变暗参数
  @return 变暗后的颜色
  */
-- (UIColor *)scf_colorDarken:(CGFloat)darken;
+- (UIColor *)colorDarken:(CGFloat)darken;
 
 @end

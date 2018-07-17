@@ -10,62 +10,62 @@
 
 #import "UIWebView+SCFWebStorage.h"
 
-static NSString * const scf_kLocalStorageName = @"localStorage";
-static NSString * const scf_kSessionStorageName = @"sessionStorage";
+static NSString * const kLocalStorageName = @"localStorage";
+static NSString * const kSessionStorageName = @"sessionStorage";
 
 @implementation UIWebView (SCFWebStorage)
 
 #pragma mark - Local Storage
 
-- (void)scf_setLocalStorageString:(NSString *)string forKey:(NSString *)key {
-    [self p_scf_setString:string forKey:key storage:scf_kLocalStorageName];
+- (void)setLocalStorageString:(NSString *)string forKey:(NSString *)key {
+    [self p_setString:string forKey:key storage:kLocalStorageName];
 }
 
-- (NSString *)scf_localStorageStringForKey:(NSString *)key {
-    return [self p_scf_stringForKey:key storage:scf_kLocalStorageName];
+- (NSString *)localStorageStringForKey:(NSString *)key {
+    return [self p_stringForKey:key storage:kLocalStorageName];
 }
 
-- (void)scf_removeLocalStorageStringForKey:(NSString *)key {
-    [self p_scf_removeStringForKey:key storage:scf_kLocalStorageName];
+- (void)removeLocalStorageStringForKey:(NSString *)key {
+    [self p_removeStringForKey:key storage:kLocalStorageName];
 }
 
-- (void)scf_clearLocalStorage {
-    [self p_scf_clearWithStorage:scf_kLocalStorageName];
+- (void)clearLocalStorage {
+    [self p_clearWithStorage:kLocalStorageName];
 }
 
 #pragma mark - Session Storage
 
-- (void)scf_setSessionStorageString:(NSString *)string forKey:(NSString *)key {
-    [self p_scf_setString:string forKey:key storage:scf_kSessionStorageName];
+- (void)setSessionStorageString:(NSString *)string forKey:(NSString *)key {
+    [self p_setString:string forKey:key storage:kSessionStorageName];
 }
 
-- (NSString *)scf_sessionStorageStringForKey:(NSString *)key {
-    return [self p_scf_stringForKey:key storage:scf_kSessionStorageName];
+- (NSString *)sessionStorageStringForKey:(NSString *)key {
+    return [self p_stringForKey:key storage:kSessionStorageName];
 }
 
-- (void)scf_removeSessionStorageStringForKey:(NSString *)key {
-    [self p_scf_removeStringForKey:key storage:scf_kSessionStorageName];
+- (void)removeSessionStorageStringForKey:(NSString *)key {
+    [self p_removeStringForKey:key storage:kSessionStorageName];
 }
 
-- (void)scf_clearSessionStorage {
-    [self p_scf_clearWithStorage:scf_kSessionStorageName];
+- (void)clearSessionStorage {
+    [self p_clearWithStorage:kSessionStorageName];
 }
 
 #pragma mark - Helpers
 
-- (void)p_scf_setString:(NSString *)string forKey:(NSString *)key storage:(NSString *)storage {
+- (void)p_setString:(NSString *)string forKey:(NSString *)key storage:(NSString *)storage {
     [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"%@.setItem('%@', '%@');", storage, key, string]];
 }
 
-- (NSString *)p_scf_stringForKey:(NSString *)key storage:(NSString *)storage {
+- (NSString *)p_stringForKey:(NSString *)key storage:(NSString *)storage {
     return [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"%@.getItem('%@');", storage, key]];
 }
 
-- (void)p_scf_removeStringForKey:(NSString *)key storage:(NSString *)storage {
+- (void)p_removeStringForKey:(NSString *)key storage:(NSString *)storage {
     [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"%@.removeItem('%@');", storage, key]];
 }
 
-- (void)p_scf_clearWithStorage:(NSString *)storage {
+- (void)p_clearWithStorage:(NSString *)storage {
     [self stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"%@.clear();", storage]];
 }
 

@@ -12,7 +12,7 @@
 
 @implementation UITextView (SCFSelect)
 
-- (NSRange)scf_selectedRange {
+- (NSRange)selectedRange {
     UITextPosition *beginning = self.beginningOfDocument;
     
     UITextRange *selectedRange = self.selectedTextRange;
@@ -25,12 +25,12 @@
     return NSMakeRange(location, length);
 }
 
-- (void)scf_selectAllText {
+- (void)selectAllText {
     UITextRange *range = [self textRangeFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
     [self setSelectedTextRange:range];
 }
 
-- (void)scf_setSelectedTextRange:(NSRange)range {
+- (void)selectedTextRange:(NSRange)range {
     UITextPosition *beginning = self.beginningOfDocument;
     UITextPosition *positionStart = [self positionFromPosition:beginning offset:range.location];
     UITextPosition *positionEnd = [self positionFromPosition:beginning offset:NSMaxRange(range)];
@@ -40,7 +40,7 @@
     [self setSelectedTextRange:selectedRange];
 }
 
-- (NSInteger)scf_getInputLengthWithText:(NSString *)text {
+- (NSInteger)inputLengthWithText:(NSString *)text {
     NSInteger textLength = 0;
     // 获取高亮部分
     UITextRange *selectedRange = [self markedTextRange];

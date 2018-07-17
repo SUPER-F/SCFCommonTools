@@ -19,7 +19,7 @@
  @param className viewcontroller名称
  @return viewcontroller对象
  */
-- (UIViewController *)scf_findViewControllerWithClassName:(NSString *)className;
+- (UIViewController *)findViewControllerWithClassName:(NSString *)className;
 
 
 /**
@@ -27,7 +27,7 @@
 
  @return 根viewcontroller
  */
-- (UIViewController *)scf_rootViewController;
+- (UIViewController *)rootViewController;
 
 
 /**
@@ -35,7 +35,7 @@
 
  @return 判断结果
  */
-- (BOOL)scf_isOnlyContainRootViewController;
+- (BOOL)isOnlyContainRootViewController;
 
 
 /**
@@ -45,7 +45,7 @@
  @param animated 是否动画
  @return pop之后的viewcontrollers
  */
-- (NSArray *)scf_popToViewControllerWithClassName:(NSString *)className animated:(BOOL)animated;
+- (NSArray *)popToViewControllerWithClassName:(NSString *)className animated:(BOOL)animated;
 
 
 /**
@@ -55,6 +55,6 @@
  @param animated 是否动画
  @return pop之后的viewcontrollers
  */
-- (NSArray *)scf_popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated;
+- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated;
 
 @end

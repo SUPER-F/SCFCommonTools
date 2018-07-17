@@ -12,7 +12,7 @@
 
 @implementation NSData (SCFEncrypt)
 
-static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NSMutableData * ivData) {
+static void FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NSMutableData * ivData) {
     NSUInteger keyLength = [keyData length];
     switch ( algorithm ) {
         case kCCAlgorithmAES128: {
@@ -71,8 +71,8 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return data
  */
-- (NSData*)scf_encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCEncrypt key:key iv:iv];
+- (NSData*)encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
+    return [self CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCEncrypt key:key iv:iv];
 }
 
 /**
@@ -83,8 +83,8 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return 解密后数据
  */
-- (NSData*)scf_decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCDecrypt key:key iv:iv];
+- (NSData*)decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
+    return [self CCCryptData:self algorithm:kCCAlgorithmAES128 operation:kCCDecrypt key:key iv:iv];
 }
 
 /**
@@ -95,8 +95,8 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return data
  */
-- (NSData*)scf_encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithm3DES operation:kCCEncrypt key:key iv:iv];
+- (NSData*)encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
+    return [self CCCryptData:self algorithm:kCCAlgorithm3DES operation:kCCEncrypt key:key iv:iv];
 }
 
 /**
@@ -107,8 +107,8 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return 解密后数据
  */
-- (NSData*)scf_decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithm3DES operation:kCCDecrypt key:key iv:iv];
+- (NSData*)decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
+    return [self CCCryptData:self algorithm:kCCAlgorithm3DES operation:kCCDecrypt key:key iv:iv];
 }
 
 /**
@@ -119,8 +119,8 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return data
  */
-- (NSData *)scf_encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv{
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithmDES operation:kCCEncrypt key:key iv:iv];
+- (NSData *)encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv{
+    return [self CCCryptData:self algorithm:kCCAlgorithmDES operation:kCCEncrypt key:key iv:iv];
 }
 
 /**
@@ -131,11 +131,11 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return 解密后数据
  */
-- (NSData *)scf_decryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv{
-    return [self scf_CCCryptData:self algorithm:kCCAlgorithmDES operation:kCCDecrypt key:key iv:iv];
+- (NSData *)decryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv{
+    return [self CCCryptData:self algorithm:kCCAlgorithmDES operation:kCCDecrypt key:key iv:iv];
 }
 
-- (NSData *)scf_CCCryptData:(NSData *)data
+- (NSData *)CCCryptData:(NSData *)data
                  algorithm:(CCAlgorithm)algorithm
                  operation:(CCOperation)operation
                        key:(NSString *)key
@@ -166,7 +166,7 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
     if (iv) {
         option = kCCOptionPKCS7Padding;
     }
-    scf_FixKeyLengths(algorithm, keyData, ivData);
+    FixKeyLengths(algorithm, keyData, ivData);
     CCCryptorStatus result = CCCrypt(operation,                    // kCCEncrypt or kCCDecrypt
                                      algorithm,
                                      option,                        // Padding option for CBC Mode
@@ -191,7 +191,7 @@ static void scf_FixKeyLengths(CCAlgorithm algorithm, NSMutableData * keyData, NS
  *
  *  @return 转成UTF8 字符串
  */
--(NSString *)scf_UTF8String{
+-(NSString *)UTF8String{
     return [[NSString alloc] initWithData:self encoding:NSUTF8StringEncoding];
 }
 

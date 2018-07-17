@@ -18,7 +18,7 @@
 
  @return 动态宽度label（起始位置相同）
  */
-- (UILabel *)scf_labelAutoSizeHorizontal;
+- (UILabel *)labelAutoSizeHorizontal;
 
 
 /**
@@ -26,7 +26,7 @@
 
  @return 动态高度label（起始位置相同）
  */
-- (UILabel *)scf_labelAutoSizeVertical;
+- (UILabel *)labelAutoSizeVertical;
 
 
 /**
@@ -35,7 +35,7 @@
  @param minWidth 最小宽度
  @return 动态宽度label（起始位置相同）
  */
-- (UILabel *)scf_labelAutoSizeHorizontalWithMinWidth:(CGFloat)minWidth;
+- (UILabel *)labelAutoSizeHorizontalWithMinWidth:(CGFloat)minWidth;
 
 
 /**
@@ -44,6 +44,6 @@
  @param minHeight 最小高度
  @return 动态高度label（起始位置相同）
  */
-- (UILabel *)scf_labelAutoSizeVerticalWithMinHeight:(CGFloat)minHeight;
+- (UILabel *)labelAutoSizeVerticalWithMinHeight:(CGFloat)minHeight;
 
 @end

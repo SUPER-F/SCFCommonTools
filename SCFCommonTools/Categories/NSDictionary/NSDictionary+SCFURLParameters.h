@@ -19,7 +19,7 @@
  @param urlString 待有参数的URL
  @return 参数字典
  */
-+ (NSDictionary *)scf_dictionaryWithURLString:(NSString *)urlString;
++ (NSDictionary *)dictionaryWithURLString:(NSString *)urlString;
 
 
 /**
@@ -27,6 +27,6 @@
 
  @return URL参数字符串
  */
-- (NSString *)scf_urlParametersString;
+- (NSString *)urlParametersString;
 
 @end

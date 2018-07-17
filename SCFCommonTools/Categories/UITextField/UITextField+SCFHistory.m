@@ -11,48 +11,48 @@
 #import "UITextField+SCFHistory.h"
 #import <objc/runtime.h>
 
-#define scf_history_x(view) (view.frame.origin.x)
-#define scf_history_y(view) (view.frame.origin.y)
-#define scf_history_w(view) (view.frame.size.width)
-#define scf_history_h(view) (view.frame.size.height)
+#define history_x(view) (view.frame.origin.x)
+#define history_y(view) (view.frame.origin.y)
+#define history_w(view) (view.frame.size.width)
+#define history_h(view) (view.frame.size.height)
 
-#define SCF_ANIMATION_DURATION 0.3f
-#define SCF_ITEM_HEIGHT 40.0f
-#define SCF_CLEAR_BUTTON_HEIGHT 45.0f
-#define SCF_MAX_HEIGHT 300.0f
+#define ANIMATION_DURATION 0.3f
+#define ITEM_HEIGHT 40.0f
+#define CLEAR_BUTTON_HEIGHT 45.0f
+#define MAX_HEIGHT 300.0f
 
 static char kTextFieldIdentifyKey;
 static char kTextFieldHistoryViewIdentifyKey;
 
 @interface UITextField ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *scf_historyTableView;
+@property (nonatomic, strong) UITableView *historyTableView;
 
 @end
 
 @implementation UITextField (SCFHistory)
 
 #pragma mark - public methods
-- (NSArray *)scf_loadHistory {
-    if (!self.scf_identify) {
+- (NSArray *)loadHistory {
+    if (!self.identify) {
         return nil;
     }
     
     NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UITextField+SCFHistory"];
     if (dic) {
-        return [dic objectForKey:self.scf_identify];
+        return [dic objectForKey:self.identify];
     }
     
     return nil;
 }
 
-- (void)scf_synchronize {
-    if (!self.scf_identify || self.text.length <= 0) {
+- (void)synchronize {
+    if (!self.identify || self.text.length <= 0) {
         return;
     }
     
     NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"UITextField+SCFHistory"];
-    NSArray *histories = [dic objectForKey:self.scf_identify];
+    NSArray *histories = [dic objectForKey:self.identify];
     
     NSMutableArray *mutHistories = [NSMutableArray arrayWithArray:histories];
     
@@ -72,63 +72,63 @@ static char kTextFieldHistoryViewIdentifyKey;
     [mutHistories addObject:self.text];
     
     NSMutableDictionary *mutDic = [NSMutableDictionary dictionaryWithDictionary:dic];
-    [mutDic setObject:mutHistories forKey:self.scf_identify];
+    [mutDic setObject:mutHistories forKey:self.identify];
     
     [[NSUserDefaults standardUserDefaults] setObject:[mutDic copy] forKey:@"UITextField+SCFHistory"];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (void)scf_showHistory {
-    NSArray *histories = [self scf_loadHistory];
+- (void)showHistory {
+    NSArray *histories = [self loadHistory];
     
-    if (!self.scf_historyTableView.superview || !histories || histories.count <= 0) {
+    if (!self.historyTableView.superview || !histories || histories.count <= 0) {
         return;
     }
     
-    CGRect frame1 = CGRectMake(scf_history_x(self),
-                               scf_history_y(self) + scf_history_h(self) + 1,
-                               scf_history_w(self),
+    CGRect frame1 = CGRectMake(history_x(self),
+                               history_y(self) + history_h(self) + 1,
+                               history_w(self),
                                1);
-    CGRect frame2 = CGRectMake(scf_history_x(self),
-                               scf_history_y(self) + scf_history_h(self) + 1,
-                               scf_history_w(self),
-                               MIN(SCF_MAX_HEIGHT, SCF_ITEM_HEIGHT * histories.count + SCF_CLEAR_BUTTON_HEIGHT));
+    CGRect frame2 = CGRectMake(history_x(self),
+                               history_y(self) + history_h(self) + 1,
+                               history_w(self),
+                               MIN(MAX_HEIGHT, ITEM_HEIGHT * histories.count + CLEAR_BUTTON_HEIGHT));
     
-    self.scf_historyTableView.frame = frame1;
-    [self.superview addSubview:self.scf_historyTableView];
+    self.historyTableView.frame = frame1;
+    [self.superview addSubview:self.historyTableView];
     
-    [UIView animateWithDuration:SCF_ANIMATION_DURATION animations:^{
-        self.scf_historyTableView.frame = frame2;
+    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+        self.historyTableView.frame = frame2;
     }];
 }
 
-- (void)scf_hideHistory {
-    if (!self.scf_historyTableView.superview) {
+- (void)hideHistory {
+    if (!self.historyTableView.superview) {
         return;
     }
     
-    CGRect frame1 = CGRectMake(scf_history_x(self),
-                               scf_history_y(self) + scf_history_h(self) + 1,
-                               scf_history_w(self),
+    CGRect frame1 = CGRectMake(history_x(self),
+                               history_y(self) + history_h(self) + 1,
+                               history_w(self),
                                1);
     
-    [UIView animateWithDuration:SCF_ANIMATION_DURATION animations:^{
-        self.scf_historyTableView.frame = frame1;
+    [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+        self.historyTableView.frame = frame1;
     } completion:^(BOOL finished) {
-        [self.scf_historyTableView removeFromSuperview];
+        [self.historyTableView removeFromSuperview];
     }];
 }
 
-- (void)scf_clearHistory {
+- (void)clearHistory {
     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"UITextField+SCFHistory"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 #pragma mark - private methods
-- (void)scf_clearHistoryButtonClick:(UIButton *)button {
-    [self scf_clearHistory];
-    [self scf_hideHistory];
+- (void)clearHistoryButtonClick:(UIButton *)button {
+    [self clearHistory];
+    [self hideHistory];
 }
 
 #pragma mark - tableView datasource
@@ -139,13 +139,13 @@ static char kTextFieldHistoryViewIdentifyKey;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self scf_loadHistory].count;
+    return [self loadHistory].count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITextFieldHistoryCell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self scf_loadHistory][indexPath.row];
+    cell.textLabel.text = [self loadHistory][indexPath.row];
     
     return cell;
 }
@@ -155,37 +155,37 @@ static char kTextFieldHistoryViewIdentifyKey;
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIButton *clearButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [clearButton setTitle:@"Clear" forState:UIControlStateNormal];
-    [clearButton addTarget:self action:@selector(scf_clearHistoryButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [clearButton addTarget:self action:@selector(clearHistoryButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     return clearButton;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return SCF_ITEM_HEIGHT;
+    return ITEM_HEIGHT;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return SCF_CLEAR_BUTTON_HEIGHT;
+    return CLEAR_BUTTON_HEIGHT;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.text = [self scf_loadHistory][indexPath.row];
-    [self scf_hideHistory];
+    self.text = [self loadHistory][indexPath.row];
+    [self hideHistory];
 }
 
 #pragma mark - setters / getters
-- (void)setScf_identify:(NSString *)scf_identify {
+- (void)setIdentify:(NSString *)identify {
     objc_setAssociatedObject(self,
                              &kTextFieldIdentifyKey,
-                             scf_identify,
+                             identify,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString *)scf_identify {
+- (NSString *)identify {
     return objc_getAssociatedObject(self, &kTextFieldIdentifyKey);
 }
 
-- (UITableView *)scf_historyTableView {
+- (UITableView *)historyTableView {
     UITableView *tableView = objc_getAssociatedObject(self, &kTextFieldHistoryViewIdentifyKey);
     
     if (!tableView) {

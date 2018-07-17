@@ -12,12 +12,12 @@
 
 @implementation NSString (SCFBase64)
 
-+ (NSString *)scf_base64EncodedStringFromString:(NSString *)fromString {
++ (NSString *)base64EncodedStringFromString:(NSString *)fromString {
     NSData *data = [fromString dataUsingEncoding:NSUTF8StringEncoding];
     return [data base64EncodedStringWithOptions:0];
 }
 
-+ (NSString *)scf_stringFromBase64EncodedString:(NSString *)base64String {
++ (NSString *)stringFromBase64EncodedString:(NSString *)base64String {
     NSData *data = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }

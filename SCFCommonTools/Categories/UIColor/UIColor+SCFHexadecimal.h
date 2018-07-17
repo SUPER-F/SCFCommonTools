@@ -13,13 +13,13 @@
 @interface UIColor (SCFHexadecimal)
 
 // 十六进制颜色值转UIColor
-+ (UIColor *)scf_colorWithHex:(UInt32)hex;
-+ (UIColor *)scf_colorWithHex:(UInt32)hex alpha:(CGFloat)alpha;
++ (UIColor *)colorWithHex:(UInt32)hex;
++ (UIColor *)colorWithHex:(UInt32)hex alpha:(CGFloat)alpha;
 
 // 十六进制颜色值字符串转UIColor
-+ (UIColor *)scf_colorWithHexString:(NSString *)hexString;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
 
 // UIColor转十六进制字符串
-- (NSString *)scf_hexString;
+- (NSString *)hexString;
 
 @end

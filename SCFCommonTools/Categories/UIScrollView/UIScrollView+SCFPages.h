@@ -12,19 +12,19 @@
 
 @interface UIScrollView (SCFPages)
 
-- (NSInteger)scf_pages;
-- (NSInteger)scf_currentPage;
+- (NSInteger)pages;
+- (NSInteger)currentPage;
 
-- (CGFloat)scf_scrollPercent;
+- (CGFloat)scrollPercent;
 
-- (CGFloat)scf_pagesX;
-- (CGFloat)scf_pagesY;
-- (CGFloat)scf_currentPageX;
-- (CGFloat)scf_currentPageY;
+- (CGFloat)pagesX;
+- (CGFloat)pagesY;
+- (CGFloat)currentPageX;
+- (CGFloat)currentPageY;
 
-- (void)scf_setPageX:(CGFloat)pageX;
-- (void)scf_setPageY:(CGFloat)pageY;
-- (void)scf_setPageX:(CGFloat)pageX animated:(BOOL)animated;
-- (void)scf_setPageY:(CGFloat)pageY animated:(BOOL)animated;
+- (void)setPageX:(CGFloat)pageX;
+- (void)setPageY:(CGFloat)pageY;
+- (void)setPageX:(CGFloat)pageX animated:(BOOL)animated;
+- (void)setPageY:(CGFloat)pageY animated:(BOOL)animated;
 
 @end

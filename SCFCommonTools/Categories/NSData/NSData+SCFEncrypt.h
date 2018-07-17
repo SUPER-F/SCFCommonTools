@@ -24,7 +24,7 @@
  *
  *  @return data
  */
-- (NSData *)scf_encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 /**
  *  @brief  利用AES解密据
@@ -34,7 +34,7 @@
  *
  *  @return 解密后数据
  */
-- (NSData *)scf_decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 /**
  *  利用DES加密数据
@@ -44,7 +44,7 @@
  *
  *  @return data
  */
-- (NSData *)scf_encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 /**
  *  @brief   利用DES解密数据
@@ -54,7 +54,7 @@
  *
  *  @return 解密后数据
  */
-- (NSData *)scf_decryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)decryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 /**
  *  利用3DES加密数据
@@ -64,7 +64,7 @@
  *
  *  @return data
  */
-- (NSData *)scf_encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 /**
  *  @brief   利用3DES解密数据
@@ -74,10 +74,10 @@
  *
  *  @return 解密后数据
  */
-- (NSData *)scf_decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
+- (NSData *)decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv;
 
 
-- (NSData *)scf_CCCryptData:(NSData *)data
+- (NSData *)CCCryptData:(NSData *)data
                  algorithm:(CCAlgorithm)algorithm
                  operation:(CCOperation)operation
                        key:(NSString *)key
@@ -88,6 +88,6 @@
  *
  *  @return 转成UTF8 字符串
  */
-- (NSString *)scf_UTF8String;
+- (NSString *)UTF8String;
 
 @end

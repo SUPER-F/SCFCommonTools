@@ -12,7 +12,7 @@
 
 @implementation UIImage (SCFAlpha)
 
-- (BOOL)scf_imageHasAlpha {
+- (BOOL)imageHasAlpha {
     CGImageAlphaInfo alpha = CGImageGetAlphaInfo(self.CGImage);
     return (alpha == kCGImageAlphaFirst
             || alpha == kCGImageAlphaLast
@@ -20,8 +20,8 @@
             || alpha == kCGImageAlphaPremultipliedLast);
 }
 
-- (UIImage *)scf_imageAddAlpha {
-    if ([self scf_imageHasAlpha]) {
+- (UIImage *)imageAddAlpha {
+    if ([self imageHasAlpha]) {
         return self;
     }
     
@@ -51,9 +51,9 @@
     return imageWithAlpha;
 }
 
-- (UIImage *)scf_imageAddTransparentBorderWithWidth:(NSUInteger)borderWidth {
+- (UIImage *)imageAddTransparentBorderWithWidth:(NSUInteger)borderWidth {
     // 如果没有alpha通道，则增加alpha通道
-    UIImage *image = [self scf_imageAddAlpha];
+    UIImage *image = [self imageAddAlpha];
     
     CGRect newRect = CGRectMake(0, 0, image.size.width + borderWidth * 2, image.size.height + borderWidth * 2);
     
@@ -71,7 +71,7 @@
     CGImageRef borderImageRef = CGBitmapContextCreateImage(bitmapContext);
     
     // 创建一个蒙版使边框透明，并将其与图像结合
-    CGImageRef maskImageRef = [UIImage scf_imageNewBorderMask:borderWidth size:newRect.size];
+    CGImageRef maskImageRef = [UIImage imageNewBorderMask:borderWidth size:newRect.size];
     CGImageRef transparentBorderImageRef = CGImageCreateWithMask(borderImageRef, maskImageRef);
     
     // 添加透明边框后的image
@@ -85,7 +85,7 @@
     return transparentBorderImage;
 }
 
-- (UIImage *)scf_imageCutTransparentBorderToBetterSize {
+- (UIImage *)imageCutTransparentBorderToBetterSize {
     CGImageRef inImage = self.CGImage;
     CFDataRef m_dataRef = CGDataProviderCopyData(CGImageGetDataProvider(inImage));
     
@@ -170,7 +170,7 @@
 // 创建一个蒙版，使外缘透明，其他一切都不透明
 // 尺寸必须包括整个蒙版(不透明部分+透明边框)
 // 调用方通过调用CGImageRelease来释放返回的引用
-+ (CGImageRef)scf_imageNewBorderMask:(NSUInteger)borderSize size:(CGSize)size {
++ (CGImageRef)imageNewBorderMask:(NSUInteger)borderSize size:(CGSize)size {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
     
     // 构建与新大小相同的上下文

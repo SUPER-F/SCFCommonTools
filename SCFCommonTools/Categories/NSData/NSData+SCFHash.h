@@ -12,13 +12,13 @@
 
 @interface NSData (SCFHash)
 
-- (NSData *)scf_md5Data;
+- (NSData *)md5Data;
 
-- (NSData *)scf_sha1Data;
+- (NSData *)sha1Data;
 
-- (NSData *)scf_sha256Data;
+- (NSData *)sha256Data;
 
-- (NSData *)scf_sha512Data;
+- (NSData *)sha512Data;
 
 
 /**
@@ -27,7 +27,7 @@
  @param key 秘钥
  @return md5 Data
  */
-- (NSData *)scf_hmacMD5DataWithKey:(NSData *)key;
+- (NSData *)hmacMD5DataWithKey:(NSData *)key;
 
 /**
  根据秘钥key 进行sha1编码
@@ -35,7 +35,7 @@
  @param key 秘钥
  @return sha1 Data
  */
-- (NSData *)scf_hmacSHA1DataWithKey:(NSData *)key;
+- (NSData *)hmacSHA1DataWithKey:(NSData *)key;
 
 /**
  根据秘钥key 进行sha256编码
@@ -43,7 +43,7 @@
  @param key 秘钥
  @return sha256 Data
  */
-- (NSData *)scf_hmacSHA256DataWithKey:(NSData *)key;
+- (NSData *)hmacSHA256DataWithKey:(NSData *)key;
 
 /**
  根据秘钥key 进行sha512编码
@@ -51,6 +51,6 @@
  @param key 秘钥
  @return sha512 Data
  */
-- (NSData *)scf_hmacSHA512DataWithKey:(NSData *)key;
+- (NSData *)hmacSHA512DataWithKey:(NSData *)key;
 
 @end

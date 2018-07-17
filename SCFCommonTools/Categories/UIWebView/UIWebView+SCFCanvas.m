@@ -13,7 +13,7 @@
 
 @implementation UIWebView (SCFCanvas)
 
-- (void)scf_createCanvas:(NSString *)canvasId width:(CGFloat)width height:(CGFloat)height {
+- (void)createCanvas:(NSString *)canvasId width:(CGFloat)width height:(CGFloat)height {
     NSString *jsString = [NSString stringWithFormat:
                           @"var canvas = document.createElement('canvas');"
                           "canvas.id = %@; canvas.width = %f; canvas.height = %f;"
@@ -24,7 +24,7 @@
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_createCanvas:(NSString *)canvasId
+- (void)createCanvas:(NSString *)canvasId
               startPoint:(CGPoint)startPoint
                    width:(CGFloat)width
                   height:(CGFloat)height {
@@ -41,7 +41,7 @@
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_fillRectOnCanvas:(NSString *)canvasId
+- (void)fillRectOnCanvas:(NSString *)canvasId
                   startPoint:(CGPoint)startPoint
                        width:(CGFloat)width
                       height:(CGFloat)height
@@ -51,11 +51,11 @@
                           "var context = canvas.getContext('2d');"
                           "context.fillStyle = '%@';"
                           "context.fillRect(%f,%f,%f,%f);"
-                          ,canvasId, [color scf_canvasColorString], startPoint.x, startPoint.y, width, height];
+                          ,canvasId, [color canvasColorString], startPoint.x, startPoint.y, width, height];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_strokeRectOnCanvas:(NSString *)canvasId
+- (void)strokeRectOnCanvas:(NSString *)canvasId
                     startPoint:(CGPoint)startPoint
                          width:(CGFloat)width
                         height:(CGFloat)height
@@ -67,11 +67,11 @@
                           "context.strokeStyle = '%@';"
                           "context.lineWidth = '%f';"
                           "context.strokeRect(%f,%f,%f,%f);"
-                          ,canvasId, [color scf_canvasColorString], lineWidth, startPoint.x, startPoint.y, width, height];
+                          ,canvasId, [color canvasColorString], lineWidth, startPoint.x, startPoint.y, width, height];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_clearRectOnCanvas:(NSString *)canvasId
+- (void)clearRectOnCanvas:(NSString *)canvasId
                    startPoint:(CGPoint)startPoint
                         width:(CGFloat)width
                        height:(CGFloat)height {
@@ -83,7 +83,7 @@
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_arcOnCanvas:(NSString *)canvasId
+- (void)arcOnCanvas:(NSString *)canvasId
             centerPoint:(CGPoint)centerPoint
                  radius:(CGFloat)radius
              startAngle:(CGFloat)startAngle
@@ -98,11 +98,11 @@
                           "context.closePath();"
                           "context.fillStyle = '%@';"
                           "context.fill();",
-                          canvasId, centerPoint.x, centerPoint.y, radius, startAngle, endAngle, anticlockwise ? @"true" : @"false", [color scf_canvasColorString]];
+                          canvasId, centerPoint.x, centerPoint.y, radius, startAngle, endAngle, anticlockwise ? @"true" : @"false", [color canvasColorString]];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_lineOnCanvas:(NSString *)canvasId
+- (void)lineOnCanvas:(NSString *)canvasId
               beginPoint:(CGPoint)beginPoint
                 endPoint:(CGPoint)endPoint
                    color:(UIColor *)color
@@ -117,11 +117,11 @@
                           "context.strokeStyle = '%@';"
                           "context.lineWidth = %f;"
                           "context.stroke();",
-                          canvasId, beginPoint.x, beginPoint.y, endPoint.x, endPoint.y, [color scf_canvasColorString], lineWidth];
+                          canvasId, beginPoint.x, beginPoint.y, endPoint.x, endPoint.y, [color canvasColorString], lineWidth];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_linesOnCanvas:(NSString *)canvasId
+- (void)linesOnCanvas:(NSString *)canvasId
                    points:(NSArray *)points
                     color:(UIColor *)color
                 lineWidth:(CGFloat)lineWidth {
@@ -138,11 +138,11 @@
                 "context.strokeStyle = '%@';"
                 "context.lineWidth = %f;"
                 "context.stroke();",
-                [color scf_canvasColorString], lineWidth];
+                [color canvasColorString], lineWidth];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_bezierCurveOnCanvas:(NSString *)canvasId
+- (void)bezierCurveOnCanvas:(NSString *)canvasId
                      beginPoint:(CGPoint)beginPoint
                   controlPoint1:(CGPoint)cp1
                   controlPoint2:(CGPoint)cp2
@@ -158,11 +158,11 @@
                           "context.strokeStyle = '%@';"
                           "context.lineWidth = %f;"
                           "context.stroke();",
-                          canvasId, beginPoint.x, beginPoint.y, cp1.x, cp1.y, cp2.x, cp2.y, endPoint.x, endPoint.y, [color scf_canvasColorString], lineWidth];
+                          canvasId, beginPoint.x, beginPoint.y, cp1.x, cp1.y, cp2.x, cp2.y, endPoint.x, endPoint.y, [color canvasColorString], lineWidth];
     [self stringByEvaluatingJavaScriptFromString:jsString];
 }
 
-- (void)scf_drawImageOnCanvas:(NSString *)canvasId
+- (void)drawImageOnCanvas:(NSString *)canvasId
                         image:(NSString *)img
                            sx:(CGFloat)sx
                            sy:(CGFloat)sy

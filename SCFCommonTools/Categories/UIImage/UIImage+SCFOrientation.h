@@ -19,7 +19,7 @@
  @param srcImage 图片
  @return 修正方向后的图片
  */
-+ (UIImage *)scf_imageFixOrientation:(UIImage *)srcImage;
++ (UIImage *)imageFixOrientation:(UIImage *)srcImage;
 
 
 /**
@@ -28,7 +28,7 @@
  @param degrees 角度
  @return 旋转后的图片
  */
-- (UIImage *)scf_imageRotatedByDegrees:(CGFloat)degrees;
+- (UIImage *)imageRotatedByDegrees:(CGFloat)degrees;
 
 
 /**
@@ -37,7 +37,7 @@
  @param radians 弧度
  @return 旋转后的图片
  */
-- (UIImage *)scf_imageRotatedByRadians:(CGFloat)radians;
+- (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 
 
 /**
@@ -45,7 +45,7 @@
 
  @return 翻转后的图片
  */
-- (UIImage *)scf_imageFlipVertical;
+- (UIImage *)imageFlipVertical;
 
 
 /**
@@ -53,7 +53,7 @@
 
  @return 翻转后的图片
  */
-- (UIImage *)scf_imageFlipHorizontal;
+- (UIImage *)imageFlipHorizontal;
 
 
 /**
@@ -62,7 +62,7 @@
  @param degrees 角度
  @return 弧度
  */
-+ (CGFloat)scf_radiansFromDegrees:(CGFloat)degrees;
++ (CGFloat)radiansFromDegrees:(CGFloat)degrees;
 
 
 /**
@@ -71,6 +71,6 @@
  @param radians 弧度
  @return 角度
  */
-+ (CGFloat)scf_degreesFromRadians:(CGFloat)radians;
++ (CGFloat)degreesFromRadians:(CGFloat)radians;
 
 @end

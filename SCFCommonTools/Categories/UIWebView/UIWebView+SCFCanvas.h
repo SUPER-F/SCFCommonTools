@@ -19,7 +19,7 @@
  @param width 画布的宽度
  @param height 画布的高度
  */
-- (void)scf_createCanvas:(NSString *)canvasId
+- (void)createCanvas:(NSString *)canvasId
                    width:(CGFloat)width
                   height:(CGFloat)height;
 
@@ -31,7 +31,7 @@
  @param width 画布的宽度
  @param height 画布的高度
  */
-- (void)scf_createCanvas:(NSString *)canvasId
+- (void)createCanvas:(NSString *)canvasId
               startPoint:(CGPoint)startPoint
                    width:(CGFloat)width
                   height:(CGFloat)height;
@@ -46,7 +46,7 @@
  @param height 矩形的高度
  @param color 填充颜色
  */
-- (void)scf_fillRectOnCanvas:(NSString *)canvasId
+- (void)fillRectOnCanvas:(NSString *)canvasId
                   startPoint:(CGPoint)startPoint
                        width:(CGFloat)width
                       height:(CGFloat)height
@@ -63,7 +63,7 @@
  @param color 笔触颜色
  @param lineWidth 线宽度
  */
-- (void)scf_strokeRectOnCanvas:(NSString *)canvasId
+- (void)strokeRectOnCanvas:(NSString *)canvasId
                     startPoint:(CGPoint)startPoint
                          width:(CGFloat)width
                         height:(CGFloat)height
@@ -79,7 +79,7 @@
  @param width 要清除的矩形的宽度
  @param height 要清除的矩形的高度
  */
-- (void)scf_clearRectOnCanvas:(NSString *)canvasId
+- (void)clearRectOnCanvas:(NSString *)canvasId
                    startPoint:(CGPoint)startPoint
                         width:(CGFloat)width
                        height:(CGFloat)height;
@@ -96,7 +96,7 @@
  @param anticlockwise 可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
  @param color 线颜色
  */
-- (void)scf_arcOnCanvas:(NSString *)canvasId
+- (void)arcOnCanvas:(NSString *)canvasId
             centerPoint:(CGPoint)centerPoint
                  radius:(CGFloat)radius
              startAngle:(CGFloat)startAngle
@@ -115,7 +115,7 @@
  @param color 颜色
  @param lineWidth 线颜色
  */
-- (void)scf_lineOnCanvas:(NSString *)canvasId
+- (void)lineOnCanvas:(NSString *)canvasId
               beginPoint:(CGPoint)beginPoint
                 endPoint:(CGPoint)endPoint
                    color:(UIColor *)color
@@ -129,7 +129,7 @@
  @param color 线颜色
  @param lineWidth 线宽度
  */
-- (void)scf_linesOnCanvas:(NSString *)canvasId
+- (void)linesOnCanvas:(NSString *)canvasId
                    points:(NSArray *)points
                     color:(UIColor *)color
                 lineWidth:(CGFloat)lineWidth;
@@ -146,7 +146,7 @@
  @param color 颜色
  @param lineWidth 曲线宽度
  */
-- (void)scf_bezierCurveOnCanvas:(NSString *)canvasId
+- (void)bezierCurveOnCanvas:(NSString *)canvasId
                       beginPoint:(CGPoint)beginPoint
                   controlPoint1:(CGPoint)cp1
                   controlPoint2:(CGPoint)cp2
@@ -170,7 +170,7 @@
  @param width 可选。要使用的图像的宽度。（伸展或缩小图像）
  @param height 可选。要使用的图像的高度。（伸展或缩小图像）
  */
-- (void)scf_drawImageOnCanvas:(NSString *)canvasId
+- (void)drawImageOnCanvas:(NSString *)canvasId
                         image:(NSString *)img
                            sx:(CGFloat)sx
                            sy:(CGFloat)sy

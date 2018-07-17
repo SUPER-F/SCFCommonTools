@@ -29,14 +29,14 @@
  * @param string  字符串
  * @param block   返回attributes
  */
-+ (NSMutableAttributedString *)scf_makeAttributeString:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block;
++ (NSMutableAttributedString *)makeAttributeString:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block;
 
 /*
  *【拼接属性字符串】
  * @param string  字符串
  * @param block   返回attributes
  */
-- (NSMutableAttributedString *)scf_makeAttributeStringAdd:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block;
+- (NSMutableAttributedString *)makeAttributeStringAdd:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block;
 
 //--------------------------- 【示例】 ------------------------------//
 //

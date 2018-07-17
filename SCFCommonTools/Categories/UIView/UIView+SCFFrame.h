@@ -15,67 +15,67 @@
 /**
  * Shortcut for frame.origin
  */
-@property (nonatomic) CGPoint scf_origin;
+@property (nonatomic) CGPoint origin;
 
 /**
  * Shortcut for frame.size
  */
-@property (nonatomic) CGSize scf_size;
+@property (nonatomic) CGSize size;
 
 /**
  * Shortcut for center.x
  *
  * Sets center.x = centerX
  */
-@property (nonatomic) CGFloat scf_centerX;
+@property (nonatomic) CGFloat centerX;
 
 /**
  * Shortcut for center.y
  *
  * Sets center.y = centerY
  */
-@property (nonatomic) CGFloat scf_centerY;
+@property (nonatomic) CGFloat centerY;
 
 /**
  * Shortcut for frame.origin.y
  *
  * Sets frame.origin.y = top
  */
-@property (nonatomic) CGFloat scf_top;
+@property (nonatomic) CGFloat top;
 
 /**
  * Shortcut for frame.origin.x
  *
  * Sets frame.origin.x = left
  */
-@property (nonatomic) CGFloat scf_left;
+@property (nonatomic) CGFloat left;
 
 /**
  * Shortcut for frame.origin.y + frame.size.height
  *
  * Sets frame.origin.y = bottom - frame.size.height
  */
-@property (nonatomic) CGFloat scf_bottom;
+@property (nonatomic) CGFloat bottom;
 
 /**
  * Shortcut for frame.origin.x + frame.size.width
  *
  * Sets frame.origin.x = right - frame.size.width
  */
-@property (nonatomic) CGFloat scf_right;
+@property (nonatomic) CGFloat right;
 
 /**
  * Shortcut for frame.size.width
  *
  * Sets frame.size.width = width
  */
-@property (nonatomic) CGFloat scf_width;
+@property (nonatomic) CGFloat width;
 
 /**
  * Shortcut for frame.size.height
  *
  * Sets frame.size.height = height
  */
-@property (nonatomic) CGFloat scf_height;
+@property (nonatomic) CGFloat height;
 
 @end

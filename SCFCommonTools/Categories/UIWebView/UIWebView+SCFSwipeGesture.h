@@ -12,6 +12,6 @@
 
 @interface UIWebView (SCFSwipeGesture) 
 
-- (void)scf_addSwipeGesture;
+- (void)addSwipeGesture;
 
 @end

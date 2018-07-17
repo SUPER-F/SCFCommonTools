@@ -19,7 +19,7 @@
  @param corners 想设置为圆角的角
  @param radius 圆角半径
  */
-- (void)scf_viewRoundedCorners:(UIRectCorner)corners
+- (void)viewRoundedCorners:(UIRectCorner)corners
                         radius:(CGFloat)radius;
 
 
@@ -31,7 +31,7 @@
  @param opacity 透明度
  @param radius 圆角半径
  */
-- (void)scf_viewShadowWithColor:(UIColor *)color
+- (void)viewShadowWithColor:(UIColor *)color
                          offset:(CGSize)offset
                         opacity:(CGFloat)opacity
                          radius:(CGFloat)radius;
@@ -42,7 +42,7 @@
 
  @param duration 动画时间
  */
-- (void)scf_removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration;
+- (void)removeFromSuperviewWithFadeDuration:(NSTimeInterval)duration;
 
 
 /**
@@ -52,7 +52,7 @@
  @param transition 添加动画
  @param duration 动画时间
  */
-- (void)scf_addSubview:(UIView *)subview
+- (void)addSubview:(UIView *)subview
         withTransition:(UIViewAnimationTransition)transition
               duration:(NSTimeInterval)duration;
 
@@ -63,7 +63,7 @@
  @param transition 移除动画
  @param duration 动画时间
  */
-- (void)scf_removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition
+- (void)removeFromSuperviewWithTransition:(UIViewAnimationTransition)transition
                                      duration:(NSTimeInterval)duration;
 
 
@@ -76,7 +76,7 @@
  @param repeatCount 重复次数
  @param timingFunction 定时功能
  */
-- (void)scf_viewRotateByAngle:(CGFloat)angle
+- (void)viewRotateByAngle:(CGFloat)angle
                      duration:(NSTimeInterval)duration
                   autoReverse:(BOOL)autoReverse
                   repeatCount:(CGFloat)repeatCount
@@ -92,7 +92,7 @@
  @param repeatCount 重复次数
  @param timingFunction 定时功能
  */
-- (void)scf_viewMoveToPoint:(CGPoint)newPoint
+- (void)viewMoveToPoint:(CGPoint)newPoint
                    duration:(NSTimeInterval)duration
                 autoReverse:(BOOL)autoReverse
                 repeatCount:(CGFloat)repeatCount

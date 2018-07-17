@@ -18,6 +18,6 @@
 
  @return 随机颜色值
  */
-+ (UIColor *)scf_colorRandom;
++ (UIColor *)colorRandom;
 
 @end

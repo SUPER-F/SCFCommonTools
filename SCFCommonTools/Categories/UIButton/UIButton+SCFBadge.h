@@ -12,26 +12,26 @@
 
 @interface UIButton (SCFBadge)
 
-@property (nonatomic, strong) UILabel *scf_badge;
+@property (nonatomic, strong) UILabel *badge;
 
 // Badge value to be display
-@property (nonatomic, copy) NSString *scf_badgeValue;
+@property (nonatomic, copy) NSString *badgeValue;
 // Badge background color
-@property (nonatomic) UIColor *scf_badgeBGColor;
+@property (nonatomic) UIColor *badgeBGColor;
 // Badge text color
-@property (nonatomic) UIColor *scf_badgeTextColor;
+@property (nonatomic) UIColor *badgeTextColor;
 // Badge font
-@property (nonatomic) UIFont *scf_badgeFont;
+@property (nonatomic) UIFont *badgeFont;
 // Padding value for the badge
-@property (nonatomic) CGFloat scf_badgePadding;
+@property (nonatomic) CGFloat badgePadding;
 // Minimum size badge to small
-@property (nonatomic) CGFloat scf_badgeMinSize;
+@property (nonatomic) CGFloat badgeMinSize;
 // Values for offsetting the badge over the BarButtonItem you picked
-@property (nonatomic) CGFloat scf_badgeOriginX;
-@property (nonatomic) CGFloat scf_badgeOriginY;
+@property (nonatomic) CGFloat badgeOriginX;
+@property (nonatomic) CGFloat badgeOriginY;
 // In case of numbers, remove the badge when reaching zero
-@property (nonatomic) BOOL scf_shouldHideBadgeAtZero;
+@property (nonatomic) BOOL shouldHideBadgeAtZero;
 // Badge has a bounce animation when value changes
-@property (nonatomic) BOOL scf_shouldAnimateBadge;
+@property (nonatomic) BOOL shouldAnimateBadge;
 
 @end

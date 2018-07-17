@@ -20,32 +20,32 @@ typedef NS_ENUM(NSInteger, SCFScrollViewDirection) {
 
 @interface UIScrollView (SCFAddition)
 
-@property (nonatomic) CGFloat scf_contentWidth;
-@property (nonatomic) CGFloat scf_contentHeight;
-@property (nonatomic) CGFloat scf_contentOffsetX;
-@property (nonatomic) CGFloat scf_contentOffsetY;
+@property (nonatomic) CGFloat contentWidth;
+@property (nonatomic) CGFloat contentHeight;
+@property (nonatomic) CGFloat contentOffsetX;
+@property (nonatomic) CGFloat contentOffsetY;
 
-- (CGPoint)scf_contentOffsetTop;
-- (CGPoint)scf_contentOffsetBottom;
-- (CGPoint)scf_contentOffsetLeft;
-- (CGPoint)scf_contentOffsetRight;
+- (CGPoint)contentOffsetTop;
+- (CGPoint)contentOffsetBottom;
+- (CGPoint)contentOffsetLeft;
+- (CGPoint)contentOffsetRight;
 
-- (SCFScrollViewDirection)scf_scrollViewDirection;
+- (SCFScrollViewDirection)scrollViewDirection;
 
-- (BOOL)scf_isScrolledToTop;
-- (BOOL)scf_isScrolledToBottom;
-- (BOOL)scf_isScrolledToLeft;
-- (BOOL)scf_isScrolledToRight;
+- (BOOL)isScrolledToTop;
+- (BOOL)isScrolledToBottom;
+- (BOOL)isScrolledToLeft;
+- (BOOL)isScrolledToRight;
 
-- (void)scf_scrollToTopAnimated:(BOOL)animated;
-- (void)scf_scrollToBottomAnimated:(BOOL)animated;
-- (void)scf_scrollToLeftAnimated:(BOOL)animated;
-- (void)scf_scrollToRightAnimated:(BOOL)animated;
+- (void)scrollToTopAnimated:(BOOL)animated;
+- (void)scrollToBottomAnimated:(BOOL)animated;
+- (void)scrollToLeftAnimated:(BOOL)animated;
+- (void)scrollToRightAnimated:(BOOL)animated;
 
-- (NSUInteger)scf_pageIndexVertical;
-- (NSUInteger)scf_pageIndexHorizontal;
+- (NSUInteger)pageIndexVertical;
+- (NSUInteger)pageIndexHorizontal;
 
-- (void)scf_scrollToVerticalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
-- (void)scf_scrollToHorizontalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
+- (void)scrollToVerticalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
+- (void)scrollToHorizontalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated;
 
 @end

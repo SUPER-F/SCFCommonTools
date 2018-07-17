@@ -14,22 +14,22 @@
 
 #pragma mark - Local Storage
 
-- (void)scf_setLocalStorageString:(NSString *)string forKey:(NSString *)key;
+- (void)setLocalStorageString:(NSString *)string forKey:(NSString *)key;
 
-- (NSString *)scf_localStorageStringForKey:(NSString *)key;
+- (NSString *)localStorageStringForKey:(NSString *)key;
 
-- (void)scf_removeLocalStorageStringForKey:(NSString *)key;
+- (void)removeLocalStorageStringForKey:(NSString *)key;
 
-- (void)scf_clearLocalStorage;
+- (void)clearLocalStorage;
 
 #pragma mark - Session Storage
 
-- (void)scf_setSessionStorageString:(NSString *)string forKey:(NSString *)key;
+- (void)setSessionStorageString:(NSString *)string forKey:(NSString *)key;
 
-- (NSString *)scf_sessionStorageStringForKey:(NSString *)key;
+- (NSString *)sessionStorageStringForKey:(NSString *)key;
 
-- (void)scf_removeSessionStorageStringForKey:(NSString *)key;
+- (void)removeSessionStorageStringForKey:(NSString *)key;
 
-- (void)scf_clearSessionStorage;
+- (void)clearSessionStorage;
 
 @end

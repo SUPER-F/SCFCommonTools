@@ -12,8 +12,8 @@
 
 @interface NSString (SCFBase64)
 
-+ (NSString *)scf_base64EncodedStringFromString:(NSString *)fromString;
++ (NSString *)base64EncodedStringFromString:(NSString *)fromString;
 
-+ (NSString *)scf_stringFromBase64EncodedString:(NSString *)base64String;
++ (NSString *)stringFromBase64EncodedString:(NSString *)base64String;
 
 @end

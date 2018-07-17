@@ -13,10 +13,10 @@
 @interface UIImage (SCFAlpha)
 
 // 是否有 alpha 通道
-- (BOOL)scf_imageHasAlpha;
+- (BOOL)imageHasAlpha;
 
 // 如没有 alpha 通道，增加 alpha 通道
-- (UIImage *)scf_imageAddAlpha;
+- (UIImage *)imageAddAlpha;
 
 
 /**
@@ -25,7 +25,7 @@
  @param borderWidth 边框宽度
  @return 增加透明边框后的image
  */
-- (UIImage *)scf_imageAddTransparentBorderWithWidth:(NSUInteger)borderWidth;
+- (UIImage *)imageAddTransparentBorderWithWidth:(NSUInteger)borderWidth;
 
 
 /**
@@ -33,6 +33,6 @@
 
  @return 裁切后的image
  */
-- (UIImage *)scf_imageCutTransparentBorderToBetterSize;
+- (UIImage *)imageCutTransparentBorderToBetterSize;
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation UIImage (SCFMerge)
 
-+ (UIImage *)scf_imageMergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage {
++ (UIImage *)imageMergeImage:(UIImage *)firstImage withImage:(UIImage *)secondImage {
     CGImageRef firstImageRef = firstImage.CGImage;
     CGFloat firstWidth = CGImageGetWidth(firstImageRef);
     CGFloat firstHeight = CGImageGetHeight(firstImageRef);

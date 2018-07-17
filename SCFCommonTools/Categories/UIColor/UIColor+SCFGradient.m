@@ -12,7 +12,7 @@
 
 @implementation UIColor (SCFGradient)
 
-+ (UIColor *)scf_gradientFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor withHeight:(CGFloat)height {
++ (UIColor *)gradientFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor withHeight:(CGFloat)height {
     CGSize size = CGSizeMake(1.0, height);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();

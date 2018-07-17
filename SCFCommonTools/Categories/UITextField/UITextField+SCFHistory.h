@@ -13,21 +13,21 @@
 @interface UITextField (SCFHistory)
 
 // textfield 的 identify
-@property (nonatomic, copy) NSString *scf_identify;
+@property (nonatomic, copy) NSString *identify;
 
 // 加载历史输入数据
-- (NSArray *)scf_loadHistory;
+- (NSArray *)loadHistory;
 
 // 保存当前输入的内容
-- (void)scf_synchronize;
+- (void)synchronize;
 
 // 显示历史输入记录
-- (void)scf_showHistory;
+- (void)showHistory;
 
 // 隐藏历史输入记录
-- (void)scf_hideHistory;
+- (void)hideHistory;
 
 // 清除历史输入记录
-- (void)scf_clearHistory;
+- (void)clearHistory;
 
 @end

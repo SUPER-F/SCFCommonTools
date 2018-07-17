@@ -19,7 +19,7 @@
  @param view 被截取的view
  @return 转化后的image
  */
-+ (UIImage *)scf_imageCaptureWithView:(UIView *)view;
++ (UIImage *)imageCaptureWithView:(UIView *)view;
 
 
 /**
@@ -29,7 +29,7 @@
  @param fromImage 原image
  @return 转化后的image
  */
-+ (UIImage *)scf_imageWithSize:(CGRect)rect fromImage:(UIImage *)fromImage;
++ (UIImage *)imageWithSize:(CGRect)rect fromImage:(UIImage *)fromImage;
 
 
 /**
@@ -39,6 +39,6 @@
  @param limitWidth 指定宽度
  @return 转化后的image
  */
-+ (UIImage *)scf_imageScreenshotWithView:(UIView *)aView limitWidth:(CGFloat)limitWidth;
++ (UIImage *)imageScreenshotWithView:(UIView *)aView limitWidth:(CGFloat)limitWidth;
 
 @end

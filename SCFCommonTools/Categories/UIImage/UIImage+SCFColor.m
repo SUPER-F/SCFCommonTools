@@ -12,7 +12,7 @@
 
 @implementation UIImage (SCFColor)
 
-+ (UIImage *)scf_imageFromColor:(UIColor *)color {
++ (UIImage *)imageFromColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     
     UIGraphicsBeginImageContext(rect.size);
@@ -27,7 +27,7 @@
     return image;
 }
 
-+ (UIImage *)scf_imageCovertToGrayFromImage:(UIImage *)fromImage {
++ (UIImage *)imageCovertToGrayFromImage:(UIImage *)fromImage {
     CGFloat width = fromImage.size.width;
     CGFloat height = fromImage.size.height;
     
@@ -54,7 +54,7 @@
     return grayImage;
 }
 
-- (UIColor *)scf_imageColorAtPoint:(CGPoint)point {
+- (UIColor *)imageColorAtPoint:(CGPoint)point {
     // 如果该点不在图片内，就返回空
     if (!CGRectContainsPoint(CGRectMake(0, 0, self.size.width, self.size.height), point)) {
         return nil;
@@ -102,7 +102,7 @@
     return resultColor;
 }
 
-- (UIColor *)scf_imageColorAtPixel:(CGPoint)pixel {
+- (UIColor *)imageColorAtPixel:(CGPoint)pixel {
     // 如果该像素点不在图片内，就返回空
     if (!CGRectContainsPoint(CGRectMake(0, 0, self.size.width, self.size.height), pixel)) {
         return nil;

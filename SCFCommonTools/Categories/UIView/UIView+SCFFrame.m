@@ -12,99 +12,99 @@
 
 @implementation UIView (SCFFrame)
 
-- (CGPoint)scf_origin {
+- (CGPoint)origin {
     return self.frame.origin;
 }
 
-- (void)setScf_origin:(CGPoint)scf_origin {
+- (void)setOrigin:(CGPoint)origin {
     CGRect frame = self.frame;
-    frame.origin = scf_origin;
+    frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGSize)scf_size {
+- (CGSize)size {
     return self.frame.size;
 }
 
-- (void)setScf_size:(CGSize)scf_size {
+- (void)setSize:(CGSize)size {
     CGRect frame = self.frame;
-    frame.size = scf_size;
+    frame.size = size;
     self.frame = frame;
 }
 
-- (CGFloat)scf_centerX {
+- (CGFloat)centerX {
     return self.center.x;
 }
 
-- (void)setScf_centerX:(CGFloat)scf_centerX {
-    self.center = CGPointMake(scf_centerX, self.center.y);
+- (void)setCenterX:(CGFloat)centerX {
+    self.center = CGPointMake(centerX, self.center.y);
 }
 
-- (CGFloat)scf_centerY {
+- (CGFloat)centerY {
     return self.center.y;
 }
 
-- (void)setScf_centerY:(CGFloat)scf_centerY {
-    self.center = CGPointMake(self.center.x, scf_centerY);
+- (void)setCenterY:(CGFloat)centerY {
+    self.center = CGPointMake(self.center.x, centerY);
 }
 
-- (CGFloat)scf_top {
+- (CGFloat)top {
     return self.frame.origin.y;
 }
 
-- (void)setScf_top:(CGFloat)scf_top {
+- (void)setTop:(CGFloat)top {
     CGRect frame = self.frame;
-    frame.origin.y = scf_top;
+    frame.origin.y = top;
     self.frame = frame;
 }
 
-- (CGFloat)scf_left {
+- (CGFloat)left {
     return self.frame.origin.x;
 }
 
-- (void)setScf_left:(CGFloat)scf_left {
+- (void)setLeft:(CGFloat)left {
     CGRect frame = self.frame;
-    frame.origin.x = scf_left;
+    frame.origin.x = left;
     self.frame = frame;
 }
 
-- (CGFloat)scf_bottom {
+- (CGFloat)bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setScf_bottom:(CGFloat)scf_bottom {
+- (void)setBottom:(CGFloat)bottom {
     CGRect frame = self.frame;
-    frame.origin.y = scf_bottom - self.frame.size.height;
+    frame.origin.y = bottom - self.frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)scf_right {
+- (CGFloat)right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setScf_right:(CGFloat)scf_right {
+- (void)setRight:(CGFloat)right {
     CGRect frame = self.frame;
-    frame.origin.x = scf_right - self.frame.size.width;
+    frame.origin.x = right - self.frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)scf_width {
+- (CGFloat)width {
     return self.frame.size.width;
 }
 
-- (void)setScf_width:(CGFloat)scf_width {
+- (void)setWidth:(CGFloat)width {
     CGRect frame = self.frame;
-    frame.size.width = scf_width;
+    frame.size.width = width;
     self.frame = frame;
 }
 
-- (CGFloat)scf_height {
+- (CGFloat)height {
     return self.frame.size.height;
 }
 
-- (void)setScf_height:(CGFloat)scf_height {
+- (void)setHeight:(CGFloat)height {
     CGRect frame = self.frame;
-    frame.size.height = scf_height;
+    frame.size.height = height;
     self.frame = frame;
 }
 

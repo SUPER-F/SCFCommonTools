@@ -12,7 +12,7 @@
 
 @implementation UINavigationController (SCFAnimationTransition)
 
-- (void)scf_pushViewController:(UIViewController *)viewController withAnimationTransition:(UIViewAnimationTransition)animationTransition {
+- (void)pushViewController:(UIViewController *)viewController withAnimationTransition:(UIViewAnimationTransition)animationTransition {
     [UIView beginAnimations:nil context:NULL];
     [self pushViewController:viewController animated:NO];
     [UIView setAnimationDuration:0.5];
@@ -21,7 +21,7 @@
     [UIView commitAnimations];
 }
 
-- (UIViewController *)scf_popViewControllerWithAnimationTransition:(UIViewAnimationTransition)animationTransition {
+- (UIViewController *)popViewControllerWithAnimationTransition:(UIViewAnimationTransition)animationTransition {
     [UIView beginAnimations:nil context:NULL];
     UIViewController *controller = [self popViewControllerAnimated:NO];
     [UIView setAnimationDuration:0.5];

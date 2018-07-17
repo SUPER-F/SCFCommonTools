@@ -18,7 +18,7 @@
  @param oriSel 原有的方法
  @param swiSel swizzle的方法
  */
-+ (void)scf_swizzleClassMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel;
++ (void)swizzleClassMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel;
 
 /**
  swizzle 实例方法
@@ -26,7 +26,7 @@
  @param oriSel 原有的方法
  @param swiSel swizzle的方法
  */
-+ (void)scf_swizzleInstanceMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel;
++ (void)swizzleInstanceMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel;
 
 /**
  动态创建绑定selector的类
@@ -35,7 +35,7 @@
  @param aSelector 传入selector
  @return 返回创建的类
  */
-+ (Class)scf_addMethodToStubClass:(SEL)aSelector;
++ (Class)addMethodToStubClass:(SEL)aSelector;
 
 /**
  判断当前类是否在主bundle里
@@ -43,7 +43,7 @@
  @param cls 出入类
  @return 返回判断结果
  */
-+ (BOOL)scf_isMainBundleClass:(Class)cls;
++ (BOOL)isMainBundleClass:(Class)cls;
 
 /**
  判断方法是否在子类里override了
@@ -52,6 +52,6 @@
  @param sel 传入要判断的Selector
  @return 返回判断是否被重载的结果
  */
-- (BOOL)scf_isMethodOverrideForClass:(Class)cls selector:(SEL)sel;
+- (BOOL)isMethodOverrideForClass:(Class)cls selector:(SEL)sel;
 
 @end

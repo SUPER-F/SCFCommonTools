@@ -12,17 +12,17 @@
 
 @implementation NSString (SCFSize)
 
-- (CGFloat)scf_heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
-    CGSize textSize = [self scf_sizeWithFont:font constrainedToWidth:width];
+- (CGFloat)heightWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
+    CGSize textSize = [self sizeWithFont:font constrainedToWidth:width];
     return textSize.height;
 }
 
-- (CGFloat)scf_widthWithFont:(UIFont *)font constrainedToWidth:(CGFloat)height {
-    CGSize textSize = [self scf_sizeWithFont:font constrainedToHeight:height];
+- (CGFloat)widthWithFont:(UIFont *)font constrainedToWidth:(CGFloat)height {
+    CGSize textSize = [self sizeWithFont:font constrainedToHeight:height];
     return textSize.width;
 }
 
-- (CGSize)scf_sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToWidth:(CGFloat)width {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;
@@ -41,7 +41,7 @@
     return textSize;
 }
 
-- (CGSize)scf_sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height {
+- (CGSize)sizeWithFont:(UIFont *)font constrainedToHeight:(CGFloat)height {
     UIFont *textFont = font ? font : [UIFont systemFontOfSize:[UIFont systemFontSize]];
     
     CGSize textSize;

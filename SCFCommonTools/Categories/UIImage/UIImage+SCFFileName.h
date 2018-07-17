@@ -19,7 +19,7 @@
  @param name 图片名
  @return 无缓存的图片
  */
-+ (UIImage *)scf_imageWithMainBundleFileName:(NSString *)name;
++ (UIImage *)imageWithMainBundleFileName:(NSString *)name;
 
 
 /**
@@ -29,6 +29,6 @@
  @param bundle 指定 bundle
  @return 无缓存的图片
  */
-+ (UIImage *)scf_imageWithFileName:(NSString *)name inBundle:(NSBundle *)bundle;
++ (UIImage *)imageWithFileName:(NSString *)name inBundle:(NSBundle *)bundle;
 
 @end

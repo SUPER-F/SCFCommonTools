@@ -12,7 +12,7 @@
 
 @implementation UINavigationController (SCFStackManager)
 
-- (UIViewController *)scf_findViewControllerWithClassName:(NSString *)className {
+- (UIViewController *)findViewControllerWithClassName:(NSString *)className {
     for (UIViewController *viewController in self.viewControllers) {
         if ([viewController isKindOfClass:NSClassFromString(className)]) {
             return viewController;
@@ -22,7 +22,7 @@
     return nil;
 }
 
-- (UIViewController *)scf_rootViewController {
+- (UIViewController *)rootViewController {
     if (self.viewControllers && self.viewControllers.count > 0) {
         return [self.viewControllers firstObject];
     }
@@ -30,18 +30,18 @@
     return nil;
 }
 
-- (BOOL)scf_isOnlyContainRootViewController {
+- (BOOL)isOnlyContainRootViewController {
     if (self.viewControllers && self.viewControllers.count == 1) {
         return YES;
     }
     return NO;
 }
 
-- (NSArray *)scf_popToViewControllerWithClassName:(NSString *)className animated:(BOOL)animated {
-    return [self popToViewController:[self scf_findViewControllerWithClassName:className] animated:animated];
+- (NSArray *)popToViewControllerWithClassName:(NSString *)className animated:(BOOL)animated {
+    return [self popToViewController:[self findViewControllerWithClassName:className] animated:animated];
 }
 
-- (NSArray *)scf_popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated {
+- (NSArray *)popToViewControllerWithLevel:(NSInteger)level animated:(BOOL)animated {
     NSInteger viewControllersCount = self.viewControllers.count;
     if (viewControllersCount > level) {
         NSInteger inx = viewControllersCount - level - 1;

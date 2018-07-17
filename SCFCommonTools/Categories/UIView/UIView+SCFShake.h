@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  摇动UITextField
  使用默认值
  */
-- (void)scf_shake;
+- (void)shake;
 
 
 /**
@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param times 摇动次数
  @param width 摇动宽度
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width;
 
 
 /**
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param width 摇动宽度
  @param handler 摇动结束的block
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width completion:(void (^)(void))handler;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width completion:(void (^)(void))handler;
 
 
 /**
@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param width 摇动宽度
  @param interval 每次摇动的持续时间
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval;
 
 
 /**
@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param interval 每次摇动的持续时间
  @param handler 摇动结束的block
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval completion:(void (^)(void))handler;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval completion:(void (^)(void))handler;
 
 
 /**
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param interval 每次摇动的持续时间
  @param direction 摇动方向
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval direction:(SCFShakedDirection)direction;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval direction:(SCFShakedDirection)direction;
 
 
 /**
@@ -90,6 +90,6 @@ typedef NS_ENUM(NSInteger, SCFShakedDirection) {
  @param direction 摇动方向
  @param handler 摇动结束的block
  */
-- (void)scf_shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval direction:(SCFShakedDirection)direction completion:(void (^)(void))handler;
+- (void)shakeWithTimes:(NSInteger)times width:(CGFloat)width duration:(NSTimeInterval)interval direction:(SCFShakedDirection)direction completion:(void (^)(void))handler;
 
 @end

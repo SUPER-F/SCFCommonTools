@@ -19,7 +19,7 @@
  @param aKey key
  @return value值如果为nil或者null，则返回nil
  */
-- (NSDictionary *)scf_dictionaryObjectForKey:(NSString *)aKey;
+- (NSDictionary *)dictionaryObjectForKey:(NSString *)aKey;
 
 
 /**
@@ -28,7 +28,7 @@
  @param aKey key
  @return value值如果为nil或者null，则返回nil
  */
-- (NSArray *)scf_arrayObjectForKey:(NSString *)aKey;
+- (NSArray *)arrayObjectForKey:(NSString *)aKey;
 
 
 /**
@@ -37,7 +37,7 @@
  @param aKey key
  @return value值如果为nil或者null或者元素不全为字符串，则返回nil
  */
-- (NSArray *)scf_arrayStringForKey:(NSString *)aKey;
+- (NSArray *)arrayStringForKey:(NSString *)aKey;
 
 /**
  获取字典指定key的字符串
@@ -45,7 +45,7 @@
  @param aKey key
  @return 如果akey找不到，返回@"" (防止出现nil，使程序崩溃)
  */
-- (NSString *)scf_stringForKey:(NSString *)aKey;
+- (NSString *)stringForKey:(NSString *)aKey;
 
 
 /**
@@ -55,7 +55,7 @@
  @param defaultValue 为空时的默认值
  @return value值
  */
-- (NSString *)scf_stringForKey:(NSString *)aKey defaultValue:(NSString *)defaultValue;
+- (NSString *)stringForKey:(NSString *)aKey defaultValue:(NSString *)defaultValue;
 
 
 /**
@@ -64,7 +64,7 @@
  @param aKey key
  @return value值如果为nil或者null会返回0字符串
  */
-- (NSString *)scf_numberStringForKey:(NSString *)aKey;
+- (NSString *)numberStringForKey:(NSString *)aKey;
 
 
 /**
@@ -73,6 +73,6 @@
  @param aKey key
  @return 替换后的value值
  */
-- (NSString *)scf_stringByReplaceNBSPForKey:(NSString *)aKey;
+- (NSString *)stringByReplaceNBSPForKey:(NSString *)aKey;
 
 @end

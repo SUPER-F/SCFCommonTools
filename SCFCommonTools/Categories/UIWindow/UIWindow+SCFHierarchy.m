@@ -12,7 +12,7 @@
 
 @implementation UIWindow (SCFHierarchy)
 
-- (UIViewController*)scf_theTopMostController {
+- (UIViewController*)theTopMostController {
     UIViewController *topController = [self rootViewController];
     
     //  Getting topMost ViewController
@@ -24,8 +24,8 @@
     return topController;
 }
 
-- (UIViewController*)scf_theCurrentViewController {
-    UIViewController *currentViewController = [self scf_theTopMostController];
+- (UIViewController*)theCurrentViewController {
+    UIViewController *currentViewController = [self theTopMostController];
     
     while (currentViewController) {
         if ([currentViewController isKindOfClass:[UITabBarController class]]) {

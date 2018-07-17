@@ -13,16 +13,16 @@
 @interface UIScreen (SCFFrame)
 
 // 固定正向方向时的size
-+ (CGSize)scf_size;
-+ (CGFloat)scf_width;
-+ (CGFloat)scf_height;
++ (CGSize)size;
++ (CGFloat)width;
++ (CGFloat)height;
 
 // 根据屏幕方向变换时的size
-+ (CGSize)scf_sizeOrientation;
-+ (CGFloat)scf_widthOrientation;
-+ (CGFloat)scf_heightOrientation;
++ (CGSize)sizeOrientation;
++ (CGFloat)widthOrientation;
++ (CGFloat)heightOrientation;
 
 // 像素size
-+ (CGSize)scf_sizeDPI;
++ (CGSize)sizeDPI;
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation UIColor (SCFRandom)
 
-+ (UIColor *)scf_colorRandom {
++ (UIColor *)colorRandom {
     NSInteger redRandom = arc4random() % 255;
     NSInteger greenRandom = arc4random() % 255;
     NSInteger blueRandom = arc4random() % 255;

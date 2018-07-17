@@ -14,7 +14,7 @@
 
 @implementation UIImage (SCFResize)
 
-- (UIImage *)scf_imageCroppedToRect:(CGRect)rect {
+- (UIImage *)imageCroppedToRect:(CGRect)rect {
     CGImageRef imageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
     UIImage *croppedImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
@@ -22,12 +22,12 @@
     return croppedImage;
 }
 
-- (UIImage *)scf_imageThumbnailWithResize:(CGSize)thumbnailSize
+- (UIImage *)imageThumbnailWithResize:(CGSize)thumbnailSize
                         transparentBorder:(CGFloat)borderSize
                              cornerRadius:(CGFloat)cornerRadius
                      interpolationQuality:(CGInterpolationQuality)quality {
     
-    UIImage *resizedImage = [self scf_imageResize:thumbnailSize contentMode:UIViewContentModeScaleAspectFill interpolationQuality:quality];
+    UIImage *resizedImage = [self imageResize:thumbnailSize contentMode:UIViewContentModeScaleAspectFill interpolationQuality:quality];
     
     // 切割所有超出缩略图大小的位置
     // 被切割的rect必须在图片上
@@ -36,14 +36,14 @@
                                  round((resizedImage.size.height - thumbnailSize.height) / 2.0),
                                  thumbnailSize.width,
                                  thumbnailSize.height);
-    UIImage *croppedImage = [resizedImage scf_imageCroppedToRect:cropRect];
+    UIImage *croppedImage = [resizedImage imageCroppedToRect:cropRect];
     
-    UIImage *transparentBorderImage = borderSize ? [croppedImage scf_imageAddTransparentBorderWithWidth:borderSize] : croppedImage;
+    UIImage *transparentBorderImage = borderSize ? [croppedImage imageAddTransparentBorderWithWidth:borderSize] : croppedImage;
     
-    return [transparentBorderImage scf_imageRoundedCornerWithCornerSize:cornerRadius borderSize:borderSize];
+    return [transparentBorderImage imageRoundedCornerWithCornerSize:cornerRadius borderSize:borderSize];
 }
 
-- (UIImage *)scf_imageResize:(CGSize)newSize
+- (UIImage *)imageResize:(CGSize)newSize
         interpolationQuality:(CGInterpolationQuality)quality {
     BOOL drawTransposed;
     
@@ -60,13 +60,13 @@
             break;
     }
     
-    return [self scf_imageResized:newSize
-                        transform:[self scf_transformForOrientationWithSize:newSize]
+    return [self imageResized:newSize
+                        transform:[self transformForOrientationWithSize:newSize]
                    drawTransposed:drawTransposed
              interpolationQuality:quality];
 }
 
-- (UIImage *)scf_imageResize:(CGSize)newSize
+- (UIImage *)imageResize:(CGSize)newSize
                  contentMode:(UIViewContentMode)contentMode
         interpolationQuality:(CGInterpolationQuality)quality {
     
@@ -90,12 +90,12 @@
     
     CGSize size = CGSizeMake(round(self.size.width * ratio), round(self.size.height * ratio));
     
-    return [self scf_imageResize:size interpolationQuality:quality];
+    return [self imageResize:size interpolationQuality:quality];
 }
 
 #pragma mark - private methods
 //新图像的方向将是UIImageOrientationUp，与当前图像的方向无关
-- (UIImage *)scf_imageResized:(CGSize)newSize
+- (UIImage *)imageResized:(CGSize)newSize
                     transform:(CGAffineTransform)transform
                drawTransposed:(BOOL)transpose
          interpolationQuality:(CGInterpolationQuality)quality {
@@ -134,7 +134,7 @@
     return newImage;
 }
 
-- (CGAffineTransform)scf_transformForOrientationWithSize:(CGSize)newSize {
+- (CGAffineTransform)transformForOrientationWithSize:(CGSize)newSize {
     CGAffineTransform transform = CGAffineTransformIdentity;
     
     switch (self.imageOrientation) {

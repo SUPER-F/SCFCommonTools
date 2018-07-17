@@ -18,7 +18,7 @@
 
  @return canvas颜色
  */
-- (NSString *)scf_canvasColorString;
+- (NSString *)canvasColorString;
 
 
 /**
@@ -26,6 +26,6 @@
 
  @return 网页颜色
  */
-- (NSString *)scf_webColorString;
+- (NSString *)webColorString;
 
 @end

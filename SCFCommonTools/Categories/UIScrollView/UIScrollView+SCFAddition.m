@@ -11,32 +11,32 @@
 #import "UIScrollView+SCFAddition.h"
 #import <objc/runtime.h>
 
-NSString *const scf_contentWidthKey = @"scf_contentWidthKey";
-NSString *const scf_contentHeightKey = @"scf_contentHeightKey";
-NSString *const scf_contentOffsetXKey = @"scf_contentOffsetXKey";
-NSString *const scf_contentOffsetYKey = @"scf_contentOffsetYKey";
+NSString *const contentWidthKey = @"contentWidthKey";
+NSString *const contentHeightKey = @"contentHeightKey";
+NSString *const contentOffsetXKey = @"contentOffsetXKey";
+NSString *const contentOffsetYKey = @"contentOffsetYKey";
 
 @implementation UIScrollView (SCFAddition)
 
 #pragma mark - contentOffset
-- (CGPoint)scf_contentOffsetTop {
+- (CGPoint)contentOffsetTop {
     return CGPointMake(0.0f, -self.contentInset.top);
 }
 
-- (CGPoint)scf_contentOffsetBottom {
+- (CGPoint)contentOffsetBottom {
     return CGPointMake(0.0f, self.contentSize.height + self.contentInset.bottom - self.bounds.size.height);
 }
 
-- (CGPoint)scf_contentOffsetLeft {
+- (CGPoint)contentOffsetLeft {
     return CGPointMake(-self.contentInset.left, 0.0f);
 }
 
-- (CGPoint)scf_contentOffsetRight {
+- (CGPoint)contentOffsetRight {
     return CGPointMake(self.contentSize.width + self.contentInset.right - self.bounds.size.width, 0.0f);
 }
 
 #pragma mark - scrollViewDirection
-- (SCFScrollViewDirection)scf_scrollViewDirection {
+- (SCFScrollViewDirection)scrollViewDirection {
     CGPoint translation = [self.panGestureRecognizer translationInView:self];
     SCFScrollViewDirection direction;
     if (translation.y < 0.0f) {
@@ -58,109 +58,109 @@ NSString *const scf_contentOffsetYKey = @"scf_contentOffsetYKey";
 }
 
 #pragma mark - isScrolled
-- (BOOL)scf_isScrolledToTop {
-    return self.contentOffset.y <= [self scf_contentOffsetTop].y;
+- (BOOL)isScrolledToTop {
+    return self.contentOffset.y <= [self contentOffsetTop].y;
 }
 
-- (BOOL)scf_isScrolledToBottom {
-    return self.contentOffset.y >= [self scf_contentOffsetBottom].y;
+- (BOOL)isScrolledToBottom {
+    return self.contentOffset.y >= [self contentOffsetBottom].y;
 }
 
-- (BOOL)scf_isScrolledToLeft {
-    return self.contentOffset.x <= [self scf_contentOffsetLeft].x;
+- (BOOL)isScrolledToLeft {
+    return self.contentOffset.x <= [self contentOffsetLeft].x;
 }
 
-- (BOOL)scf_isScrolledToRight {
-    return self.contentOffset.x >= [self scf_contentOffsetRight].x;
+- (BOOL)isScrolledToRight {
+    return self.contentOffset.x >= [self contentOffsetRight].x;
 }
 
 #pragma mark - scrollTo
-- (void)scf_scrollToTopAnimated:(BOOL)animated {
-    [self setContentOffset:[self scf_contentOffsetTop] animated:animated];
+- (void)scrollToTopAnimated:(BOOL)animated {
+    [self setContentOffset:[self contentOffsetTop] animated:animated];
 }
 
-- (void)scf_scrollToBottomAnimated:(BOOL)animated {
-    [self setContentOffset:[self scf_contentOffsetBottom] animated:animated];
+- (void)scrollToBottomAnimated:(BOOL)animated {
+    [self setContentOffset:[self contentOffsetBottom] animated:animated];
 }
 
-- (void)scf_scrollToLeftAnimated:(BOOL)animated {
-    [self setContentOffset:[self scf_contentOffsetLeft] animated:animated];
+- (void)scrollToLeftAnimated:(BOOL)animated {
+    [self setContentOffset:[self contentOffsetLeft] animated:animated];
 }
 
-- (void)scf_scrollToRightAnimated:(BOOL)animated {
-    [self setContentOffset:[self scf_contentOffsetRight] animated:animated];
+- (void)scrollToRightAnimated:(BOOL)animated {
+    [self setContentOffset:[self contentOffsetRight] animated:animated];
 }
 
 #pragma mark - pageIndex
-- (NSUInteger)scf_pageIndexVertical {
+- (NSUInteger)pageIndexVertical {
     return (self.contentOffset.y + (self.frame.size.height * 0.5f)) / self.frame.size.height;
 }
 
-- (NSUInteger)scf_pageIndexHorizontal {
+- (NSUInteger)pageIndexHorizontal {
     return (self.contentOffset.x + (self.frame.size.width * 0.5f)) / self.frame.size.width;
 }
 
 #pragma mark - scrollToPageIndex
-- (void)scf_scrollToVerticalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
+- (void)scrollToVerticalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
     [self setContentOffset:CGPointMake(0.0f, self.frame.size.height * pageIndex) animated:animated];
 }
 
-- (void)scf_scrollToHorizontalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
+- (void)scrollToHorizontalPageIndex:(NSUInteger)pageIndex animated:(BOOL)animated {
     [self setContentOffset:CGPointMake(self.frame.size.width * pageIndex, 0.0f) animated:animated];
 }
 
 #pragma mark - setters / getters
-#pragma mark scf_contentWidth
-- (void)setScf_contentWidth:(CGFloat)scf_contentWidth {
-    NSNumber *number = [NSNumber numberWithFloat:scf_contentWidth];
+#pragma mark contentWidth
+- (void)setContentWidth:(CGFloat)contentWidth {
+    NSNumber *number = [NSNumber numberWithFloat:contentWidth];
     objc_setAssociatedObject(self,
-                             &scf_contentWidthKey,
+                             &contentWidthKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_contentWidth {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_contentWidthKey);
+- (CGFloat)contentWidth {
+    NSNumber *number = objc_getAssociatedObject(self, &contentWidthKey);
     return number.floatValue;
 }
 
-#pragma mark scf_contentHeight
-- (void)setScf_contentHeight:(CGFloat)scf_contentHeight {
-    NSNumber *number = [NSNumber numberWithFloat:scf_contentHeight];
+#pragma mark contentHeight
+- (void)setContentHeight:(CGFloat)contentHeight {
+    NSNumber *number = [NSNumber numberWithFloat:contentHeight];
     objc_setAssociatedObject(self,
-                             &scf_contentHeightKey,
+                             &contentHeightKey,
                              number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_contentHeight {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_contentHeightKey);
+- (CGFloat)contentHeight {
+    NSNumber *number = objc_getAssociatedObject(self, &contentHeightKey);
     return number.floatValue;
 }
 
-#pragma mark scf_contentOffsetX
-- (void)setScf_contentOffsetX:(CGFloat)scf_contentOffsetX {
-    NSNumber *number = [NSNumber numberWithFloat:scf_contentOffsetX];
+#pragma mark contentOffsetX
+- (void)setContentOffsetX:(CGFloat)contentOffsetX {
+    NSNumber *number = [NSNumber numberWithFloat:contentOffsetX];
     objc_setAssociatedObject(self,
-                             &scf_contentOffsetXKey,
+                             &contentOffsetXKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_contentOffsetX {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_contentOffsetXKey);
+- (CGFloat)contentOffsetX {
+    NSNumber *number = objc_getAssociatedObject(self, &contentOffsetXKey);
     return number.floatValue;
 }
 
-#pragma mark scf_contentOffsetY
-- (void)setScf_contentOffsetY:(CGFloat)scf_contentOffsetY {
-    NSNumber *number = [NSNumber numberWithFloat:scf_contentOffsetY];
-    objc_setAssociatedObject(self, &scf_contentOffsetYKey,
+#pragma mark contentOffsetY
+- (void)setContentOffsetY:(CGFloat)contentOffsetY {
+    NSNumber *number = [NSNumber numberWithFloat:contentOffsetY];
+    objc_setAssociatedObject(self, &contentOffsetYKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_contentOffsetY {
-    NSNumber *number = objc_getAssociatedObject(self, &scf_contentOffsetYKey);
+- (CGFloat)contentOffsetY {
+    NSNumber *number = objc_getAssociatedObject(self, &contentOffsetYKey);
     return number.floatValue;
 }
 

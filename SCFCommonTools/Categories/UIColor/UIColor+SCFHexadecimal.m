@@ -12,48 +12,48 @@
 
 @implementation UIColor (SCFHexadecimal)
 
-+ (UIColor *)scf_colorWithHex:(UInt32)hex {
-    return [UIColor scf_colorWithHex:hex alpha:1.0];
++ (UIColor *)colorWithHex:(UInt32)hex {
+    return [UIColor colorWithHex:hex alpha:1.0];
 }
 
-+ (UIColor *)scf_colorWithHex:(UInt32)hex alpha:(CGFloat)alpha {
++ (UIColor *)colorWithHex:(UInt32)hex alpha:(CGFloat)alpha {
     return [UIColor colorWithRed:((hex >> 16) & 0xFF) / 255.0
                            green:((hex >> 8) & 0xFF) / 255.0
                             blue:(hex & 0xFF) / 255.0
                            alpha:alpha];
 }
 
-+ (UIColor *)scf_colorWithHexString:(NSString *)hexString {
++ (UIColor *)colorWithHexString:(NSString *)hexString {
     CGFloat alpha, red, green, blue;
     
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
     switch ([colorString length]) {
         case 3:  // #RGB
             alpha = 1.0f;
-            red = [UIColor scf_colorCompoentFromHexString:colorString start:0 length:1];
-            green = [UIColor scf_colorCompoentFromHexString:colorString start:1 length:1];
-            blue = [UIColor scf_colorCompoentFromHexString:colorString start:2 length:1];
+            red = [UIColor colorCompoentFromHexString:colorString start:0 length:1];
+            green = [UIColor colorCompoentFromHexString:colorString start:1 length:1];
+            blue = [UIColor colorCompoentFromHexString:colorString start:2 length:1];
             break;
             
         case 4:  // #ARGB
-            alpha = [UIColor scf_colorCompoentFromHexString:colorString start:0 length:1];
-            red = [UIColor scf_colorCompoentFromHexString:colorString start:1 length:1];
-            green = [UIColor scf_colorCompoentFromHexString:colorString start:2 length:1];
-            blue = [UIColor scf_colorCompoentFromHexString:colorString start:3 length:1];
+            alpha = [UIColor colorCompoentFromHexString:colorString start:0 length:1];
+            red = [UIColor colorCompoentFromHexString:colorString start:1 length:1];
+            green = [UIColor colorCompoentFromHexString:colorString start:2 length:1];
+            blue = [UIColor colorCompoentFromHexString:colorString start:3 length:1];
             break;
             
         case 6:  // #RRGGBB
             alpha = 1.0f;
-            red = [UIColor scf_colorCompoentFromHexString:colorString start:0 length:2];
-            green = [UIColor scf_colorCompoentFromHexString:colorString start:2 length:2];
-            blue = [UIColor scf_colorCompoentFromHexString:colorString start:4 length:2];
+            red = [UIColor colorCompoentFromHexString:colorString start:0 length:2];
+            green = [UIColor colorCompoentFromHexString:colorString start:2 length:2];
+            blue = [UIColor colorCompoentFromHexString:colorString start:4 length:2];
             break;
             
         case 8:  // #AARRGGBB
-            alpha = [UIColor scf_colorCompoentFromHexString:colorString start:0 length:2];
-            red = [UIColor scf_colorCompoentFromHexString:colorString start:2 length:2];
-            green = [UIColor scf_colorCompoentFromHexString:colorString start:4 length:2];
-            blue = [UIColor scf_colorCompoentFromHexString:colorString start:6 length:2];
+            alpha = [UIColor colorCompoentFromHexString:colorString start:0 length:2];
+            red = [UIColor colorCompoentFromHexString:colorString start:2 length:2];
+            green = [UIColor colorCompoentFromHexString:colorString start:4 length:2];
+            blue = [UIColor colorCompoentFromHexString:colorString start:6 length:2];
             break;
             
         default:
@@ -62,7 +62,7 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-- (NSString *)scf_hexString {
+- (NSString *)hexString {
     UIColor *color = self;
     if (CGColorGetNumberOfComponents(color.CGColor) < 4) {
         const CGFloat *components = CGColorGetComponents(color.CGColor);
@@ -83,7 +83,7 @@
 }
 
 #pragma mark private methods
-+ (CGFloat)scf_colorCompoentFromHexString:(NSString *)hexString start:(NSUInteger)start length:(NSUInteger)length {
++ (CGFloat)colorCompoentFromHexString:(NSString *)hexString start:(NSUInteger)start length:(NSUInteger)length {
     NSString *substring = [hexString substringWithRange:NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat:@"%@%@", substring, substring];
     

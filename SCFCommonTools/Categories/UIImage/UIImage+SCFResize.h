@@ -21,7 +21,7 @@
  @param rect 裁切位置
  @return 根据给定位置切割的图片
  */
-- (UIImage *)scf_imageCroppedToRect:(CGRect)rect;
+- (UIImage *)imageCroppedToRect:(CGRect)rect;
 
 
 /**
@@ -35,7 +35,7 @@
  @param quality 图片质量
  @return 生成的缩略图
  */
-- (UIImage *)scf_imageThumbnailWithResize:(CGSize)thumbnailSize
+- (UIImage *)imageThumbnailWithResize:(CGSize)thumbnailSize
                         transparentBorder:(CGFloat)borderSize
                              cornerRadius:(CGFloat)cornerRadius
                      interpolationQuality:(CGInterpolationQuality)quality;
@@ -49,7 +49,7 @@
  @param quality 图片质量
  @return 改变大小后的图片
  */
-- (UIImage *)scf_imageResize:(CGSize)newSize
+- (UIImage *)imageResize:(CGSize)newSize
         interpolationQuality:(CGInterpolationQuality)quality;
 
 
@@ -62,7 +62,7 @@
  @param quality 图片质量
  @return 改变大小后的图片
  */
-- (UIImage *)scf_imageResize:(CGSize)newSize
+- (UIImage *)imageResize:(CGSize)newSize
                  contentMode:(UIViewContentMode)contentMode
         interpolationQuality:(CGInterpolationQuality)quality;
 

@@ -21,6 +21,6 @@
  @param borderSize 边框尺寸
  @return 结果图片
  */
-- (UIImage *)scf_imageRoundedCornerWithCornerSize:(CGFloat)cornerSize borderSize:(CGFloat)borderSize;
+- (UIImage *)imageRoundedCornerWithCornerSize:(CGFloat)cornerSize borderSize:(CGFloat)borderSize;
 
 @end

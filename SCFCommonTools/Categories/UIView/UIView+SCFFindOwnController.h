@@ -12,6 +12,6 @@
 
 @interface UIView (SCFFindOwnController)
 
-- (UIViewController *)scf_findOwnController;
+- (UIViewController *)findOwnController;
 
 @end

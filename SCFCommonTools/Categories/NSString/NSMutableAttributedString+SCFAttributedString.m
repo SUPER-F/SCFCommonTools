@@ -40,7 +40,7 @@
  * @param string  字符串
  * @param block   返回attributes
  */
-+ (NSMutableAttributedString *)scf_makeAttributeString:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block {
++ (NSMutableAttributedString *)makeAttributeString:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block {
     NSMutableDictionary * attributes = [NSMutableDictionary dictionary];
     block(attributes);
     NSMutableAttributedString * as = [[NSMutableAttributedString alloc] initWithString:string attributes:attributes];
@@ -53,7 +53,7 @@
  * @param string  字符串
  * @param block   返回attributes
  */
-- (NSMutableAttributedString *)scf_makeAttributeStringAdd:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block {
+- (NSMutableAttributedString *)makeAttributeStringAdd:(NSString *)string Attribute:(void(^)(NSMutableDictionary * attributes))block {
     NSMutableDictionary * attributes = [NSMutableDictionary dictionary];
     block(attributes);
     NSMutableAttributedString * as = [[NSMutableAttributedString alloc] initWithString:string attributes:attributes];

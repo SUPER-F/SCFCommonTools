@@ -13,12 +13,12 @@
 @interface UITextField (SCFSelect)
 
 // 当前选中的字符范围
-- (NSRange)scf_selectedRange;
+- (NSRange)selectedRange;
 
 // 选中所有文字
-- (void)scf_selectAllText;
+- (void)selectAllText;
 
 // 设置指定范围的文字被选中
-- (void)scf_setSelectedTextRange:(NSRange)range;
+- (void)selectedTextRange:(NSRange)rg;
 
 @end

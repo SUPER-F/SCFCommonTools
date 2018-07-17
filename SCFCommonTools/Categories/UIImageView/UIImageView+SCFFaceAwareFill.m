@@ -12,31 +12,31 @@
 #import <CoreImage/CoreImage.h>
 #import <QuartzCore/QuartzCore.h>
 
-static CIDetector *_scf_faceDetector;
+static CIDetector *_faceDetector;
 
 @implementation UIImageView (SCFFaceAwareFill)
 
 + (void)initialize {
-    _scf_faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy : CIDetectorAccuracyLow}];
+    _faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy : CIDetectorAccuracyLow}];
 }
 
 // based on this: http://maniacdev.com/2011/11/tutorial-easy-face-detection-with-core-image-in-ios-5/
-- (void)scf_faceAwareFill {
+- (void)faceAwareFill {
     if (self.image == nil) {
         return;
     }
     
-    CGRect facesRect = [self scf_rectWithFaces];
+    CGRect facesRect = [self rectWithFaces];
     if (facesRect.size.height + facesRect.size.width == 0) {
         return;
     }
     
     self.contentMode = UIViewContentModeLeft;
-    [self scf_scaleImageFocusingOnRect:facesRect];
+    [self scaleImageFocusingOnRect:facesRect];
 }
 
 #pragma mark - private methods
-- (CGRect)scf_rectWithFaces {
+- (CGRect)rectWithFaces {
     // get a CIImage
     CIImage *ciImage = self.image.CIImage;
     
@@ -46,7 +46,7 @@ static CIDetector *_scf_faceDetector;
     }
     
     // 使用静态的 CIDetector
-    CIDetector *detector = _scf_faceDetector;
+    CIDetector *detector = _faceDetector;
     
     // 创建一个包含检测器中所有检测到的face的数组
     NSArray *features = [detector featuresInImage:ciImage];
@@ -70,7 +70,7 @@ static CIDetector *_scf_faceDetector;
     return totalFaceRects;
 }
 
-- (void)scf_scaleImageFocusingOnRect:(CGRect)facesRect {
+- (void)scaleImageFocusingOnRect:(CGRect)facesRect {
     CGFloat multi1 = self.frame.size.width / self.image.size.width;
     CGFloat multi2 = self.frame.size.height / self.image.size.height;
     CGFloat multi = MAX(multi1, multi2);

@@ -12,15 +12,15 @@
 
 @implementation UIColor (SCFModify)
 
-- (UIColor *)scf_colorInverted {
-    NSArray *components = [self scf_componentArray];
+- (UIColor *)colorInverted {
+    NSArray *components = [self componentArray];
     return [UIColor colorWithRed:1 - [components[0] doubleValue]
                            green:1 - [components[1] doubleValue]
                             blue:1 - [components[2] doubleValue]
                            alpha:[components[3] doubleValue]];
 }
 
-- (UIColor *)scf_colorTranslucency {
+- (UIColor *)colorTranslucency {
     //指定HSB，参数是：色调（hue），饱和的（saturation），亮度（brightness）
     CGFloat hue = 0, saturation = 0, brightness = 0, alpha = 0;
     [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
@@ -31,7 +31,7 @@
                            alpha:alpha];
 }
 
-- (UIColor *)scf_colorLighten:(CGFloat)lighten {
+- (UIColor *)colorLighten:(CGFloat)lighten {
     //指定HSB，参数是：色调（hue），饱和的（saturation），亮度（brightness）
     CGFloat hue = 0, saturation = 0, brightness = 0, alpha = 0;
     [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
@@ -42,7 +42,7 @@
                            alpha:alpha];
 }
 
-- (UIColor *)scf_colorDarken:(CGFloat)darken {
+- (UIColor *)colorDarken:(CGFloat)darken {
     //指定HSB，参数是：色调（hue），饱和的（saturation），亮度（brightness）
     CGFloat hue = 0, saturation = 0, brightness = 0, alpha = 0;
     [self getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
@@ -54,7 +54,7 @@
 }
 
 #pragma mark - private methods
-- (NSArray *)scf_componentArray {
+- (NSArray *)componentArray {
     // 红色分量, 绿色分量, 蓝色分量, alpha分量
     CGFloat red, green, blue, alpha;
     const CGFloat *components = CGColorGetComponents([self CGColor]);

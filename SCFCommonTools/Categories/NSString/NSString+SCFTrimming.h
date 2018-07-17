@@ -13,15 +13,15 @@
 @interface NSString (SCFTrimming)
 
 // 清除HTML标签
-- (NSString *)scf_stringByTrimmingHTML;
+- (NSString *)stringByTrimmingHTML;
 
 // 清除HTML标签和JS脚本
-- (NSString *)scf_stringByTrimmingHTMLAndScript;
+- (NSString *)stringByTrimmingHTMLAndScript;
 
 // 清除空格
-- (NSString *)scf_stringByTrimmingWhiteSpace;
+- (NSString *)stringByTrimmingWhiteSpace;
 
 // 清除空格和空行
-- (NSString *)scf_stringByTrimmingWhiteSpaceAndNewlines;
+- (NSString *)stringByTrimmingWhiteSpaceAndNewlines;
 
 @end

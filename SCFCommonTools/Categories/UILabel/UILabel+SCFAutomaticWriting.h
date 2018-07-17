@@ -36,20 +36,20 @@ typedef NS_ENUM(NSInteger, UILabelSCFlinkingMode) {
 
 @interface UILabel (SCFAutomaticWriting)
 
-@property (strong, nonatomic) NSOperationQueue *scf_automaticWritingOperationQueue;
-@property (assign, nonatomic) UIEdgeInsets scf_edgeInsets;
+@property (strong, nonatomic) NSOperationQueue *automaticWritingOperationQueue;
+@property (assign, nonatomic) UIEdgeInsets edgeInsets;
 
-- (void)scf_setTextWithAutomaticWritingAnimation:(NSString *)text;
+- (void)setTextWithAutomaticWritingAnimation:(NSString *)text;
 
-- (void)scf_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelSCFlinkingMode)blinkingMode;
+- (void)setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelSCFlinkingMode)blinkingMode;
 
-- (void)scf_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration;
+- (void)setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration;
 
-- (void)scf_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode;
+- (void)setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode;
 
-- (void)scf_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter;
+- (void)setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter;
 
-- (void)scf_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion;
+- (void)setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelSCFlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion;
 
 
 @end

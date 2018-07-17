@@ -12,18 +12,18 @@
 
 @implementation NSDictionary (SCFValue)
 
-- (NSDictionary *)scf_dictionaryObjectForKey:(NSString *)aKey {
+- (NSDictionary *)dictionaryObjectForKey:(NSString *)aKey {
     id object = [self objectForKey:aKey];
     return [object isKindOfClass:[NSDictionary class]] ? object : nil;
 }
 
-- (NSArray *)scf_arrayObjectForKey:(NSString *)aKey {
+- (NSArray *)arrayObjectForKey:(NSString *)aKey {
     id object = [self objectForKey:aKey];
     return [object isKindOfClass:[NSArray class]] ? object : nil;
 }
 
-- (NSArray *)scf_arrayStringForKey:(NSString *)aKey {
-    NSArray *array = [self scf_arrayObjectForKey:aKey];
+- (NSArray *)arrayStringForKey:(NSString *)aKey {
+    NSArray *array = [self arrayObjectForKey:aKey];
     BOOL invalid = NO;
     for (id item in array)     {
         if (![item isKindOfClass:[NSString class]])         {
@@ -33,7 +33,7 @@
     return invalid ? nil : array;
 }
 
-- (NSString *)scf_stringForKey:(NSString *)aKey defaultValue:(NSString *)defaultValue {
+- (NSString *)stringForKey:(NSString *)aKey defaultValue:(NSString *)defaultValue {
     id object = [self objectForKey:aKey];
     if ([object isKindOfClass:[NSString class]]) {
         return object;
@@ -44,16 +44,16 @@
     return defaultValue;
 }
 
-- (NSString *)scf_stringForKey:(NSString *)aKey {
-    return [self scf_stringForKey:aKey defaultValue:@""];
+- (NSString *)stringForKey:(NSString *)aKey {
+    return [self stringForKey:aKey defaultValue:@""];
 }
 
-- (NSString *)scf_numberStringForKey:(NSString *)aKey {
-    return [self scf_stringForKey:aKey defaultValue:@"0"];
+- (NSString *)numberStringForKey:(NSString *)aKey {
+    return [self stringForKey:aKey defaultValue:@"0"];
 }
 
-- (NSString *)scf_stringByReplaceNBSPForKey:(NSString *)aKey {
-    NSString *value = [self scf_stringForKey:aKey];
+- (NSString *)stringByReplaceNBSPForKey:(NSString *)aKey {
+    NSString *value = [self stringForKey:aKey];
     NSString *str = [value stringByReplacingOccurrencesOfString:@"&nbsp" withString:@" "];
     return str;
 }

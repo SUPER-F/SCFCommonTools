@@ -12,7 +12,7 @@
 
 @implementation NSString (SCFPages)
 
-- (NSArray *)scf_getPagesFromString:(NSString *)string withFont:(UIFont *)font inRect:(CGRect)rect {
+- (NSArray *)getPagesFromString:(NSString *)string withFont:(UIFont *)font inRect:(CGRect)rect {
     //返回一个数组，包含每一页的字符串开始点和长度(NSRange)
     NSMutableArray *ranges = [NSMutableArray array];
     

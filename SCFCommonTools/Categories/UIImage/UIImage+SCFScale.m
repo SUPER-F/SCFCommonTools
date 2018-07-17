@@ -44,7 +44,7 @@
 
 @implementation UIImage (SCFScale)
 
-- (UIImage *)scf_imageCroppedToRect:(CGRect)rect {
+- (UIImage *)imageCroppedToRect:(CGRect)rect {
     // begin drawing context
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
     
@@ -60,7 +60,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageScaledToSize:(CGSize)size {
+- (UIImage *)imageScaledToSize:(CGSize)size {
     // avoid redundant drawing
     if (CGSizeEqualToSize(self.size, size)) {
         return self;
@@ -81,35 +81,35 @@
     return image;
 }
 
-- (UIImage *)scf_imageScaledToFitSize:(CGSize)size {
+- (UIImage *)imageScaledToFitSize:(CGSize)size {
     if (CGSizeEqualToSize(self.size, size)) {
         return self;
     }
     // calculate rect
     CGFloat aspect = self.size.width / self.size.height;
     if (size.width / aspect <= size.height) {
-        return [self scf_imageScaledToSize:CGSizeMake(size.width, size.width / aspect)];
+        return [self imageScaledToSize:CGSizeMake(size.width, size.width / aspect)];
     }
     else {
-        return [self scf_imageScaledToSize:CGSizeMake(size.height * aspect, size.height)];
+        return [self imageScaledToSize:CGSizeMake(size.height * aspect, size.height)];
     }
 }
 
-- (UIImage *)scf_imageScaledToFillSize:(CGSize)size {
+- (UIImage *)imageScaledToFillSize:(CGSize)size {
     if (CGSizeEqualToSize(self.size, size)) {
         return self;
     }
     // calculate rect
     CGFloat aspect = self.size.width / self.size.height;
     if (size.width / aspect >= size.height) {
-        return [self scf_imageScaledToSize:CGSizeMake(size.width, size.width / aspect)];
+        return [self imageScaledToSize:CGSizeMake(size.width, size.width / aspect)];
     }
     else {
-        return [self scf_imageScaledToSize:CGSizeMake(size.height * aspect, size.height)];
+        return [self imageScaledToSize:CGSizeMake(size.height * aspect, size.height)];
     }
 }
 
-- (UIImage *)scf_imageCroppedAndScaledToSize:(CGSize)size
+- (UIImage *)imageCroppedAndScaledToSize:(CGSize)size
                                  contentMode:(UIViewContentMode)contentMode
                                     padToFit:(BOOL)padToFit {
     // calculate rect
@@ -220,7 +220,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageReflectedWithScale:(CGFloat)scale {
+- (UIImage *)imageReflectedWithScale:(CGFloat)scale {
     // get reflection dimensions
     CGFloat height = ceil(self.size.height * scale);
     CGSize size = CGSizeMake(self.size.width, height);
@@ -231,7 +231,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     // clip to gradient
-    CGContextClipToMask(context, bounds, [UIImage scf_imageRefGradientMask]);
+    CGContextClipToMask(context, bounds, [UIImage imageRefGradientMask]);
     
     // draw reflected image
     CGContextScaleCTM(context, 1.0f, -1.0f);
@@ -247,9 +247,9 @@
     return image;
 }
 
-- (UIImage *)scf_imageReflectedWithScale:(CGFloat)scale gap:(CGFloat)gap alpha:(CGFloat)alpha {
+- (UIImage *)imageReflectedWithScale:(CGFloat)scale gap:(CGFloat)gap alpha:(CGFloat)alpha {
     // get reflected image
-    UIImage *reflection = [self scf_imageReflectedWithScale:scale];
+    UIImage *reflection = [self imageReflectedWithScale:scale];
     CGFloat reflectionOffsset = reflection.size.height + gap;
     
     // begin drawing context
@@ -270,7 +270,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageWithShadowColor:(UIColor *)color offset:(CGSize)offset blur:(CGFloat)blur {
+- (UIImage *)imageWithShadowColor:(UIColor *)color offset:(CGSize)offset blur:(CGFloat)blur {
     // get size
     CGSize border = CGSizeMake(fabs(offset.width) + blur, fabs(offset.height) + blur);
     
@@ -295,7 +295,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageWithCornerRadius:(CGFloat)radius {
+- (UIImage *)imageWithCornerRadius:(CGFloat)radius {
     // begin drawing context
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -328,7 +328,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageWithAlpha:(CGFloat)alpha {
+- (UIImage *)imageWithAlpha:(CGFloat)alpha {
     // begin drawing context
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     
@@ -344,7 +344,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageWithMaskFromImage:(UIImage *)fromImage {
+- (UIImage *)imageWithMaskFromImage:(UIImage *)fromImage {
     // begin drawing context
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -364,7 +364,7 @@
     return image;
 }
 
-- (UIImage *)scf_imageWithMaskFromImageAlpha {
+- (UIImage *)imageWithMaskFromImageAlpha {
     // get dimensions
     size_t width = CGImageGetWidth(self.CGImage);
     size_t height = CGImageGetHeight(self.CGImage);
@@ -400,7 +400,7 @@
 }
 
 #pragma mark - private methods
-+ (CGImageRef)scf_imageRefGradientMask {
++ (CGImageRef)imageRefGradientMask {
     static CGImageRef sharedMask = NULL;
     if (sharedMask == NULL) {
         // create gradient mask

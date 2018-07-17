@@ -16,14 +16,14 @@
 
 @implementation UIWebView (SCFSwipeGesture)
 
-- (void)scf_addSwipeGesture {
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(p_scf_swipeRight:)];
+- (void)addSwipeGesture {
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(p_swipeRight:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [swipeRight setNumberOfTouchesRequired:2];
     [swipeRight setDelegate:self];
     [self addGestureRecognizer:swipeRight];
     
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(p_scf_swipeLeft:)];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(p_swipeLeft:)];
     [swipeLeft setDirection:UISwipeGestureRecognizerDirectionRight];
     [swipeLeft setNumberOfTouchesRequired:2];
     [swipeLeft setDelegate:self];
@@ -38,13 +38,13 @@
     [pan requireGestureRecognizerToFail:swipeLeft];
 }
 
-- (void)p_scf_swipeRight:(UISwipeGestureRecognizer *)recognizer {
+- (void)p_swipeRight:(UISwipeGestureRecognizer *)recognizer {
     if ([recognizer numberOfTouches] == 2 && [self canGoBack]) {
         [self goBack];
     }
 }
 
-- (void)p_scf_swipeLeft:(UISwipeGestureRecognizer *)recognizer {
+- (void)p_swipeLeft:(UISwipeGestureRecognizer *)recognizer {
     if ([recognizer numberOfTouches] == 2 && [self canGoForward]) {
         [self goForward];
     }

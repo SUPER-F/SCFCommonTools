@@ -12,7 +12,7 @@
 
 @implementation UIButton (SCFImagePosition)
 
-- (void)scf_setImagePosition:(SCFImagePositions)position spacing:(CGFloat)spacing {
+- (void)setImagePosition:(SCFImagePositions)position spacing:(CGFloat)spacing {
     CGFloat imageWidth = self.imageView.image.size.width;
     CGFloat imageHeight = self.imageView.image.size.height;
 

@@ -12,8 +12,8 @@
 
 @interface UITextView (SCFPlaceHolder)
 
-@property (nonatomic, strong) UITextView *scf_placeHolderTextView;
+@property (nonatomic, strong) UITextView *placeHolderTextView;
 
-- (void)scf_addPlaceHolder:(NSString *)placeHolder;
+- (void)addPlaceHolder:(NSString *)placeHolder;
 
 @end

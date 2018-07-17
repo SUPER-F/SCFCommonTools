@@ -17,6 +17,6 @@
 
 //要求图像执行"Aspect Fill"“相位填充”，但将图像以被检测的人脸为中心
 //不是图像的简单中心
-- (void)scf_faceAwareFill;
+- (void)faceAwareFill;
 
 @end

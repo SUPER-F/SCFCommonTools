@@ -17,7 +17,7 @@
  *
  *  @param hidden 是否显示阴影
  */
-- (void)scf_shadowViewHidden:(BOOL)hidden {
+- (void)shadowViewHidden:(BOOL)hidden {
     for (UIView *aView in [self subviews]) {
         if ([aView isKindOfClass:[UIScrollView class]]) {
             [(UIScrollView *)aView setShowsHorizontalScrollIndicator:NO];
@@ -34,7 +34,7 @@
  *
  *  @param hidden 是否显示水平滑动指示器
  */
-- (void)scf_showsHorizontalScrollIndicator:(BOOL)hidden {
+- (void)showsHorizontalScrollIndicator:(BOOL)hidden {
     for (UIView *aView in [self subviews]) {
         if ([aView isKindOfClass:[UIScrollView class]]) {
             [(UIScrollView *)aView setShowsHorizontalScrollIndicator:hidden];
@@ -46,7 +46,7 @@
  *
  *  @param hidden 是否显示垂直滑动指示器
  */
-- (void)scf_showsVerticalScrollIndicator:(BOOL)hidden {
+- (void)showsVerticalScrollIndicator:(BOOL)hidden {
     for (UIView *aView in [self subviews]) {
         if ([aView isKindOfClass:[UIScrollView class]]) {
             [(UIScrollView *)aView setShowsVerticalScrollIndicator:hidden];
@@ -56,16 +56,16 @@
 /**
  *  @brief  网页透明
  */
--(void)scf_makeTransparent {
+-(void)makeTransparent {
     self.backgroundColor = [UIColor clearColor];
     self.opaque = NO;
 }
 /**
  *  @brief  网页透明移除阴影
  */
--(void)scf_makeTransparentAndRemoveShadow {
-    [self scf_makeTransparent];
-    [self scf_shadowViewHidden:YES];
+-(void)makeTransparentAndRemoveShadow {
+    [self makeTransparent];
+    [self shadowViewHidden:YES];
 }
 
 @end

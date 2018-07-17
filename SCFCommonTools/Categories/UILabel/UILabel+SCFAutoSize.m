@@ -12,15 +12,15 @@
 
 @implementation UILabel (SCFAutoSize)
 
-- (UILabel *)scf_labelAutoSizeHorizontal {
-    return [self scf_labelAutoSizeHorizontalWithMinWidth:0.0f];
+- (UILabel *)labelAutoSizeHorizontal {
+    return [self labelAutoSizeHorizontalWithMinWidth:0.0f];
 }
 
-- (UILabel *)scf_labelAutoSizeVertical {
-    return [self scf_labelAutoSizeVerticalWithMinHeight:0.0f];
+- (UILabel *)labelAutoSizeVertical {
+    return [self labelAutoSizeVerticalWithMinHeight:0.0f];
 }
 
-- (UILabel *)scf_labelAutoSizeHorizontalWithMinWidth:(CGFloat)minWidth {
+- (UILabel *)labelAutoSizeHorizontalWithMinWidth:(CGFloat)minWidth {
     CGRect newFrame = self.frame;
     CGSize constrainedSize = CGSizeMake(CGFLOAT_MAX, newFrame.size.height);
     NSString *text = self.text;
@@ -49,7 +49,7 @@
     return self;
 }
 
-- (UILabel *)scf_labelAutoSizeVerticalWithMinHeight:(CGFloat)minHeight {
+- (UILabel *)labelAutoSizeVerticalWithMinHeight:(CGFloat)minHeight {
     CGRect newFrame = self.frame;
     CGSize constrainedSize = CGSizeMake(newFrame.size.width, CGFLOAT_MAX);
     NSString *text = self.text;

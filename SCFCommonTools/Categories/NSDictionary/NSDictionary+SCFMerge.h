@@ -13,10 +13,10 @@
 @interface NSDictionary (SCFMerge)
 
 // 合并两个NSDictionary
-+ (NSDictionary *)scf_dictionaryByMergingDictionary:(NSDictionary *)dict1
++ (NSDictionary *)dictionaryByMergingDictionary:(NSDictionary *)dict1
                                      withDictionary:(NSDictionary *)dict2;
 
 // 并入一个NSDictionary
-- (NSDictionary *)scf_dictionaryByMergingDictionary:(NSDictionary *)dict;
+- (NSDictionary *)dictionaryByMergingDictionary:(NSDictionary *)dict;
 
 @end

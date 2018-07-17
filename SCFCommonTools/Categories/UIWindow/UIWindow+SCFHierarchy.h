@@ -17,13 +17,13 @@
  
  @return Returns the current Top Most ViewController in hierarchy.
  */
-- (UIViewController*)scf_theTopMostController;
+- (UIViewController*)theTopMostController;
 
 /*!
  @method currentViewController
  
  @return Returns the topViewController in stack of topMostController.
  */
-- (UIViewController*)scf_theCurrentViewController;
+- (UIViewController*)theCurrentViewController;
 
 @end

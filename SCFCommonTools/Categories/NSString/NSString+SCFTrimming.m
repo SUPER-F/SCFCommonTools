@@ -12,14 +12,14 @@
 
 @implementation NSString (SCFTrimming)
 
-- (NSString *)scf_stringByTrimmingHTML {
+- (NSString *)stringByTrimmingHTML {
     return [self stringByReplacingOccurrencesOfString:@"<[^>]+>"
                                            withString:@""
                                               options:NSRegularExpressionSearch
                                                 range:NSMakeRange(0, self.length)];
 }
 
-- (NSString *)scf_stringByTrimmingHTMLAndScript {
+- (NSString *)stringByTrimmingHTMLAndScript {
     NSMutableString *mtbString = [self mutableCopy];
     NSError *error;
     NSRegularExpression *regex = [NSRegularExpression
@@ -32,14 +32,14 @@
     for (NSTextCheckingResult *match in [matches reverseObjectEnumerator]) {
         [mtbString replaceCharactersInRange:match.range withString:@""];
     }
-    return [mtbString scf_stringByTrimmingHTML];
+    return [mtbString stringByTrimmingHTML];
 }
 
-- (NSString *)scf_stringByTrimmingWhiteSpace {
+- (NSString *)stringByTrimmingWhiteSpace {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 }
 
-- (NSString *)scf_stringByTrimmingWhiteSpaceAndNewlines {
+- (NSString *)stringByTrimmingWhiteSpaceAndNewlines {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 

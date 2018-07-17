@@ -12,7 +12,7 @@
 
 @implementation NSDictionary (SCFMerge)
 
-+ (NSDictionary *)scf_dictionaryByMergingDictionary:(NSDictionary *)dict1
++ (NSDictionary *)dictionaryByMergingDictionary:(NSDictionary *)dict1
                                      withDictionary:(NSDictionary *)dict2 {
     NSMutableDictionary *result = [NSMutableDictionary dictionaryWithDictionary:dict1];
     NSMutableDictionary *tempResult = [NSMutableDictionary dictionaryWithDictionary:dict1];
@@ -21,7 +21,7 @@
     [tempResult enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([dict1 objectForKey:key]) {
             if ([obj isKindOfClass:[NSDictionary class]]) {
-                NSDictionary *newDic = [[dict1 objectForKey:key] scf_dictionaryByMergingDictionary:(NSDictionary *)obj];
+                NSDictionary *newDic = [[dict1 objectForKey:key] dictionaryByMergingDictionary:(NSDictionary *)obj];
                 [result setObject:newDic forKey:key];
             }
             else {
@@ -30,7 +30,7 @@
         }
         else if ([dict2 objectForKey:key]) {
             if ([obj isKindOfClass:[NSDictionary class]]) {
-                NSDictionary *newDic = [[dict2 objectForKey:key] scf_dictionaryByMergingDictionary:(NSDictionary *)obj];
+                NSDictionary *newDic = [[dict2 objectForKey:key] dictionaryByMergingDictionary:(NSDictionary *)obj];
                 [result setObject:newDic forKey:key];
             }
             else {
@@ -42,8 +42,8 @@
     return result.copy;
 }
 
-- (NSDictionary *)scf_dictionaryByMergingDictionary:(NSDictionary *)dict {
-    return [NSDictionary scf_dictionaryByMergingDictionary:self withDictionary:dict];
+- (NSDictionary *)dictionaryByMergingDictionary:(NSDictionary *)dict {
+    return [NSDictionary dictionaryByMergingDictionary:self withDictionary:dict];
 }
 
 @end

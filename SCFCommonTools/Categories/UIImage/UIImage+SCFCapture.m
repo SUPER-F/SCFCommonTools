@@ -13,7 +13,7 @@
 
 @implementation UIImage (SCFCapture)
 
-+ (UIImage *)scf_imageCaptureWithView:(UIView *)view {
++ (UIImage *)imageCaptureWithView:(UIView *)view {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, [UIScreen mainScreen].scale);
     // iOS7 及其后续版本
     if ([view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
@@ -27,7 +27,7 @@
     return screenshot;
 }
 
-+ (UIImage *)scf_imageWithSize:(CGRect)rect fromImage:(UIImage *)fromImage {
++ (UIImage *)imageWithSize:(CGRect)rect fromImage:(UIImage *)fromImage {
     // 原图fromImage
     CGImageRef fromImageRef = fromImage.CGImage;
     // 自定义rect的截图区域
@@ -47,7 +47,7 @@
     return subImage;
 }
 
-+ (UIImage *)scf_imageScreenshotWithView:(UIView *)aView limitWidth:(CGFloat)limitWidth {
++ (UIImage *)imageScreenshotWithView:(UIView *)aView limitWidth:(CGFloat)limitWidth {
     // 获取原view的transform
     CGAffineTransform oldTransform = aView.transform;
     

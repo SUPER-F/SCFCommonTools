@@ -12,7 +12,7 @@
 
 @implementation UITextField (SCFSelect)
 
-- (NSRange)scf_selectedRange {
+- (NSRange)selectedRange {
     UITextPosition *beginning = self.beginningOfDocument;
     
     UITextRange *selectedRange = self.selectedTextRange;
@@ -25,15 +25,15 @@
     return NSMakeRange(location, length);
 }
 
-- (void)scf_selectAllText {
-    UITextRange *range = [self textRangeFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
-    [self setSelectedTextRange:range];
+- (void)selectAllText {
+    UITextRange *rg = [self textRangeFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
+    [self setSelectedTextRange:rg];
 }
 
-- (void)scf_setSelectedTextRange:(NSRange)range {
+- (void)selectedTextRange:(NSRange)rg {
     UITextPosition *beginning = self.beginningOfDocument;
-    UITextPosition *positionStart = [self positionFromPosition:beginning offset:range.location];
-    UITextPosition *positionEnd = [self positionFromPosition:beginning offset:NSMaxRange(range)];
+    UITextPosition *positionStart = [self positionFromPosition:beginning offset:rg.location];
+    UITextPosition *positionEnd = [self positionFromPosition:beginning offset:NSMaxRange(rg)];
     
     UITextRange *selectedRange = [self textRangeFromPosition:positionStart toPosition:positionEnd];
     

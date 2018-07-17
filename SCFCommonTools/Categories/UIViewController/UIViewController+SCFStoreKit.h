@@ -15,9 +15,9 @@
 
 @interface UIViewController (SCFStoreKit) <SKStoreProductViewControllerDelegate>
 
-@property (nonatomic, copy) NSString *scf_campaignToken;
-@property (nonatomic, copy) void (^scf_loadingStoreKitItemBlock)(void);
-@property (nonatomic, copy) void (^scf_loadedStoreKitItemBlock)(void);
+@property (nonatomic, copy) NSString *campaignToken;
+@property (nonatomic, copy) void (^loadingStoreKitItemBlock)(void);
+@property (nonatomic, copy) void (^loadedStoreKitItemBlock)(void);
 
 /**
  判断连接中是否包含APP主机名
@@ -25,7 +25,7 @@
  @param urlString URL
  @return 是否包含
  */
-+ (BOOL)scf_isContainsAppUrlHostWithUrlString:(NSString *)urlString;
++ (BOOL)isContainsAppUrlHostWithUrlString:(NSString *)urlString;
 
 /**
  获取APP的ID
@@ -33,7 +33,7 @@
  @param urlString APP的URL
  @return APP的ID
  */
-+ (NSString *)scf_getAppIDWithUrlString:(NSString *)urlString;
++ (NSString *)getAppIDWithUrlString:(NSString *)urlString;
 
 /**
  获取APP的URL
@@ -41,7 +41,7 @@
  @param identifier APP的ID
  @return APP的URL
  */
-+ (NSURL *)scf_getAppUrlWithIdentifier:(NSString *)identifier;
++ (NSURL *)getAppUrlWithIdentifier:(NSString *)identifier;
 
 
 /**
@@ -49,7 +49,7 @@
 
  @param identifier APP的ID
  */
-+ (void)scf_openAppUrlWithIdentifier:(NSString *)identifier;
++ (void)openAppUrlWithIdentifier:(NSString *)identifier;
 
 
 /**
@@ -57,13 +57,13 @@
 
  @param identifier APP的ID
  */
-+ (void)scf_openAppReviewUrlWithIdentifier:(NSString *)identifier;
++ (void)openAppReviewUrlWithIdentifier:(NSString *)identifier;
 
 /**
  模态到APP商店页面
  
  @param identifier APP的ID
  */
-- (void)scf_presentStoreViewControllerWithIdentifier:(NSString *)identifier;
+- (void)presentStoreViewControllerWithIdentifier:(NSString *)identifier;
 
 @end

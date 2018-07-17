@@ -18,69 +18,69 @@ static const void *SCFTextViewTextZoomEnabledKey = &SCFTextViewTextZoomEnabledKe
 @implementation UITextView (SCFPinchZoom)
 
 #pragma mark - setters / getters
-#pragma mark scf_minFontSize
-- (void)setScf_minFontSize:(CGFloat)scf_minFontSize {
-    NSNumber *number = [NSNumber numberWithFloat:scf_minFontSize];
+#pragma mark minFontSize
+- (void)setMinFontSize:(CGFloat)minFontSize {
+    NSNumber *number = [NSNumber numberWithFloat:minFontSize];
     objc_setAssociatedObject(self,
                              SCFTextViewTextMinFontSizeKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_minFontSize {
+- (CGFloat)minFontSize {
     NSNumber *number = objc_getAssociatedObject(self, SCFTextViewTextMinFontSizeKey);
     return number.floatValue;
 }
 
-#pragma mark scf_maxFontSize
-- (void)setScf_maxFontSize:(CGFloat)scf_maxFontSize {
-    NSNumber *number = [NSNumber numberWithFloat:scf_maxFontSize];
+#pragma mark maxFontSize
+- (void)setMaxFontSize:(CGFloat)maxFontSize {
+    NSNumber *number = [NSNumber numberWithFloat:maxFontSize];
     objc_setAssociatedObject(self,
                              SCFTextViewTextMaxFontSizeKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)scf_maxFontSize {
+- (CGFloat)maxFontSize {
     NSNumber *number = objc_getAssociatedObject(self, SCFTextViewTextMaxFontSizeKey);
     return number.floatValue;
 }
 
-#pragma mark scf_zoomEnabled
-- (void)setScf_zoomEnabled:(BOOL)scf_zoomEnabled {
-    NSNumber *number = [NSNumber numberWithBool:scf_zoomEnabled];
+#pragma mark zoomEnabled
+- (void)setZoomEnabled:(BOOL)zoomEnabled {
+    NSNumber *number = [NSNumber numberWithBool:zoomEnabled];
     objc_setAssociatedObject(self,
                              SCFTextViewTextZoomEnabledKey,
                              number,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-    if (scf_zoomEnabled) {
+    if (zoomEnabled) {
         for (UIGestureRecognizer *recognizer in self.gestureRecognizers) {
             if ([recognizer isKindOfClass:[UIPinchGestureRecognizer class]]) {
                 return;
             }
         }
         
-        self.scf_minFontSize = self.scf_minFontSize ? self.scf_minFontSize : 8.0f;
-        self.scf_maxFontSize = self.scf_maxFontSize ? self.scf_maxFontSize : 42.0f;
+        self.minFontSize = self.minFontSize ? self.minFontSize : 8.0f;
+        self.maxFontSize = self.maxFontSize ? self.maxFontSize : 42.0f;
         
-        UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(p_scf_pinchGesture:)];
+        UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(p_pinchGesture:)];
         [self addGestureRecognizer:pinchRecognizer];
     }
 }
 
-- (BOOL)scf_zoomEnabled {
+- (BOOL)zoomEnabled {
     NSNumber *number = objc_getAssociatedObject(self, SCFTextViewTextZoomEnabledKey);
     return number.boolValue;
 }
 
-- (void)p_scf_pinchGesture:(UIPinchGestureRecognizer *)recognizer {
-    if (!self.scf_zoomEnabled) {
+- (void)p_pinchGesture:(UIPinchGestureRecognizer *)recognizer {
+    if (!self.zoomEnabled) {
         return;
     }
     
     CGFloat fontSize = (recognizer.velocity > 0.0f ? 1.0f : -1.0f) + self.font.pointSize;
-    fontSize = MAX(MIN(fontSize, self.scf_maxFontSize), self.scf_minFontSize);
+    fontSize = MAX(MIN(fontSize, self.maxFontSize), self.minFontSize);
     
     self.font = [UIFont fontWithName:self.font.fontName size:fontSize];
 }

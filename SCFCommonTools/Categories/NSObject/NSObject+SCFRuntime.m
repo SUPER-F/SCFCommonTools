@@ -18,7 +18,7 @@ void ProtectCrashProtected(id self, SEL sel) {
 
 @implementation NSObject (SCFRuntime)
 
-+ (void)scf_swizzleClassMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel {
++ (void)swizzleClassMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel {
     Class cls = object_getClass(self);
     
     Method originAddObserverMethod = class_getClassMethod(cls, oriSel);
@@ -27,7 +27,7 @@ void ProtectCrashProtected(id self, SEL sel) {
     [self swizzleMethodWithOriginSel:oriSel oriMethod:originAddObserverMethod swizzledSel:swiSel swizzledMethod:swizzledAddObserverMethod class:cls];
 }
 
-+ (void)scf_swizzleInstanceMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel {
++ (void)swizzleInstanceMethodWithOriginSel:(SEL)oriSel swizzledSel:(SEL)swiSel {
     Method originAddObserverMethod = class_getInstanceMethod(self, oriSel);
     Method swizzledAddObserverMethod = class_getInstanceMethod(self, swiSel);
     
@@ -48,7 +48,7 @@ void ProtectCrashProtected(id self, SEL sel) {
     }
 }
 
-+ (Class)scf_addMethodToStubClass:(SEL)aSelector {
++ (Class)addMethodToStubClass:(SEL)aSelector {
     Class ProtectCrashProtector = objc_getClass(kProtectCrashProtectorName);
     
     if (!ProtectCrashProtector) {
@@ -60,11 +60,11 @@ void ProtectCrashProtected(id self, SEL sel) {
     return ProtectCrashProtector;
 }
 
-+ (BOOL)scf_isMainBundleClass:(Class)cls {
++ (BOOL)isMainBundleClass:(Class)cls {
     return cls && [[NSBundle bundleForClass:cls] isEqual:[NSBundle mainBundle]];
 }
 
-- (BOOL)scf_isMethodOverrideForClass:(Class)cls selector:(SEL)sel {
+- (BOOL)isMethodOverrideForClass:(Class)cls selector:(SEL)sel {
     IMP clsIMP = class_getMethodImplementation(cls, sel);
     IMP superClsIMP = class_getMethodImplementation([cls superclass], sel);
     

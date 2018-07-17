@@ -12,8 +12,8 @@
 
 @implementation UIColor (SCFWeb)
 
-- (NSString *)scf_canvasColorString {
-    CGFloat *arrRGBA = [self scf_getRGBA];
+- (NSString *)canvasColorString {
+    CGFloat *arrRGBA = [self getRGBA];
     CGFloat r = arrRGBA[0] * 255;
     CGFloat g = arrRGBA[1] * 255;
     CGFloat b = arrRGBA[2] * 255;
@@ -21,8 +21,8 @@
     return [NSString stringWithFormat:@"rgba(%f,%f,%f,%f)", r, g, b, a];
 }
 
-- (NSString *)scf_webColorString {
-    CGFloat *arrRGBA = [self scf_getRGBA];
+- (NSString *)webColorString {
+    CGFloat *arrRGBA = [self getRGBA];
     int r = arrRGBA[0] * 255;
     int g = arrRGBA[1] * 255;
     int b = arrRGBA[2] * 255;
@@ -30,7 +30,7 @@
 }
 
 #pragma mark - private methods
-- (CGFloat *)scf_getRGBA {
+- (CGFloat *)getRGBA {
     UIColor *color = self;
     CGColorRef colorRef = color.CGColor;
     size_t numComponents = CGColorGetNumberOfComponents(colorRef);

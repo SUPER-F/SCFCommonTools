@@ -12,11 +12,11 @@
 
 @implementation UIImage (SCFFileName)
 
-+ (UIImage *)scf_imageWithMainBundleFileName:(NSString *)name {
-    return [self scf_imageWithFileName:name inBundle:[NSBundle mainBundle]];
++ (UIImage *)imageWithMainBundleFileName:(NSString *)name {
+    return [self imageWithFileName:name inBundle:[NSBundle mainBundle]];
 }
 
-+ (UIImage *)scf_imageWithFileName:(NSString *)name inBundle:(NSBundle *)bundle {
++ (UIImage *)imageWithFileName:(NSString *)name inBundle:(NSBundle *)bundle {
     NSString *extension = @"png";
     
     NSArray *components = [name componentsSeparatedByString:@"."];

@@ -11,23 +11,23 @@
 #import "UITextView+SCFPlaceHolder.h"
 #import <objc/runtime.h>
 
-static const void *scf_placeHolderTextViewKey = &scf_placeHolderTextViewKey;
+static const void *placeHolderTextViewKey = &placeHolderTextViewKey;
 
 @implementation UITextView (SCFPlaceHolder)
 
-- (void)setScf_placeHolderTextView:(UITextView *)scf_placeHolderTextView {
+- (void)setPlaceHolderTextView:(UITextView *)placeHolderTextView {
     objc_setAssociatedObject(self,
-                             scf_placeHolderTextViewKey,
-                             scf_placeHolderTextView,
+                             placeHolderTextViewKey,
+                             placeHolderTextView,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UITextView *)scf_placeHolderTextView {
-    return objc_getAssociatedObject(self, scf_placeHolderTextViewKey);
+- (UITextView *)placeHolderTextView {
+    return objc_getAssociatedObject(self, placeHolderTextViewKey);
 }
 
-- (void)scf_addPlaceHolder:(NSString *)placeHolder {
-    if (![self scf_placeHolderTextView]) {
+- (void)addPlaceHolder:(NSString *)placeHolder {
+    if (![self placeHolderTextView]) {
         UITextView *textView = [[UITextView alloc] initWithFrame:self.bounds];
         textView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         textView.font = self.font;
@@ -37,23 +37,23 @@ static const void *scf_placeHolderTextViewKey = &scf_placeHolderTextViewKey;
         textView.text = placeHolder;
         [self addSubview:textView];
         
-        [self setScf_placeHolderTextView:textView];
+        [self setPlaceHolderTextView:textView];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_scf_textViewDidBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:self];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_scf_textViewDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_textViewDidBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(p_textViewDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
     }
     
-    self.scf_placeHolderTextView.text = placeHolder;
+    self.placeHolderTextView.text = placeHolder;
 }
 
 #pragma mark - UITextViewDelegate notification
-- (void)p_scf_textViewDidBeginEditing:(NSNotification *)notification {
-    self.scf_placeHolderTextView.hidden = YES;
+- (void)p_textViewDidBeginEditing:(NSNotification *)notification {
+    self.placeHolderTextView.hidden = YES;
 }
 
-- (void)p_scf_textViewDidEndEditing:(NSNotification *)notification {
+- (void)p_textViewDidEndEditing:(NSNotification *)notification {
     if (!self.text || [self.text isEqualToString:@""]) {
-        self.scf_placeHolderTextView.hidden = NO;
+        self.placeHolderTextView.hidden = NO;
     }
 }
 
