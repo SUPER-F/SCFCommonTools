@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F69F554229AC739003D73E3 /* UINavigationBar+handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F69F553229AC739003D73E3 /* UINavigationBar+handle.m */; };
 		9506890C20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506890B20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m */; };
 		9506890F20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506890E20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.m */; };
 		9506891220E23C8D009C2EE7 /* UIImageView+SCFReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506891120E23C8D009C2EE7 /* UIImageView+SCFReflect.m */; };
@@ -89,6 +90,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F69F552229AC739003D73E3 /* UINavigationBar+handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+handle.h"; sourceTree = "<group>"; };
+		1F69F553229AC739003D73E3 /* UINavigationBar+handle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+handle.m"; sourceTree = "<group>"; };
 		9506890A20E214CA009C2EE7 /* UIImageView+SCFBetterFace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCFBetterFace.h"; sourceTree = "<group>"; };
 		9506890B20E214CA009C2EE7 /* UIImageView+SCFBetterFace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCFBetterFace.m"; sourceTree = "<group>"; };
 		9506890D20E22490009C2EE7 /* UIImageView+SCFFaceAwareFill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCFFaceAwareFill.h"; sourceTree = "<group>"; };
@@ -258,6 +261,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F69F551229AC739003D73E3 /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				1F69F552229AC739003D73E3 /* UINavigationBar+handle.h */,
+				1F69F553229AC739003D73E3 /* UINavigationBar+handle.m */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
 		9506891320E2460B009C2EE7 /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +507,7 @@
 		959A5A0620D8E9980097F0C1 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1F69F551229AC739003D73E3 /* UINavigationBar */,
 				950689AE20F309F1009C2EE7 /* NSObject */,
 				950689A720EF4A5D009C2EE7 /* NSData */,
 				9506899D20EE0820009C2EE7 /* NSDictionary */,
@@ -727,6 +740,7 @@
 				9506894F20E6277B009C2EE7 /* UIView+SCFVisuals.m in Sources */,
 				9506893C20E5DDD6009C2EE7 /* UITextView+SCFInputLimit.m in Sources */,
 				9506898A20ECB104009C2EE7 /* NSString+SCFBase64.m in Sources */,
+				1F69F554229AC739003D73E3 /* UINavigationBar+handle.m in Sources */,
 				9506892F20E4B329009C2EE7 /* UITextField+SCFHistory.m in Sources */,
 				9506895D20EA1F30009C2EE7 /* UIWebView+SCFCanvas.m in Sources */,
 				9506899020ECCC25009C2EE7 /* NSString+SCFString.m in Sources */,
